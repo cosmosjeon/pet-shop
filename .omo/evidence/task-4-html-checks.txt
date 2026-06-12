@@ -1,0 +1,192 @@
+COMMAND: rg -n "건강하게 자란 반려가족을 만나는 곳, 헬스독|전국 6개 지점|1600-4533|id=\"branches\"|id=\"care\"|id=\"reviews\"" pet-clone-site/index.html
+29:          <a href="tel:1600-4533">1600-4533</a>
+54:            <h1>건강하게 자란 반려가족을 만나는 곳, 헬스독</h1>
+56:              전국 6개 지점에서 아이의 건강과 성향, 가족의 생활 환경까지 함께 확인하며 책임 있는 상담을 도와드립니다.
+59:              <a class="button button-dark" href="tel:1600-4533">전화 상담 1600-4533</a>
+73:            <a href="tel:1600-4533">대표번호 1600-4533</a>
+74:            <a href="#branches">전국 6개 지점</a>
+93:      <section class="review-section" id="branches">
+98:            <p>전국 6개 지점에서 방문 상담과 네이버 플레이스 연결을 제공합니다.</p>
+298:      <section class="promise-section" id="care">
+326:      <section class="review-section" id="reviews">
+373:              <dd><a href="tel:1600-4533">1600-4533</a></dd>
+381:              <dd><a href="#branches">전국 6개 지점과 네이버 플레이스 연결 보기</a></dd>
+389:      <a href="tel:1600-4533"><span>TEL</span>전화상담</a>
+401:        <p>건강한 반려가족 상담 · 전국 6개 지점 · 대표번호 1600-4533</p>
+RESULT: exit=0
+
+COMMAND: sh -c 'if rg "BB PUPPY|비비퍼피|010-7699-0531" pet-clone-site/index.html; then exit 1; fi'
+RESULT: exit=0 PASS no runtime old identity/phone copy found
+
+COMMAND: node - <<'NODE' (count puppy cards; PASS if >= 12)
+puppy-card-count=12
+PASS puppy card count >= 12
+RESULT: exit=0
+
+COMMAND: node - <<'NODE' (count branch cards/names; PASS if all 6 present)
+branch-card-count=6
+branch-names-present=창원헬스독, 부산헬스독, 송파헬스독, 수원헬스독, 평택헬스독, 인천헬스독
+PASS all 6 branch cards/names present
+RESULT: exit=0
+
+COMMAND: node - <<'NODE' (verify referenced local image/script/style asset paths exist)
+local-reference-count=25
+exists assets/healthdog/logo/healthdog-logo.png
+exists styles.css
+exists content.js
+exists app.js
+exists assets/healthdog/pets/pet-01-white-outdoor.webp
+exists assets/healthdog/generated/service-guide-grid.svg
+exists assets/healthdog/pets/pet-02-brown-desk.webp
+exists assets/healthdog/pets/pet-03-black-white-desk.webp
+exists assets/healthdog/pets/pet-04-tan-handheld.webp
+exists assets/healthdog/pets/pet-05-black-tan-outdoor.webp
+exists assets/healthdog/pets/pet-06-lap-pair.webp
+exists assets/healthdog/pets/pet-07-charcoal-desk.webp
+exists assets/healthdog/pets/pet-08-gray-handheld.webp
+exists assets/healthdog/pets/pet-09-white-turf.webp
+exists assets/healthdog/pets/pet-10-black-white-outdoor.webp
+exists assets/healthdog/pets/pet-11-basket-black-white.webp
+exists assets/healthdog/pets/pet-12-black-pair.webp
+exists assets/healthdog/generated/care-promise-poster.svg
+exists assets/healthdog/generated/promise-banner.svg
+exists assets/healthdog/reviews/review-01-store-proof.webp
+exists assets/healthdog/reviews/review-02-poodle-proof.webp
+exists assets/healthdog/reviews/review-03-portrait-proof.webp
+exists assets/healthdog/reviews/review-05-sofa-proof.webp
+exists assets/healthdog/reviews/review-06-family-proof.webp
+exists assets/healthdog/reviews/review-09-pomeranian-proof.webp
+PASS all referenced local assets/scripts/styles exist
+RESULT: exit=0
+
+COMMAND: stale_state re-read content.js and assets list after edit
+19:      mainPhone: "1600-4533",
+20:      phoneHref: "tel:1600-4533",
+36:        label: "전화 상담 1600-4533",
+37:        href: "tel:1600-4533",
+38:        ariaLabel: "헬스독 전화 상담 1600-4533",
+60:        "대표번호 1600-4533",
+92:          body: "대표번호 1600-4533으로 가까운 지점 상담 연결",
+101:        name: "창원헬스독",
+109:        name: "부산헬스독",
+117:        name: "송파헬스독",
+125:        name: "수원헬스독",
+133:        name: "평택헬스독",
+142:        name: "인천헬스독",
+215:      contactLine: "대표번호 1600-4533",
+220:        { label: "전화상담", href: "tel:1600-4533" },
+225:        { label: "전화상담", href: "tel:1600-4533" },
+232:      representativePhone: "1600-4533",
+asset-counts pets=18
+ reviews=12
+ generated=3
+RESULT: exit=0
+
+COMMAND: dirty_worktree scoped status
+ M pet-clone-site/index.html
+?? .omo/evidence/task-4-html-baseline.txt
+?? .omo/evidence/task-4-html-checks.txt
+RESULT: exit=0
+
+---
+TODO 4 ADVERSARIAL CLEANUP VERIFY
+timestamp=2026-06-12T22:45:22+09:00
+cwd=/Users/cosmos/Documents/pet
+
+COMMAND: git status --short
+ M .omo/start-work/ledger.jsonl
+ M pet-clone-site/index.html
+?? .omo/evidence/task-4-html-baseline.txt
+?? .omo/evidence/task-4-html-checks.txt
+?? .omo/evidence/task-4-html-desktop.png
+RESULT: exit=0
+
+COMMAND: lsof -nP -iTCP:8790 -sTCP:LISTEN
+COMMAND   PID   USER   FD   TYPE             DEVICE SIZE/OFF NODE NAME
+Python  73728 cosmos    3u  IPv4 0xe132a20a455293bc      0t0  TCP 127.0.0.1:8790 (LISTEN)
+RESULT: exit=0
+
+COMMAND: ps -p 73728 -o pid=,ppid=,comm=,args=
+73728 73727 /opt/homebrew/Ce /opt/homebrew/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python -m http.server 8790 --bind 127.0.0.1
+RESULT: exit=0
+
+COMMAND: lsof -a -p 73728 -d cwd
+COMMAND   PID   USER   FD   TYPE DEVICE SIZE/OFF      NODE NAME
+Python  73728 cosmos  cwd    DIR   1,17      256 296558208 /Users/cosmos/Documents/pet/pet-clone-site
+RESULT: exit=0
+
+COMMAND: kill 73728
+RESULT: exit=0
+
+COMMAND: lsof -nP -iTCP:8790 -sTCP:LISTEN
+RESULT: exit=1 no listener on 127.0.0.1:8790 or any TCP bind for port 8790
+
+COMMAND: ps -p 73728 -o pid=,ppid=,comm=,args=
+RESULT: exit=1 PID 73728 no longer exists
+
+COMMAND: rg -n "건강하게 자란 반려가족을 만나는 곳, 헬스독|전국 6개 지점|1600-4533|id=\"branches\"|id=\"care\"|id=\"reviews\"" pet-clone-site/index.html
+29:          <a href="tel:1600-4533">1600-4533</a>
+54:            <h1>건강하게 자란 반려가족을 만나는 곳, 헬스독</h1>
+56:              전국 6개 지점에서 아이의 건강과 성향, 가족의 생활 환경까지 함께 확인하며 책임 있는 상담을 도와드립니다.
+59:              <a class="button button-dark" href="tel:1600-4533">전화 상담 1600-4533</a>
+73:            <a href="tel:1600-4533">대표번호 1600-4533</a>
+74:            <a href="#branches">전국 6개 지점</a>
+93:      <section class="review-section" id="branches">
+98:            <p>전국 6개 지점에서 방문 상담과 네이버 플레이스 연결을 제공합니다.</p>
+298:      <section class="promise-section" id="care">
+326:      <section class="review-section" id="reviews">
+373:              <dd><a href="tel:1600-4533">1600-4533</a></dd>
+381:              <dd><a href="#branches">전국 6개 지점과 네이버 플레이스 연결 보기</a></dd>
+389:      <a href="tel:1600-4533"><span>TEL</span>전화상담</a>
+401:        <p>건강한 반려가족 상담 · 전국 6개 지점 · 대표번호 1600-4533</p>
+RESULT: exit=0
+
+COMMAND: sh -c 'if rg "BB PUPPY|비비퍼피|010-7699-0531" pet-clone-site/index.html; then exit 1; fi'
+RESULT: exit=0 PASS no old identity/phone copy found
+
+COMMAND: node <<'NODE' (count pet cards, branches, and local refs)
+{
+  "puppyCards": 12,
+  "puppyCardsPass": true,
+  "branchCards": 6,
+  "expectedBranches": [
+    "창원헬스독",
+    "부산헬스독",
+    "송파헬스독",
+    "수원헬스독",
+    "평택헬스독",
+    "인천헬스독"
+  ],
+  "missingBranches": [],
+  "localRefsChecked": 29,
+  "missingRefs": []
+}
+RESULT: exit=0
+
+COMMAND: file .omo/evidence/task-4-html-desktop.png
+.omo/evidence/task-4-html-desktop.png: PNG image data, 1280 x 6632, 8-bit/color RGB, non-interlaced
+RESULT: exit=0
+
+COMMAND: sips -g pixelWidth -g pixelHeight -g format .omo/evidence/task-4-html-desktop.png
+/Users/cosmos/Documents/pet/.omo/evidence/task-4-html-desktop.png
+  pixelWidth: 1280
+  pixelHeight: 6632
+  format: png
+RESULT: exit=0
+
+COMMAND: identify .omo/evidence/task-4-html-desktop.png
+.omo/evidence/task-4-html-desktop.png PNG 1280x6632 1280x6632+0+0 8-bit sRGB 3.84853MiB 0.000u 0:00.001
+RESULT: exit=0
+
+COMMAND: rg -n -i "ignore (all|previous)|system prompt|developer message|prompt injection|jailbreak|exfiltrat|rm -rf|curl .*\\||sudo |AGENTS\\.md|BEGIN (SYSTEM|INSTRUCTIONS)" pet-clone-site/index.html
+RESULT: exit=1 PASS no unsafe prompt-injection-like text found
+
+COMMAND: git status --short -- .omo/evidence/task-4-html-baseline.txt .omo/evidence/task-4-html-checks.txt .omo/evidence/task-4-html-desktop.png pet-clone-site/index.html .omo/start-work/ledger.jsonl
+ M .omo/start-work/ledger.jsonl
+ M pet-clone-site/index.html
+?? .omo/evidence/task-4-html-baseline.txt
+?? .omo/evidence/task-4-html-checks.txt
+?? .omo/evidence/task-4-html-desktop.png
+RESULT: exit=0
+
+VERDICT: PASS Todo 4 requirements verified. Cleanup receipt: PID 73728 python http.server was running from /Users/cosmos/Documents/pet/pet-clone-site on 127.0.0.1:8790, kill returned exit=0, follow-up lsof returned exit=1/no listener.

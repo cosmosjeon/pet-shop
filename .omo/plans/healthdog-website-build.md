@@ -182,7 +182,7 @@ Critical path: Todo 1 -> Todo 4 -> Todo 5 -> Todo 7 -> Todo 9 -> Todo 11.
   - Manual visual assertion by agent: write pass/fail notes for Korean text legibility to `.omo/evidence/task-3-generated-korean-review.md`.
   Commit: Y | `feat(assets): add generated healthdog graphic modules` | `pet-clone-site/assets/healthdog/generated/`, `pet-clone-site/assets/healthdog/prompts/`
 
-- [ ] 4. Rebuild `index.html` as the Health Dog page
+- [x] 4. Rebuild `index.html` as the Health Dog page
   What to do / Must NOT do
   - Replace the current BB PUPPY DOM with Health Dog sections while preserving useful static structure.
   - Use the exact hero:

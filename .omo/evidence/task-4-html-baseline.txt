@@ -1,0 +1,20 @@
+COMMAND: rg -n "건강하게 자란 반려가족을 만나는 곳, 헬스독|id=\"branches\"|id=\"care\"" pet-clone-site/index.html || true
+
+COMMAND: rg -n "BB PUPPY|비비퍼피|010-7699-0531" pet-clone-site/index.html
+6:    <title>BB PUPPY Atelier</title>
+21:        <a class="brand-mark" href="#top" aria-label="BB PUPPY Atelier 홈">
+22:          <img class="brand-logo" src="assets/logo.png" alt="BB PUPPY">
+27:          <a href="tel:010-7699-0531">010-7699-0531</a>
+49:            <img class="hero-logo" src="assets/logo.png" alt="BB PUPPY">
+53:              평생 함께할 가족, 비비퍼피에서 소중한 인연을 만나보세요.
+58:            <img src="assets/story/hero-puppy.webp" alt="BB PUPPY 강아지 클로즈업">
+66:            <p class="section-kicker">BB PUPPY - PUPPIES</p>
+68:            <p>비비퍼피의 아기들을 소개합니다.</p>
+200:            <p class="section-kicker">BB PUPPY CARE</p>
+216:            <p class="section-kicker">BB PUPPY PROMISE</p>
+229:            <p class="section-kicker">BB PUPPY'S PRECIOUS MOMENTS REVIEW</p>
+253:            <p class="section-kicker">VISIT BB PUPPY</p>
+260:              <dd><a href="tel:010-7699-0531">010-7699-0531</a></dd>
+278:      <a href="tel:010-7699-0531"><span>TEL</span>전화예약</a>
+285:          <img src="assets/logo.png" alt="BB PUPPY">
+286:          <span>BB PUPPY Atelier</span>
