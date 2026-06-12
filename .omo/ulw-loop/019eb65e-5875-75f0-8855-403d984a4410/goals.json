@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "createdAt": "2026-06-12T12:59:44.215Z",
+  "updatedAt": "2026-06-12T13:00:30.950Z",
+  "briefPath": ".omo/ulw-loop/019eb65e-5875-75f0-8855-403d984a4410/brief.md",
+  "goalsPath": ".omo/ulw-loop/019eb65e-5875-75f0-8855-403d984a4410/goals.json",
+  "ledgerPath": ".omo/ulw-loop/019eb65e-5875-75f0-8855-403d984a4410/ledger.jsonl",
+  "codexGoalMode": "aggregate",
+  "goals": [
+    {
+      "id": "G001-execute-the-approved-prometheus-plan",
+      "title": "Execute the approved Prometheus plan at .omo/plans/healthdog-website-...",
+      "objective": "Execute the approved Prometheus plan at .omo/plans/healthdog-website-build.md end-to-end. Use the Prometheus plan checkboxes as the authoritative task breakdown; verify with automated commands, real browser/manual QA evidence, independent review, cleanup receipts, atomic commits, and the already requested GitHub push when complete.",
+      "status": "pending",
+      "successCriteria": [
+        {
+          "id": "C001",
+          "scenario": "Browser happy path: after all Prometheus checkboxes complete, start python3 -m http.server 8790 --directory pet-clone-site, open http://127.0.0.1:8790/index.html in the in-app browser, capture desktop and mobile screenshots; PASS iff first viewport clearly presents 헬스독, phone 1600-4533, real pet imagery, branch CTA, and no broken major layout.",
+          "userModel": "happy",
+          "expectedEvidence": ".omo/evidence/task-9-desktop-fullpage.png + .omo/evidence/task-9-mobile-fullpage.png + .omo/evidence/task-9-visual-qa.md with cleanup receipt for server/browser state",
+          "capturedEvidence": null,
+          "status": "pending"
+        },
+        {
+          "id": "C002",
+          "scenario": "Regression and guardrail commands: run node --test pet-clone-site/tests/site-structure.test.mjs, rg required Health Dog strings, and rg forbidden BB PUPPY/secret/commerce/unconfirmed medical-claim strings; PASS iff tests pass, required data is present, forbidden strings are absent or documented as source-only false positives in evidence.",
+          "userModel": "edge",
+          "expectedEvidence": ".omo/evidence/task-11-final-commands.txt + .omo/evidence/final-scope-fidelity.txt with exact command outputs and cleanup receipt",
+          "capturedEvidence": null,
+          "status": "pending"
+        },
+        {
+          "id": "C003",
+          "scenario": "Final review and git delivery: independent reviewer audits final diff/evidence, debugging hypotheses are checked, git status is clean except intentional state, and the verified commit is pushed to origin/main as previously requested; PASS iff reviewer approval, push result, and commit hash are recorded.",
+          "userModel": "regression",
+          "expectedEvidence": ".omo/evidence/final-review-verdict.md + .omo/evidence/final-debugging-audit.md + .omo/evidence/task-11-final-commands.txt + pushed commit hash",
+          "capturedEvidence": null,
+          "status": "pending"
+        }
+      ],
+      "attempt": 0,
+      "createdAt": "2026-06-12T12:59:44.215Z",
+      "updatedAt": "2026-06-12T13:00:30.950Z"
+    }
+  ],
+  "codexObjective": "Complete the durable ulw-loop plan in .omo/ulw-loop/019eb65e-5875-75f0-8855-403d984a4410/goals.json, including later accepted/appended stories, under the original brief constraints; use .omo/ulw-loop/019eb65e-5875-75f0-8855-403d984a4410/ledger.jsonl as the audit trail."
+}

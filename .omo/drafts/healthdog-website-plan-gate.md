@@ -65,3 +65,39 @@ Build a decision-complete execution plan for replacing the current BB PUPPY-styl
 Question for user:
 
 May I now write the final `.omo/plans/healthdog-website-build.md` execution plan from this approach?
+
+## 2026-06-12 Planning Continuation
+
+User resumed planning after pushing the repository to `cosmosjeon/pet-shop`.
+
+Additional confirmed/contextual facts:
+
+- Current repository root is pushed to `origin/main`.
+- Current implementation surface is `pet-clone-site/`, a static HTML/CSS/JS site with a Node test file.
+- Existing prototype still carries BB PUPPY identity and should be replaced with Health Dog identity.
+- `pet-clone-site/tests/site-structure.test.mjs` is the existing cheap automated verification surface.
+- User corrected the image strategy: modern generative image tools can produce Korean text well enough, so generated poster/banner graphics may include Korean text.
+- Updated image strategy allows full generated Korean poster/banner images, with visual review for typos, spacing, broken glyphs, and hierarchy.
+
+Recommended execution defaults for the final plan:
+
+- Implementation target: replace `pet-clone-site/` in place rather than create a new app folder.
+- Build type: keep static HTML/CSS/JS for speed and easy browser QA.
+- Visual direction: BB PUPPY-like modern pet-shop rhythm, but with Health Dog logo, actual client pet/review assets, six-branch trust, and image-led infographic modules.
+- Asset strategy: use real pet/review/logo assets for proof, plus generated Korean graphic modules for service grid, care promise poster, and promise banner.
+- Test strategy recommendation: tests-after plus mandatory browser visual QA. Update `site-structure.test.mjs` after the page structure is replaced, then drive the local page in the in-app browser across desktop/mobile.
+
+Remaining approval questions before final plan generation:
+
+1. Should the final plan modify `pet-clone-site/` in place?
+   - Recommended: yes, because it already has the static site structure and tests.
+   - Alternative: create a new `healthdog-site/` folder and leave `pet-clone-site/` as historical prototype.
+
+2. Should the plan include Korean text baked into generated poster/banner images?
+   - Recommended: yes, for the icon guide, promise poster, and large promise banner.
+   - Guardrail: keep source copy/prompts and visually verify generated Korean at real display size.
+
+3. Test strategy:
+   - Recommended: tests-after plus browser visual QA.
+   - Alternative: TDD first for structure tests, then visual QA.
+   - Not recommended: no automated tests, browser QA only.

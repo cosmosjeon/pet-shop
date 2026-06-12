@@ -1,0 +1,48 @@
+Wave 1 Todo 2 Content Contract Evidence
+
+Baseline before creating content.js:
+- content.js existed: no
+- required Health Dog content contract strings in existing runtime files: 0 matches
+- legacy runtime identity was present in pet-clone-site/index.html before this task: yes, 17 matches
+
+Final scan command:
+rg -n "1600-4533|map.naver.com|헬스독|BB PUPPY|010-7699-0531" pet-clone-site/content.js > .omo/evidence/task-2-content-scan.txt
+
+Final scan output from pet-clone-site/content.js:
+6:      companyName: "헬스독",
+17:      name: "헬스독",
+18:      fullName: "헬스독",
+19:      mainPhone: "1600-4533",
+20:      phoneHref: "tel:1600-4533",
+21:      headline: "건강하게 자란 반려가족을 만나는 곳, 헬스독",
+28:      { label: "헬스독 케어", href: "#care" },
+36:        label: "전화 상담 1600-4533",
+37:        href: "tel:1600-4533",
+38:        ariaLabel: "헬스독 전화 상담 1600-4533",
+56:      headline: "건강하게 자란 반려가족을 만나는 곳, 헬스독",
+60:        "대표번호 1600-4533",
+71:          title: "헬스독 소개",
+72:          body: "전국 지점에서 반려가족 상담을 돕는 헬스독 브랜드 안내",
+92:          body: "대표번호 1600-4533으로 가까운 지점 상담 연결",
+101:        name: "창원헬스독",
+104:          "https://map.naver.com/p/search/%EA%B2%BD%EB%82%A8%20%EC%B0%BD%EC%9B%90%EC%8B%9C%20%EC%9D%98%EC%B0%BD%EA%B5%AC%20%EC%84%9C%EC%83%81%EB%8F%99%20676-1%20%EC%B0%BD%EC%9B%90%ED%97%AC%EC%8A%A4%EB%8F%85",
+109:        name: "부산헬스독",
+112:          "https://map.naver.com/p/search/%EB%B6%80%EC%82%B0%20%EB%B6%80%EC%82%B0%EC%A7%84%EA%B5%AC%20%EB%B6%80%EC%95%94%EB%8F%99%2096-8%20%EB%B6%80%EC%82%B0%ED%97%AC%EC%8A%A4%EB%8F%85",
+117:        name: "송파헬스독",
+120:          "https://map.naver.com/p/search/%EC%84%9C%EC%9A%B8%20%EC%86%A1%ED%8C%8C%EA%B5%AC%20%EC%9E%A0%EC%8B%A4%EB%8F%99%20188-12%20%EC%86%A1%ED%8C%8C%ED%97%AC%EC%8A%A4%EB%8F%85",
+125:        name: "수원헬스독",
+128:          "https://map.naver.com/p/search/%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%88%98%EC%9B%90%EC%8B%9C%20%EC%9D%B4%EC%9D%98%EB%8F%99%201266-5%20%EC%88%98%EC%9B%90%ED%97%AC%EC%8A%A4%EB%8F%85",
+133:        name: "평택헬스독",
+137:          "https://map.naver.com/p/search/%EA%B2%BD%EA%B8%B0%EB%8F%84%20%ED%8F%89%ED%83%9D%EB%8F%99%20164-2%20%ED%8F%89%ED%83%9D%ED%97%AC%EC%8A%A4%EB%8F%85",
+142:        name: "인천헬스독",
+145:          "https://map.naver.com/p/search/%EC%9D%B8%EC%B2%9C%20%EC%84%9C%EA%B5%AC%20%EB%8B%B9%ED%95%98%EB%8F%99%201098-5%20%EC%9D%B8%EC%B2%9C%ED%97%AC%EC%8A%A4%EB%8F%85",
+179:      title: "헬스독 평생 케어 약속",
+215:      contactLine: "대표번호 1600-4533",
+220:        { label: "전화상담", href: "tel:1600-4533" },
+225:        { label: "전화상담", href: "tel:1600-4533" },
+231:      companyName: "헬스독",
+232:      representativePhone: "1600-4533",
+
+Post-scan assertion:
+- Required phone, Health Dog brand strings, branch names, and Naver fallback URLs are present in content.js.
+- The final scan output contains no stale old-brand or old-phone matches from content.js.

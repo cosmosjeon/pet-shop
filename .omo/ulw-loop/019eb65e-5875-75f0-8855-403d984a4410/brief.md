@@ -1,0 +1,1 @@
+Execute the approved Prometheus plan at .omo/plans/healthdog-website-build.md end-to-end. Use the Prometheus plan checkboxes as the authoritative task breakdown; verify with automated commands, real browser/manual QA evidence, independent review, cleanup receipts, atomic commits, and the already requested GitHub push when complete.

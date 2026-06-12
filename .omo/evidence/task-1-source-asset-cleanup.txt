@@ -1,0 +1,53 @@
+DoneClaim: source asset cleanup completed
+
+Scope:
+- Repository: /Users/cosmos/Documents/pet
+- Target paths only:
+  - client-research/healthdog-new-input/petreviews/KakaoTalk_20260530_210707710.png
+  - client-research/healthdog-new-input/pets/KakaoTalk_20260530_210529704_04.jpg
+
+Wave 1 attribution:
+- Introduced during Wave 1: yes, based on the provided before/after dirty-state context. The files were not dirty before Wave 1 dispatch and were dirty after Wave 1.
+- User-authored intent apparent: no. The inspected diff metadata showed binary size changes only on original client-research source assets.
+- Restored: yes, both target files were restored from HEAD with a git restore command scoped exactly to those two paths.
+
+Commands and results:
+
+1. Command:
+   git status --short -- client-research/healthdog-new-input/petreviews/KakaoTalk_20260530_210707710.png client-research/healthdog-new-input/pets/KakaoTalk_20260530_210529704_04.jpg
+   Result:
+    M client-research/healthdog-new-input/petreviews/KakaoTalk_20260530_210707710.png
+    M client-research/healthdog-new-input/pets/KakaoTalk_20260530_210529704_04.jpg
+
+2. Command:
+   git diff --stat -- client-research/healthdog-new-input/petreviews/KakaoTalk_20260530_210707710.png client-research/healthdog-new-input/pets/KakaoTalk_20260530_210529704_04.jpg
+   Result:
+    .../petreviews/KakaoTalk_20260530_210707710.png    | Bin 239184 -> 2627604 bytes
+    .../pets/KakaoTalk_20260530_210529704_04.jpg       | Bin 1441331 -> 1217423 bytes
+    2 files changed, 0 insertions(+), 0 deletions(-)
+
+3. Command:
+   git restore -- client-research/healthdog-new-input/petreviews/KakaoTalk_20260530_210707710.png client-research/healthdog-new-input/pets/KakaoTalk_20260530_210529704_04.jpg
+   Result:
+   (no output; exit code 0)
+
+4. Command:
+   git status --short -- client-research/healthdog-new-input/petreviews/KakaoTalk_20260530_210707710.png client-research/healthdog-new-input/pets/KakaoTalk_20260530_210529704_04.jpg
+   Result:
+   (no output; PASS)
+
+5. Command:
+   git diff --stat -- client-research/healthdog-new-input/petreviews/KakaoTalk_20260530_210707710.png client-research/healthdog-new-input/pets/KakaoTalk_20260530_210529704_04.jpg
+   Result:
+   (no output)
+
+Adversarial classes:
+- dirty_worktree: probed by checking the exact two dirty paths before any restore.
+- misleading_success_output: probed by verifying post-restore status and diff output, not relying only on git restore's exit code.
+- stale_state: applicable; rechecked state before and after restore.
+- Other classes: not applicable.
+
+Cleanup receipt:
+- Restored exactly the two named client-research image files from HEAD.
+- Did not touch product files.
+- Did not commit.

@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="820" viewBox="0 0 1200 820" role="img" aria-labelledby="title desc">
+  <title id="title">헬스독 서비스 안내 그래픽</title>
+  <desc id="desc">헬스독 소개, 분양 상담, 건강 케어, 지점 위치, 실제 후기, 빠른 상담을 3x2 그리드로 안내하는 그래픽입니다.</desc>
+  <defs>
+    <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fffaf1"/>
+      <stop offset="1" stop-color="#eef8f1"/>
+    </linearGradient>
+    <linearGradient id="mintLine" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4ad3c1"/>
+      <stop offset="1" stop-color="#7f62b8"/>
+    </linearGradient>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="24" flood-color="#0a292f" flood-opacity="0.14"/>
+    </filter>
+    <style>
+      .headline { font: 800 58px "Pretendard", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; fill: #132139; letter-spacing: 0; }
+      .subcopy { font: 500 27px "Pretendard", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; fill: #405361; letter-spacing: 0; }
+      .tileTitle { font: 800 34px "Pretendard", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; fill: #15243d; letter-spacing: 0; }
+      .tileMeta { font: 700 18px "Inter", "Pretendard", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; fill: #5d7180; letter-spacing: 0; }
+      .iconStroke { fill: none; stroke: #1c7567; stroke-width: 7; stroke-linecap: round; stroke-linejoin: round; }
+      .iconAccent { fill: none; stroke: #7f62b8; stroke-width: 7; stroke-linecap: round; stroke-linejoin: round; }
+      .smallFill { fill: #dff7ef; }
+      .badge { font: 800 22px "Pretendard", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; fill: #ffffff; letter-spacing: 0; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="820" rx="36" fill="url(#paper)"/>
+  <circle cx="1074" cy="118" r="136" fill="#dff7ef" opacity="0.8"/>
+  <circle cx="125" cy="715" r="126" fill="#efe8fb" opacity="0.72"/>
+  <path d="M945 78 C1000 110 1044 156 1075 215" fill="none" stroke="#2b8070" stroke-width="5" stroke-linecap="round" opacity="0.28"/>
+  <path d="M71 205 C123 149 181 113 252 96" fill="none" stroke="#7f62b8" stroke-width="5" stroke-linecap="round" opacity="0.22"/>
+
+  <g transform="translate(80 70)">
+    <text class="headline" x="0" y="76">처음부터 건강하게</text>
+    <text class="subcopy" x="0" y="126">분양 전부터 분양 후까지, 보호자와 반려견이 안심할 수 있도록 함께합니다.</text>
+  </g>
+
+  <g filter="url(#softShadow)">
+    <rect x="76" y="240" width="330" height="206" rx="24" fill="#ffffff"/>
+    <rect x="435" y="240" width="330" height="206" rx="24" fill="#ffffff"/>
+    <rect x="794" y="240" width="330" height="206" rx="24" fill="#ffffff"/>
+    <rect x="76" y="476" width="330" height="206" rx="24" fill="#ffffff"/>
+    <rect x="435" y="476" width="330" height="206" rx="24" fill="#ffffff"/>
+    <rect x="794" y="476" width="330" height="206" rx="24" fill="#ffffff"/>
+  </g>
+
+  <g transform="translate(76 240)">
+    <circle class="smallFill" cx="66" cy="66" r="40"/>
+    <path class="iconStroke" d="M47 65 h38"/>
+    <path class="iconStroke" d="M53 82 h26"/>
+    <path class="iconAccent" d="M57 48 h18"/>
+    <text class="tileMeta" x="125" y="62">01</text>
+    <text class="tileTitle" x="125" y="107">헬스독 소개</text>
+  </g>
+
+  <g transform="translate(435 240)">
+    <circle class="smallFill" cx="66" cy="66" r="40"/>
+    <path class="iconStroke" d="M43 54 h47 v38 h-47 z"/>
+    <path class="iconAccent" d="M54 52 v-12 h25 v12"/>
+    <path class="iconStroke" d="M55 73 h23"/>
+    <text class="tileMeta" x="125" y="62">02</text>
+    <text class="tileTitle" x="125" y="107">분양 상담</text>
+  </g>
+
+  <g transform="translate(794 240)">
+    <circle class="smallFill" cx="66" cy="66" r="40"/>
+    <path class="iconStroke" d="M66 92 C45 80 38 61 48 49 C55 41 66 45 66 54 C66 45 78 41 85 49 C96 61 87 80 66 92 z"/>
+    <path class="iconAccent" d="M66 58 v21 M55 69 h22"/>
+    <text class="tileMeta" x="125" y="62">03</text>
+    <text class="tileTitle" x="125" y="107">건강 케어</text>
+  </g>
+
+  <g transform="translate(76 476)">
+    <circle class="smallFill" cx="66" cy="66" r="40"/>
+    <path class="iconStroke" d="M66 98 C86 77 92 62 85 49 C78 36 54 36 47 49 C40 62 46 77 66 98 z"/>
+    <circle cx="66" cy="58" r="10" fill="none" stroke="#7f62b8" stroke-width="7"/>
+    <text class="tileMeta" x="125" y="62">04</text>
+    <text class="tileTitle" x="125" y="107">지점 위치</text>
+  </g>
+
+  <g transform="translate(435 476)">
+    <circle class="smallFill" cx="66" cy="66" r="40"/>
+    <path class="iconStroke" d="M39 50 h54 v35 h-28 l-17 16 v-16 h-9 z"/>
+    <path class="iconAccent" d="M53 65 h25 M53 78 h16"/>
+    <text class="tileMeta" x="125" y="62">05</text>
+    <text class="tileTitle" x="125" y="107">실제 후기</text>
+  </g>
+
+  <g transform="translate(794 476)">
+    <circle class="smallFill" cx="66" cy="66" r="40"/>
+    <path class="iconStroke" d="M47 78 C47 54 60 42 76 43 C88 44 95 52 94 64 C93 77 80 86 62 87"/>
+    <path class="iconAccent" d="M50 89 l-10 2 2-10 M75 55 h-14 M75 70 h-22"/>
+    <text class="tileMeta" x="125" y="62">06</text>
+    <text class="tileTitle" x="125" y="107">빠른 상담</text>
+  </g>
+
+  <g transform="translate(80 724)">
+    <rect width="1040" height="48" rx="24" fill="url(#mintLine)"/>
+    <text class="badge" x="520" y="32" text-anchor="middle">가까운 6개 지점</text>
+  </g>
+</svg>

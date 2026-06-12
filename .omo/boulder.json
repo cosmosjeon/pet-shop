@@ -1,0 +1,14 @@
+{
+  "schema_version": 2,
+  "active_work_id": "healthdog-website-build",
+  "works": {
+    "healthdog-website-build": {
+      "work_id": "healthdog-website-build",
+      "active_plan": ".omo/plans/healthdog-website-build.md",
+      "plan_name": "healthdog-website-build",
+      "session_ids": ["codex:019eb65e-5875-75f0-8855-403d984a4410"],
+      "status": "active",
+      "worktree_path": null
+    }
+  }
+}
