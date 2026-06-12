@@ -1,0 +1,134 @@
+@charset "utf-8";
+
+
+/*湲곕낯?쒓렇 ?뺤쓽*/
+html{font-size:13px; background:#;margin:0;padding:0;}
+
+/* 留덉쭊怨??⑤뵫??珥덇린??*/
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, p, blockquote, th, td, figure, span, a, caption {margin:0;padding:0;}
+
+
+/* 由ъ뒪?몄쓽 ?ㅽ????쒓굅 */
+ol, ul {list-style:none;}
+
+/* ?뚯씠釉??ㅽ???珥덇린??*/
+table {border-collapse:collapse;border-spacing:0;table-layout:fixed;}
+
+/* ?대?吏 諛??꾨뱶?뗭뿉??蹂대뜑 ?쒖떆 珥덇린??*/
+fieldset, img {border:0;}
+img{vertical-align:middle;max-width:100%;}
+
+/* 罹≪뀡 ?띿뒪???뺣젹 珥덇린??*/
+caption {text-align:left;}
+
+/* ?쇳깭洹몄쓽 珥덇린??*/
+
+input.radio {vertical-align:middle;margin-bottom:3px;}
+
+a:link    {color:#434343; text-decoration: none;}
+a:active    {color:#434343; text-decoration: none;}
+a:visited    {color:#434343; text-decoration: none;}
+a:hover    {color:#434343; text-decoration: none;}
+
+
+input[type='checkbox']{vertical-align:middle;} 
+input[type='checkbox']{background:#fff; border:solid 2px #ccc; border-radius:4px 4px; height:17px; width:17px; -webkit-appearance:none; } 
+input[type='checkbox']:checked{background:#fff; border:solid 2px #ccc; border-radius:4px 4px;} 
+input[type='checkbox']:checked:after {content:' '; display:block; width:11px; height:11px; background:#3399cc; position:relative; top:1px; left:1px; border-radius:4px 4px;}
+
+input[type='radio']{vertical-align: bottom;} 
+input[type='radio']{background:#fff; border:solid 2px #ccc; border-radius:15px 15px; height:17px; width:17px; -webkit-appearance:none;} 
+input[type='radio']:checked{background:#fff; border:solid 2px #ccc; border-radius:15px 15px;} 
+input[type='radio']:checked:after {content:' '; display:block; width:12px; height:12px; background:#3399cc; position:relative; top:1px; left:1px; border-radius:12px 12px;}
+
+
+
+/* 由ъ뒪?명깭洹?*/
+ul.con li {list-style:circle; margin-left:10px;}
+
+
+/* 踰꾪듉 */
+a.btn_big{display:inline-block;padding-right:4px; padding-left:10px; background:url(../images/bg_btn_default.png) no-repeat 100% 0;font-family:'?섎닎怨좊뵓',nanumgothic,'?뗭?',dotum;font-size:18px;color:#d5d5d5;line-height:26px;word-spacing:-1px;text-decoration:none !important;white-space:nowrap}
+a.btn_big span,a.btn_big strong{display:block;padding:3px 8px 2px 12px;background:url(../images/bg_btn_default.png) no-repeat}
+a.btn_off{display:inline-block;padding-right:4px; padding-left:10px; font-family:'?섎닎怨좊뵓',nanumgothic,'?뗭?',dotum;font-size:18px;color:#d5d5d5;line-height:26px;word-spacing:-1px;text-decoration:none !important;white-space:nowrap}
+a.btn_off span,a.btn_off strong{display:block;padding:3px 8px 2px 12px;}
+
+
+
+
+/*諛뺤뒪?뚮몢由?/
+.view_box{position:relative;  width:100%; padding-right:0px;width:100%; background-image:url(../images/tl1.png);}
+.view_box2{position:relative;  width:100%;padding-right:0px;width:100%; background-image:url(../images/tl2.png) ; background-repeat:repeat-y; background-position:right;  }
+.view_box .guide{position:relative;  width:100%; height:6px;}
+
+.view_box .tl{
+	display:block;
+	position:absolute;
+	width:100%;
+	height:6px;
+	padding-right:0px;
+	background:url(../images/t1.png);
+	font-size:0;
+
+}
+.view_box .tr{display:block;position:absolute;right:0px;width:6px;height:6px;margin-left:100%;background:url(../images/t2.png) no-repeat;font-size:0}
+.view_box .lb{display:block;position:absolute;width:100%;height:6px;padding-right:0px;background:url(../images/t3.png);font-size:0}
+.view_box .rb{display:block;position:absolute;right:0px;width:6px;height:6px;margin-left:100%;background:url(../images/t4.png) no-repeat;font-size:0}
+.view_box .cont{position:relative; padding-right:0px;width:90%; margin:20px auto ;  }
+
+
+
+
+
+
+
+
+
+/*湲?먯뒪???/
+
+.txtbig1 {   color:#e9e3de;	   font-weight:bold;	   font-size:1.5em; }
+.txtst1b {   color:#c4c2be;	   font-weight:bold;	   font-size:1.2em;}
+
+
+/*踰꾪듉?ㅽ???/
+
+.brown {
+	color: #fff;
+	font-weight:bold;
+	border: solid 1px #373737;
+	border-radius: .3em;
+	background: #3c3c3b;
+	background: -webkit-gradient(linear, left top, left bottom, from(#257ca5), to(#16658b));
+	background: -moz-linear-gradient(top,  #257ca5,  #16658b);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#257ca5', endColorstr='#16658b');
+	padding:5px;
+	font-size:1.2em;
+}
+
+.brown:active {
+	color: #fcd3a5;
+	background: -webkit-gradient(linear, left top, left bottom, from(#16658b), to(#257ca5));
+	background: -moz-linear-gradient(top,  #16658b,  #257ca5);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#16658b', endColorstr='#257ca5');
+	padding:5px;
+	font-size:1.2em;
+}
+
+.orange {
+	color: #fef4e9;
+	font-weight:bold;
+	border: solid 1px #da7c0c;
+	border-radius: .3em;
+	background: #f78d1d;
+	background: -webkit-gradient(linear, left top, left bottom, from(#faa51a), to(#f47a20));
+	background: -moz-linear-gradient(top,  #faa51a,  #f47a20);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#faa51a', endColorstr='#f47a20');
+}
+
+.orange:active {
+	color: #fcd3a5;
+	background: -webkit-gradient(linear, left top, left bottom, from(#f47a20), to(#faa51a));
+	background: -moz-linear-gradient(top,  #f47a20,  #faa51a);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#f47a20', endColorstr='#faa51a');
+}
+/*//踰꾪듉?ㅽ???/

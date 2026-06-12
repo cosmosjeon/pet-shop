@@ -1,0 +1,79 @@
+@charset "utf-8";
+@import url('common.css');
+@import url('global.css');
+
+/* 첫 로그인 페이지 */
+#loginbg {position:absolute; top:50%; left:50%; width:800px; height:480px; margin-left: -400px; margin-top: -330px; background-image:url(../images/login_bg.jpg); }
+.login {float:left; width:143px; margin-top:301px; margin-left:308px;}
+.login ul li { float:left; margin-bottom:3px;}
+#loginbg .btn { float:left; margin-top:302px; }
+
+
+#wrap{ width:100%; _text-align:left;  }
+
+/* 상단컨텐츠 */
+
+#top{ width:100%; height: 94px; background-image:url(../images/top_bg.jpg); background-repeat:repeat-x;}
+.logo{ float:left; margin-top:6px; margin-left:8px; }
+.topBtn{ float:right; margin-top:9px; width:165px;}
+.topBtn ul li{ float:left; margin-right:8px; }
+.topMenu{ float:left; width:100%; margin-top:5px; }
+
+
+#container{ width:100%; overflow:hidden;  }
+#container:after{display:block; clear:both; content:''}
+
+#leftBox{ float:left; width:180px; margin-left:5px; margin-bottom:15px; background-image:url(../images/leftBox_bg1.gif); background-repeat:repeat-y;}
+#leftMenu{width:170px; margin-top:10px; margin-left:5px;}
+.leftMenuTit{width:170px; height:28px; background-image:url(../images/leftmenu_titbg.gif); }
+.subCont1{width:170px; height:13px; background-image:url(../images/subcont_bg1.gif); }
+.subCont2{width:170px; background-image:url(../images/subcont_bg2.gif); }
+.subCont3{width:170px; height:13px; background-image:url(../images/subcont_bg3.gif); }
+
+
+
+
+#content{width:100%;}
+
+.root{width:100%; padding-bottom:15px; padding-top:10px;}
+
+.tit{width:100%; padding-bottom:8px; }
+
+.orderList{width:100%;}
+
+
+
+/* 
+.counter{width:100%; margin-top:23px; float:left; }
+
+.1on1{width:100%; margin-top:23px; }
+
+.info{width:100%; margin-top:23px; }
+
+ */
+
+
+
+
+#footer{ width:100%; margin-top: 30px; }
+
+
+
+
+
+
+
+/* 탭메뉴 */
+#tabmenu{ position:relative; height:29px; background:url(../images/tab_menu.gif) repeat-x 0 100%; font-family:'돋움',dotum; font-size:12px }
+#tabmenu ul,#tabmenu ul li{margin:0;padding:0}
+#tabmenu ul li{list-style:none}
+#tabmenu ul li,#tabmenu ul li a{background:url(../images/bg_tab2_off.gif) no-repeat}
+#tabmenu ul li{float:left;margin-right:-1px;line-height:26px}
+#tabmenu ul li a{display:inline-block;padding:2px 12px 1px;_padding:3px 12px 0;background-position: 100% 0;font-weight:bold;color:#666;cursor:pointer;text-decoration:none !important}
+#tabmenu ul li a:hover{color:#000}
+#tabmenu ul li.on,#tabmenu ul li.on a{background-image:url(../images/bg_tab2_on.gif)}
+#tabmenu ul li.on a{color:#d91721}
+
+#tabcontent0{}
+#tabcontent1{}
+/* //탭메뉴 */

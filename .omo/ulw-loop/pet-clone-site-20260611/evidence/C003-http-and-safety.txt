@@ -1,0 +1,78 @@
+HTTP checks
+
+/index.html
+HTTP/1.0 200 OK
+Server: SimpleHTTP/0.6 Python/3.14.5
+Date: Thu, 11 Jun 2026 12:38:06 GMT
+Content-type: text/html
+Content-Length: 12752
+Last-Modified: Thu, 11 Jun 2026 12:37:24 GMT
+
+/styles.css
+HTTP/1.0 200 OK
+Server: SimpleHTTP/0.6 Python/3.14.5
+Date: Thu, 11 Jun 2026 12:38:06 GMT
+Content-type: text/css
+Content-Length: 13173
+Last-Modified: Thu, 11 Jun 2026 12:26:14 GMT
+
+/app.js
+HTTP/1.0 200 OK
+Server: SimpleHTTP/0.6 Python/3.14.5
+Date: Thu, 11 Jun 2026 12:38:06 GMT
+Content-type: text/javascript
+Content-Length: 1903
+Last-Modified: Thu, 11 Jun 2026 12:07:22 GMT
+
+/assets/logo.png
+HTTP/1.0 200 OK
+Server: SimpleHTTP/0.6 Python/3.14.5
+Date: Thu, 11 Jun 2026 12:38:06 GMT
+Content-type: image/png
+Content-Length: 6702
+Last-Modified: Thu, 11 Jun 2026 12:05:00 GMT
+
+/assets/story/hero-puppy.webp
+HTTP/1.0 200 OK
+Server: SimpleHTTP/0.6 Python/3.14.5
+Date: Thu, 11 Jun 2026 12:38:06 GMT
+Content-type: image/webp
+Content-Length: 182418
+Last-Modified: Thu, 11 Jun 2026 12:17:26 GMT
+
+/assets/story/hero-family.jpg
+HTTP/1.0 200 OK
+Server: SimpleHTTP/0.6 Python/3.14.5
+Date: Thu, 11 Jun 2026 12:38:06 GMT
+Content-type: image/jpeg
+Content-Length: 104608
+Last-Modified: Thu, 11 Jun 2026 12:05:00 GMT
+
+/assets/puppies/pomeranian-party.webp
+HTTP/1.0 200 OK
+Server: SimpleHTTP/0.6 Python/3.14.5
+Date: Thu, 11 Jun 2026 12:38:06 GMT
+Content-type: image/webp
+Content-Length: 269158
+Last-Modified: Thu, 11 Jun 2026 12:05:00 GMT
+
+Forbidden string scan
+PASS no forbidden strings/internal reference copy in runtime source
+
+Local file inventory
+/Users/cosmos/Documents/pet/pet-clone-site/app.js
+/Users/cosmos/Documents/pet/pet-clone-site/assets/logo.png
+/Users/cosmos/Documents/pet/pet-clone-site/assets/puppies/bichon-white.webp
+/Users/cosmos/Documents/pet/pet-clone-site/assets/puppies/coton-soft.webp
+/Users/cosmos/Documents/pet/pet-clone-site/assets/puppies/hybrid-tiny.webp
+/Users/cosmos/Documents/pet/pet-clone-site/assets/puppies/maltese-baby.webp
+/Users/cosmos/Documents/pet/pet-clone-site/assets/puppies/maltipoo-cream.webp
+/Users/cosmos/Documents/pet/pet-clone-site/assets/puppies/pomeranian-cream.webp
+/Users/cosmos/Documents/pet/pet-clone-site/assets/puppies/pomeranian-party.webp
+/Users/cosmos/Documents/pet/pet-clone-site/assets/puppies/poodle-apricot.webp
+/Users/cosmos/Documents/pet/pet-clone-site/assets/story/hero-family.jpg
+/Users/cosmos/Documents/pet/pet-clone-site/assets/story/hero-puppy.webp
+/Users/cosmos/Documents/pet/pet-clone-site/assets/story/promise.jpg
+/Users/cosmos/Documents/pet/pet-clone-site/index.html
+/Users/cosmos/Documents/pet/pet-clone-site/styles.css
+/Users/cosmos/Documents/pet/pet-clone-site/tests/site-structure.test.mjs

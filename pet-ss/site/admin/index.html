@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>관리자 시스템</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<form name='main_login' action='http://puppybebe.com/dd3_maker/_mgr.main/fc_proc.php?proc_code=login' method=post >
+<input type=hidden name=http_rtn value='/admin/main.html'>
+<div id="loginbg">
+  <div class="login">
+    <ul>
+      <li><input name="user_id" type="text" 
+        style="color:#888888;width:131px;height:16px;border:1px solid #dadada; background-color:#ffffff; font-size:11px; padding:2px;"/></li>
+      <li><input name="user_pw" type="password" 
+        style='color:#888888;width:131px;height:16px;border:1px solid #dadada; background-color:#ffffff; font-size:11px; padding:2px;'/></li>
+    </ul>
+  </div>
+  <div class="btn"><input type="image" src="images/btn_login.jpg" /></div>
+</div>
+</form>
+<script language="javascript"> 
+
+function view(tagin_net) 
+{ 
+  var height = screen.height; 
+  var width = screen.width; 
+  var leftpos = width / 2 - 150; 
+  var toppos = height / 2 - 100; 
+  //var url = 'viewer.html?pic='+encode(what); 
+  var imgwin = window.open(tagin_net,'WIN','scrollbars=no,status=no,toolbar=no,resizable=1,location=no,menu=no,width=400,height=177,left=' + leftpos + ',top=' + toppos); 
+  imgwin.focus(); 
+} 
+
+function getParams() 
+{ 
+  var idx = document.URL.indexOf('?'); 
+  var params = new Array(); 
+  if (idx != -1) 
+  { 
+    var pairs = document.URL.substring(idx+1, document.URL.length).split('&'); 
+    for (var i=0; i<pairs.length; i++) 
+    { 
+      nameVal = pairs[i].split('='); 
+      params[nameVal[0]] = nameVal[1]; 
+    } 
+  } 
+  return params; 
+} 
+
+params = getParams(); 
+
+</script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+@charset "utf-8";
+
+.mainbanner { position:relative; width:1100px; overflow:hidden;}
+.mainbanner .left { float:left; width:550px;}
+
+/* 메인비주얼 */
+.main_visual {position:relative; border-radius:20px; :width:100%; overflow:hidden; z-index:7; }
+.main_visual .imgs { position:relative; width:100%; height:644px;}
+.main_visual .imgs > li { position:absolute; width:100%; height:100%; top:0; left:100%;}
+.main_visual .imgs li.li_01 { left:0; }
+
+.main_visual .imgs .mb_text { position:relative; width:; margin:0 auto; }
+
+/* 좌우 화살표 */
+.main_visual .bns {position:absolute; top:50%; width:100%; margin-top:-30px; }
+.main_visual .bns > div {}
+.main_visual .bns .bn a {width:100%; height:100%; display:block;}
+.main_visual .bns .bn_left {float:left; left:5%; position:absolute;}
+.main_visual .bns .bn_right {float:right; right:5%; position:absolute;}
+
+.mainbanner .right { float:right; width:500px; padding-top:10px;}
+.mainbanner .right .title { background:url(../images/mainbanner_title_bg.gif) top right no-repeat; font-size:20px; font-weight:600; color:#a6a6a6; line-height:55px; }
+.mainbanner .right .title p { font-size:45px; font-weight:300; color:#2d2d2d; letter-spacing:-3.0px;}
+.mainbanner .right .title span { display:block; font-size:55px; font-weight:300; line-height:65px; color:#2d2d2d; letter-spacing:-3.0px;}
+.mainbanner .right .title span strong { font-weight:500; }
+
+.mainbanner .right .quick { margin-top:55px;}
+
+.promise { margin-top:70px;}
+.pet_list { margin-top:70px;}
+.family { margin-top:70px;}
+
+
+
+body.bg { background:url(../images/bg_main2.jpg) top center repeat-x;}
+.visual{ width:100%; overflow:hidden; border-top:0px #000000 solid;}
+.contentWrap{ width:1100px; overflow: hidden; margin: 0 auto 0; }
+.bannerCompany{float:left; border-right:1px #d4d4d4 solid;}
+
+
+.bbsNotice{ float:left;  width:290px; }
+
+.bbsNotice > .title{border-bottom:2px #3c3c3c solid;overflow:hidden;}
+#bbsTab {float:left;  overflow:hidden;}
+#bbsTab li {border-top:2px #bdbdbd solid;letter-spacing:-1px; margin-right:5px; padding:0 5px; color:#5d5d5d; font-size:14px; line-height:30px;float:left;  overflow:hidden; font-family:'맑은 고딕'; font-weight:bold; cursor:pointer;  }
+#bbsTab li.on {border-top:2px #004592 solid;color:#004592; }
+
+.bbsMore {float:right;  overflow:hidden; color:#5d5d5d; font-size:11px; line-height:30px;  overflow:hidden; font-family:'맑은 고딕'; font-weight:bold; }
+
+
+
+.bbsGallery{ float:left;  width:290px; }
+.bbsGallery > .title{float:left; width:100%;}
+.bbsGallery > .contents{float:left; width:100%; margin-top:7px;  overflow:hidden;}
+
+
+
+/* 분양후기 슬라이더 */
+.slider2    { position: absolute; left:50px; width:1099px; height:268px !important;overflow:hidden;  }
+.slider2 ul { margin:0; padding:0; height:268px; }
+.slider2 li { float:left; list-style:none; margin:0px 4.5px; border:0px #6f6f6f solid; }
+.slider2 li img{width:268px;height:268px;}
+.controls .prev-slide{position: absolute; left:0; top:270px;}
+.controls .next-slide{position: absolute; right:0; top:270px;}
+
+
+
+
+/*기본게시판*/
+.latestBBS li { line-height:22px;height:22px;overflow:hidden; background: url(../images/dot_title2.png) no-repeat 0 8px ;}
+.latestBBS li .title { color:#2a2a2a; padding-left:5px; overflow:hidden; }
+.latestBBS li img {display:none;}
+.latestBBS li .text {display:none;}
+.latestBBS li .date {display:none;}
+
+/*갤러리게시판*/
+.latestGallery li { width:120px; float:left; margin:10px 4px;  }
+.latestGallery li .img img { width:120px; height:90px;   }
+.latestGallery li .caption { width:120px; height:15px; margin-top:5px; overflow:hidden; text-align:center  }
+
+
+
+.right{float:left;  margin-left:30px; width:368px;}
+.right > .tel{float:left; border-right:1px #d4d4d4 solid;}
+.right > .online{float:left; border-right:1px #d4d4d4 solid;}
+.right > .data{float:left;}
+.right > .map{float:left; margin-top:14px;}
+
+
+/*상단 고양이 메뉴*/
+.main-catmenu {border-top:1px #ccc solid;}
+.main-catmenu #sm { width: 1100px; margin : 0  auto ; padding: 14px 0; display:flex; font-family:'맑은 고딕'; font-weight:bold; font-size: 12px; line-height: 12px; justify-content: center; }
+.main-catmenu #sm li { margin-left:  10px; padding-left:10px; border-left: 1px #ccc solid; text-align: center;}
+.main-catmenu #sm li:first-child { margin-left:  0; padding-left:0; border-left: none;}

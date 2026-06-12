@@ -1,0 +1,191 @@
+@charset "utf-8";
+
+
+/*모바일*/
+.Viewtitle {background:#36394b;height:40px;width:360px; margin:0 auto;}
+.Viewtitle > .btn { float:left;}
+.Viewtitle > .title {color:#fff; font-weight:bold; font-size: 1.2em; float:left; line-height:40px; text-align:center; width:280px;}
+
+/*상단타이틀영역*/
+.titleArea {background:#36394b;height:40px;}
+.titleArea > .btn { float:left;}
+.titleArea > .title {color:#fff; font-weight:bold; font-size: 1.2em; float:left; line-height:40px; text-align:center; width:280px;}
+.titleArea > .map { display:none;}
+
+/*로그인 페이지*/
+div.loginBox{ width:200px; padding:10px; display:block; overflow:hidden; border:1px #c5c5c5 solid; }
+div.loginBox fieldset { padding:0; width:100%;  }
+div.loginBox .input {float:left;width:70%;}
+div.loginBox .info {font-size: 12px; line-height:21px; height:64px; padding-top:14px ;text-align:center; border-bottom:1px #CCC solid}
+div.loginBox input#tel2245212 { width:97%; height:25px; padding-left:3%; font-size:12px; margin-top:0px;border:1px #b7bcc7 solid;}
+div.loginBox input#tel22452 {  width:97%; height:25px; padding-left:3%; font-size:12px; margin-top:3px; border:1px #b7bcc7 solid;}
+div.loginBox input#save {margin-top:9px;}
+div.loginBox #save { vertical-align:middle; display:inline-block; }
+div.loginBox label { vertical-align:middle; color:#4b4b4b; font-size:11px;   margin:9px 0px 0px 5px; display:inline-block; }
+div.loginBox .join {  color:#4b4b4b; font-size:0.9em;   font-weight:bold; float:right; margin-top:7px; }
+div.loginBox .btn {float:left;margin-left:2%; width:28%; }
+div.loginBox .btn > a{ background:#333;color:#fff;font-size: 12px; font-weight:bold;  width:100%;  margin:0 auto; line-height:57px;height:57px; text-align: center; display:block;}
+div.loginBox .btn > a:hover{ background:#666;}
+div.loginBox .btnJoin {width:80px; float:left; margin-top:20px;}
+div.loginBox .btnJoin > a{ color:#5d6a82;font-size: 12px; padding-left:21px; line-height:20px;height:20px; display:block; background:url(../mobile/images/bg_join.png) no-repeat 0px 0px; background-size: 18px 18px;}
+div.loginBox .btnFind {width:120px; float:left; margin-top:20px;}
+div.loginBox .btnFind > a{ color:#5d6a82;font-size: 12px; padding-left:21px; line-height:20px;height:20px; display:block; background:url(../mobile/images/bg_find.png) no-repeat 0px 0px; background-size: 18px 18px;}
+
+
+/*로그인 페이지*/
+div.login{ width:290px; margin:0 auto 20px;; display:block; overflow:hidden; }
+div.login .txt{ margin-top:20px; color:#353747; font-size:1em; letter-spacing:-0.5px; text-align: center; margin-bottom: 15px; }
+div.login fieldset { padding:0;  }
+div.login input#tel2245212 { background:url(../mobile/images/bg_input_id.png) no-repeat 15px 7px #FFFFFF; background-size: 25px 25px; width:240px; height:40px; padding-left:50px; font-size:1em; margin-top:0px;font-weight:bold; border:1px #b7bcc7 solid;}
+div.login input#tel22452 { background:url(../mobile/images/bg_input_pw.png) no-repeat 15px 7px #FFFFFF; background-size: 25px 25px; width:240px; height:40px; padding-left:50px; font-size:1em; margin-top:5px;font-weight:bold; border:1px #b7bcc7 solid;}
+div.login input#save {margin-top:9px;}
+div.login label { vertical-align:middle; color:#4b4b4b; font-size:0.9em;   font-weight:bold; margin:7px 0px 0px 5px; display: inline-block;}
+div.login .join {  color:#4b4b4b; font-size:0.9em;   font-weight:bold; float:right; margin-top:7px; }
+div.login .btn {margin-top:20px;}
+div.login .btn > a{ color:#fff;font-size: 1.2em; background:#fe434c; width:290px; margin:0 auto; line-height:40px;height:40px; text-align: center; display:block;}
+div.login .btnJoin {width:145px; float:left; margin-top:20px;}
+div.login .btnJoin > a{ color:#5d6a82;font-size: 1em; padding-left:40px; line-height:38px;height:38px; display:block; background:url(../mobile/images/bg_join.png) no-repeat 0px 0px; background-size: 35px 35px;}
+div.login .btnFind {width:145px; float:left; margin-top:20px;}
+div.login .btnFind > a{ color:#5d6a82;font-size: 1em; padding-left:36px; line-height:38px;height:38px; display:block; background:url(../mobile/images/bg_find.png) no-repeat 0px 0px; background-size: 35px 35px;}
+
+
+
+/*회원가입 페이지*/
+div.join{  width:360px; margin:0 auto; display:block; background:#FFF;}
+div.join h1{ background:url(../images/bg_logintitle.png); line-height:30px; color:#d3d3d3; font-size:1em; font-weight:bold; width:325px;; padding-left:15px; display:block;margin-top:15px; border-radius:3px 3px 0px 0px;}
+div.join fieldset {background-color:#f0f0f0; padding:15px;  overflow:hidden;}
+div.join input#save {margin-top:9px;}
+div.join label { vertical-align:middle; color:#4b4b4b; font-size:0.9em;   font-weight:bold; margin:7px 0px 0px 5px; display: inline-block;}
+div.join .policy { background:#FFFFFF; color:#4b4b4b; font-size:0.8em;text-align:left;line-height:1.6em;height:100px;overflow:auto;border:1px solid #C6C6C6;padding:5px }
+div.join .btn {margin-top:20px;}
+div.join .btn > a{ color:#fff;font-size: 1.2em; background:#fe434c; width:330px; margin:0 auto; line-height:40px;height:40px; text-align: center; display:block;}
+
+
+/*회원가입 페이지2*/
+div.join2{  width:360px; margin:0 auto; display:block; background:#FFF; padding-bottom:20px;}
+div.join2 table .sm{ width:35%; }
+div.join2 table .md{width:50%;}
+div.join2 table .lg{width:97%;}
+div.join2 table{width:330px;border:0;border-top:2px solid #999; margin:0 auto;}
+div.join2 legend{ padding:12px 15px 0; line-height:22px; color:#86ac06;font-size:0.8em}
+div.join2 th,
+div.join2 td{padding:4px;border:0;vertical-align:top; color:#3b3b3b;font-size:0.8em;  line-height:30px; letter-spacing:-0.1em;}
+div.join2 th{color:#333}
+div.join2 td{color:#666}
+div.join2 thead th{border-bottom:1px solid #ccc;background:#f8f8f8}
+div.join2 tbody th{border-bottom:1px solid #ddd;background:#fafafa;text-align:left}
+div.join2 tfoot th{border-bottom:1px solid #ddd}
+div.join2 tbody td{border-bottom:1px solid #ddd}
+div.join2 tfoot td{border-bottom:1px solid #ddd;font-weight:bold;color:#333}
+div.join2 .i_check,
+div.join2 .i_radio{width:13px;height:13px;margin:2px 5px 2px 0;padding:0;vertical-align:middle}
+div.join2 .i_text{position:relative;margin:2px;padding:1px 2px;border:1px solid #b7b7b7;border-right-color:#e1e1e1;border-bottom-color:#e1e1e1;background:transparent; height:25px;color:#3b3b3b;font-size:1em; }
+div.join2 .hide{visibility:hidden;position:absolute;top:0;left:0;width:1px;height:1px;font-size:0;line-height:0}
+div.join2 select{margin:2px}
+div.join2 label{margin:0 10px 0 0;cursor:pointer}
+div.join2 select {height:25px;color:#3b3b3b;font-size:1em; margin:0px 0px 20px 0px; padding-right:30px; -webkit-appearance:none; border:1px solid #b7b7b7;border-right-color:#e1e1e1;border-bottom-color:#e1e1e1; background:url(../images/bg_select.gif) right no-repeat;}
+div.join2 .btn {margin-top:10px;}
+div.join2 .btn > a{ color:#fff;font-size: 1.2em; background:#fe434c; width:330px; margin:0 auto; line-height:40px;height:40px; text-align: center; display:block;}
+
+div.join3{  width:340px; margin:0 auto; display:block; font-size:1em; background:#FFF; padding:30px 10px 20px;}
+div.join3 .txt{ text-align:center;}
+div.join3 .txt2{ text-align:left; border:3px #eaeaea solid; padding:10px; margin-top:15px;}
+div.join3 .btn > a{ color:#fff;font-size: 1.2em; background:#fe434c; width:340px; margin:20px auto 0; line-height:40px;height:40px; text-align: center; display:block;}
+
+
+/*기타등등*/
+.paginate{ width:100%; text-align:center; margin-top:1em;margin-bottom:15px;}
+.paginate a { margin-left:0px; display:inline-block; width:1.8em; color:#686868; font-size:1em; line-height:1.8em; background:#ffffff; border:1px #c5c5c5 solid; }
+.paginate a.on{ margin-left:0.1em; display:inline-block;  width:1.8em; color:#fff; font-size:1em; line-height:1.8em;  background:#484848; border:1px #484848 solid;  }
+
+.btnArea {text-align:right; margin-top:1em;}
+.btnArea > .btn {background:url(../images/bg_btn.png) ; background-size: cover; display:inline-block; margin:0px 0px 0px 5px;}
+.btnArea > .btn > a{ background:url(../images/bg_btn.png) right; background-size:cover; height:25px; line-height:25px; padding:0 10px; display:block; font-size:1.1em; color:#454444; font-weight:bold; }
+.btnArea > input{background:url(../images/bg_btn.png) right, url(../images/bg_btn.png) left; height:51px; line-height:51px; padding:0 20px;  font-size:1.9em; color:#454444; font-weight:bold; border:none;}
+
+.privacyArea{height:80px; overflow-y:scroll; text-align:left; border:1px #ddd solid;width:334px; padding:5px;  margin:20px 8px 0; font-size:0.8em; line-height:1.3em;}
+.privacyText{font-size:0.9em; margin-top:5px;width:340px;  margin:5px 8px;}
+
+
+
+
+/* 큰 기기들 (큰 데스크탑, 720px 이상) */
+@media all and (min-width:720px) { 
+
+
+/*상단타이틀영역*/
+.titleArea {background:#fff;height:40px; border-bottom:1px #e8e8e8 solid;}
+.titleArea > .btn { display:none;}
+.titleArea > .title {color:#272727; font-weight:bold; font-size: 17px; font-family:'맑은 고딕'; background:url(../shop/images/dot_title3.png) no-repeat 0 14px; padding-left:23px; float:left; line-height:40px; text-align:left; width:280px;}
+.titleArea > .map { display:block; color: #797979; font-size: 11px; background:url(../shop/images/dot_home.png) no-repeat 0 1px; float:right; padding-left:17px; margin-top:17px;}
+.Viewtitle { display:none;}
+
+
+/*기타등등*/
+.paginate{ width:100%; text-align:center; margin-top:1em;margin-bottom:0; }
+.paginate a { margin-left:0px; display:inline-block; width:18px; color:#686868; font-size:11px; line-height:18px; background:#ffffff; border:1px #c5c5c5 solid; }
+.paginate a.on{ margin-left:0px; display:inline-block;  width:20px; color:#fff; font-size:11px; line-height:20px;  background:#484848; border:0;  }
+.btnArea {text-align:right; margin-top:1em;}
+.btnArea > .btn {background:url(../images/bg_btn.png) ; background-size: cover; display:inline-block; margin:0px 0px 0px 5px;}
+.btnArea > .btn > a{ background:url(../images/bg_btn.png) right; background-size:cover; height:25px; line-height:25px; padding:0 10px; display:block; font-size:11px; color:#454444; font-weight:bold; }
+.btnArea > input{background:url(../images/bg_btn.png) right, url(../images/bg_btn.png) left; height:51px; line-height:51px; padding:0 20px;  font-size:1.9em; color:#454444; font-weight:bold; border:none;}
+
+
+
+
+/*로그인 페이지*/
+div.login{ width:330px; margin:0 auto; display:block; }
+div.login .txt{ margin-top:20px;letter-spacing:0;  color:#353747; font-size:13px;font-family:'맑은 고딕'; font-weight:bold; text-align: center; margin-bottom: 15px; }
+div.login fieldset { padding:20px; border:1px #d8d8d8 solid;  }
+div.login input#tel2245212 { background:url(../mobile/images/bg_input_id.png) no-repeat 15px 7px #FFFFFF; background-size: 25px 25px; width:240px; height:40px; padding-left:50px; font-size:1em; margin-top:0px;font-weight:bold; border:1px #b7bcc7 solid;}
+div.login input#tel22452 { background:url(../mobile/images/bg_input_pw.png) no-repeat 15px 7px #FFFFFF; background-size: 25px 25px; width:240px; height:40px; padding-left:50px; font-size:1em; margin-top:5px;font-weight:bold; border:1px #b7bcc7 solid;}
+div.login input#save {margin-top:9px;}
+div.login label { color:#4b4b4b; font-size:12px; line-height:12px;   font-weight:bold; margin:0px 0px 0px 5px; display: inline-block;}
+div.login .join {  color:#4b4b4b; font-size:0.9em;   font-weight:bold; float:right; margin-top:7px; }
+div.login .btn {margin-top:20px;}
+div.login .btn > a{ color:#fff;font-size: 1.2em; background:#3b6490; width:290px; margin:0 auto; line-height:40px;height:40px; text-align: center; display:block;}
+div.login .btnJoin {width:145px; float:left; margin-top:10px;}
+div.login .btnJoin > a{ color:#5d6a82;font-size: 1em; padding-left:40px; line-height:38px;height:38px; display:block; background:url(../mobile/images/bg_join.png) no-repeat 0px 0px; background-size: 35px 35px;}
+div.login .btnFind {width:145px; float:left; margin-top:10px;}
+div.login .btnFind > a{ color:#5d6a82;font-size: 1em; padding-left:36px; line-height:38px;height:38px; display:block; background:url(../mobile/images/bg_find.png) no-repeat 0px 0px; background-size: 35px 35px;}
+
+
+/*회원가입 페이지*/
+div.join{position:relative;overflow:hidden; width:100%; margin:0 auto; background:#FFF;}
+div.join h1{ background:url(../images/bg_logintitle.png); line-height:30px; color:#d3d3d3; font-size:1em; font-weight:bold; width:325px;; padding-left:15px; display:block;margin-top:15px; border-radius:3px 3px 0px 0px;}
+div.join fieldset {background-color:#FFF; padding:15px;  overflow:hidden;}
+div.join input#save {margin-top:9px;}
+div.join label { vertical-align:middle; color:#4b4b4b; font-size:0.9em;   font-weight:bold; margin:7px 0px 0px 5px; display: inline-block;}
+div.join .policy { color:#4b4b4b; font-size:12px;text-align:left;line-height:1.6em;height:200px;overflow:auto;border:1px solid #C6C6C6;padding:5px }div.join .btn {margin-top:20px;}
+div.join .btn > a{ color:#fff;font-size: 1.2em; background:#fe434c; width:100px; margin:0 auto; line-height:40px;height:40px; text-align: center; display:block;}
+
+/*회원가입 페이지2*/
+div.join2{position:relative;overflow:hidden; width:100%; margin:0 auto; background:#FFF;}
+div.join2 table .sm{ width:35%; }
+div.join2 table .md{width:50%;}
+div.join2 table .lg{width:97%;}
+div.join2 table{width:100%;border:0;border-top:2px solid #999; margin:0 auto;}
+div.join2 legend{ padding:12px 15px 0; line-height:22px; color:#86ac06;font-size:12px}
+div.join2 th,
+div.join2 td{padding:4px;border:0;vertical-align:top; color:#3b3b3b;font-size:12px;  line-height:30px; letter-spacing:0;}
+div.join2 th{color:#333}
+div.join2 td{color:#666}
+div.join2 thead th{border-bottom:1px solid #ccc;background:#f8f8f8}
+div.join2 tbody th{border-bottom:1px solid #ddd;background:#fafafa;text-align:left}
+div.join2 tfoot th{border-bottom:1px solid #ddd}
+div.join2 tbody td{border-bottom:1px solid #ddd}
+div.join2 tfoot td{border-bottom:1px solid #ddd;font-weight:bold;color:#333}
+div.join2 .i_check,
+div.join2 .i_radio{width:13px;height:13px;margin:2px 5px 2px 0;padding:0;vertical-align:middle}
+div.join2 .i_text{position:relative;margin:2px;padding:1px 2px;border:1px solid #b7b7b7;border-right-color:#e1e1e1;border-bottom-color:#e1e1e1;background:transparent; height:25px;color:#3b3b3b;font-size:1em; }
+div.join2 .hide{visibility:hidden;position:absolute;top:0;left:0;width:1px;height:1px;font-size:0;line-height:0}
+div.join2 select{margin:2px}
+div.join2 label{margin:0 10px 0 0;cursor:pointer}
+div.join2 select {height:25px;color:#3b3b3b;font-size:1em; margin:0px 0px 20px 0px; padding-right:30px; -webkit-appearance:none; border:1px solid #b7b7b7;border-right-color:#e1e1e1;border-bottom-color:#e1e1e1; background:url(../images/bg_select.gif) right no-repeat;}
+div.join2 .btn {margin-top:10px;}
+div.join2 .btn > a{ color:#fff;font-size: 1.2em; background:#fe434c; width:100px; margin:0 auto; line-height:40px;height:40px; text-align: center; display:block;}
+
+div.join3{  width:340px; margin:0 auto; display:block; font-size:1em; padding:10px;}
+div.join3 .btn > a{ color:#fff;font-size: 1.2em; background:#fe434c; width:100px; margin:20px auto 0; line-height:40px;height:40px; text-align: center; display:block;}
+
+}

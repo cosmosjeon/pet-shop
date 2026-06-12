@@ -1,0 +1,19 @@
+HTML Tidy: unknown option: d
+HTML Tidy: unknown option: o
+HTML Tidy: unknown option: t
+HTML Tidy: unknown option: y
+HTML Tidy: unknown option: p
+Error: Can't open "html5"
+
+line 11 column 5 - Error: <header> is not recognized!
+line 11 column 5 - Warning: discarding unexpected <header>
+line 13 column 9 - Error: <nav> is not recognized!
+line 13 column 9 - Warning: discarding unexpected <nav>
+line 18 column 9 - Warning: discarding unexpected </nav>
+line 37 column 7 - Error: <nav> is not recognized!
+line 37 column 7 - Warning: discarding unexpected <nav>
+line 42 column 7 - Warning: discarding unexpected </nav>
+line 43 column 5 - Warning: discarding unexpected </header>
+line 45 column 5 - Error: <main> is not recognized!
+line 45 column 5 - Warning: discarding unexpected <main>
+line 46 column 7 - Error: <section> is not recognized!

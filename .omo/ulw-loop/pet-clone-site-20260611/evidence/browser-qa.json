@@ -1,0 +1,61 @@
+{
+  "desktopState": {
+    "title": "BB PUPPY Atelier",
+    "h1": "사랑으로 시작되는 평생의 인연",
+    "navItems": [
+      "매장소개",
+      "강아지분양",
+      "입양후기",
+      "오시는 길"
+    ],
+    "puppyCards": 8,
+    "visibleCards": 8,
+    "hasLogo": true,
+    "hasHeroLogo": true,
+    "hasFloatingCta": true,
+    "hasFooter": true,
+    "hasInternalFooterCopy": false,
+    "hasSourceReferenceAttr": false,
+    "promiseHeadingWordBreak": "keep-all",
+    "headerRect": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 105
+    },
+    "heroRect": {
+      "x": 0,
+      "y": 105,
+      "width": 1440,
+      "height": 411
+    },
+    "gridRect": {
+      "x": 80,
+      "y": 725,
+      "width": 1280,
+      "height": 745
+    },
+    "footerRect": {
+      "x": 0,
+      "y": 3681,
+      "width": 1440,
+      "height": 262
+    }
+  },
+  "mobileState": {
+    "width": 390,
+    "activeFilter": "pomeranian",
+    "visibleCards": [
+      "포메라니안 [Pomeranian]",
+      "포메라니안 [Pomeranian]"
+    ],
+    "hiddenEmptyState": true,
+    "headerHeight": 77,
+    "floatingBottom": 0,
+    "firstTitleBottom": 1054,
+    "ctaTop": 1126,
+    "titleClearOfCta": true,
+    "overflowX": false
+  },
+  "failures": []
+}

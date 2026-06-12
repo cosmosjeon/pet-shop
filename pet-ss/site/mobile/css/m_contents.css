@@ -1,0 +1,161 @@
+
+/*header{ width: 360px; margin: 0 auto }*/
+
+header{   width: 100%; margin: 0 auto; background:#; text-align: center; z-index:; }
+header > .wrapper {position:fixed; top:0; left:0; width:100%; height:60px; background:#fff; border-bottom:1px #273056 solid; z-index:9999;}
+header > .wrapper > .top_tel { position:absolute; right:15px; top:15px;}
+header > .wrapper > .top_tel img {height:30px; }
+header > .wrapper > .top_sns { position:absolute; right:50px; top:20px;}
+header > .wrapper > .top_sns ul li { float:left; margin-right:10px;}
+header > .wrapper > .top_sns img {height:20px; }
+header > .wrapper > .logo { position:absolute; left:50%; top:17px; width:260px; margin-left:-130px;}
+header > .wrapper > .logo img {height:25px; }
+
+header > .wrapper > .top_menu { position:absolute; top:60px; border-top:1px #CCC solid; width:100%; overflow:hidden;}
+header > .wrapper > .top_menu li a { display:block; float:left; width:20%; border-right:1px #CCC solid; font-size:1.0em; font-weight:600; color:#; line-height:48px; letter-spacing:-1.0px; text-align:center;}
+header > .wrapper > .top_menu li:last-child {  border-right:0px #CCC solid; }
+
+
+
+
+.visual {width: 360px; margin:60px auto 0;}
+
+
+.bannerMain {width: 360px; margin:30px auto; background:#FFFFFF; }
+.branch { overflow:hidden;}
+.branch div { float:left; width:48%; margin:1%;}
+.branch div img { width:100%;}
+
+.productListMain { overflow:hidden;}
+.productListMain li { float:left; margin:2%; width:46%; overflow:hidden; }
+.productListMain li .img  { display:block; border:0px #d4d4d4 solid; }
+.productListMain li .img img  {width:100%; height:166px; border-radius:15px;}
+.productListMain li .caption { display:block; width:100%; height:30px; line-height:1.5em; font-size:1.0em; color:#333; text-align:center; margin-top:5px; }
+
+
+
+footer {width: 360px; margin: 0 auto; background:#095f4d;  }
+footer > .banner{width: 360px; margin: 0 auto; }
+footer > address { background:#;color:#aec9c3; padding:15px 0; text-align:center; font-size:0.9em;  font-style:normal; display:block; line-height:1.3em}
+
+
+
+nav.gnb {width: 360px; margin: 0 auto; }
+
+
+#sm {overflow:hidden;  width:340px;  margin:5px auto; display:block; }
+#sm li { float:left;  }
+#sm li a {width:81px;line-height:30px;height:30px; overflow:hidden;font-size:0.9em; margin:1px; letter-spacing:-1px;color:#333; font-weight:bold; display:block;  background:#fff; border:1px #e4e4e4 solid;  text-align:center;} 
+#sm li.on a { color:#fff; background:#095f4d;border:1px #095f4d solid;}
+
+
+
+
+
+
+
+
+/* 상단타이틀영역 */
+.titleArea { position:relative;  text-align: center; overflow: hidden; background: url(../../images/bg_title.png) center top no-repeat; ; background-size:250%}
+.titleArea > .wrap {  padding:0 40px;   display: inline-block; } 
+.titleArea h1#kor { color: #454545; font-size: 1.1em; line-height:22px; font-family: '맑은 고딕';   display:inline-block;}
+.titleArea h1#eng { color: #7b4f30; font-size: 1.9em;font-family: 'Roboto Slab', serif; font-weight:normal; margin-top:36px;background:#fff; padding:0 20px;}
+
+
+
+
+
+
+section.content { width:340px; margin:0 auto; background:#FFFFFF; padding:10px 10px 40px; }
+section.content > h1 {font-family:sans-serif; color:#444; font-size:1.2em; border-bottom:1px #9b9b9b solid; padding-bottom:4px;  }
+section.content h2 {font-family:sans-serif;color: #454545; font-size: 1.1em ; margin-bottom:2px; line-height:1.1em; font-weight:bold; background:url(../images/dot_title.png) no-repeat 0px 0px;  padding-left:7px; text-align:left; }
+
+section.content .wrapper{ margin: 20px 0 0 0; }
+section.content .wrapper2{ margin: 20px 0 0 0; padding-bottom:15px; border-bottom:1px #CCC dashed; }
+
+
+section.content .tbBottom { margin-top:5px; font-family: sans-serif; color: #333333; }
+section.content .text1 { margin-top:5px; font-family: sans-serif; color: #333333;  line-height: 20px; }
+section.content .text1 strong{ color:#72bc08 }
+section.content .text2 { margin-left:15px; list-style:circle; font-family: sans-serif; color: #535353; font-size: 13px; margin-top:10px; line-height:21px; }
+section.content .text2 strong{ color:#72bc08 }
+section.content .img{ margin-top:7px; }
+section.content .contentsBox { border:1px #f5f5f5 solid; background:#fdfdfd;margin-top:8px; overflow:hidden; padding:10px; }
+
+
+
+
+
+/* 매장소개 */
+section.content .companyIntro {overflow:hidden;}
+section.content .companyIntro > .pic { margin-top:20px; }
+section.content .companyIntro > .contents {  margin-top: 0; }
+section.content .companyIntro > .contents .intro1{  font-family:'바탕체' ; color: #1d1d1d; font-size: 1.3em; line-height: 1.5em;}
+section.content .companyIntro > .contents .intro2{  font-family:'맑은 고딕' ; color: #666; font-size: 1em; line-height: 1.5em; margin-left:5px;margin-top:15px;  padding-bottom:15px; border-bottom:1px #CCC dashed }
+
+.popup-gallery  a{ display:inline-block; width:145px;  border:1px #e9e9e9 solid; padding:5px; margin:5px; }
+
+/* 분양안내 */
+section.content .petsale {overflow:hidden;}
+section.content .petsale .summery { text-align:center; font-family: '맑은 고딕'; color: #333; font-size: 1.2em;  line-height:1.5em;border-bottom:1px #CCC solid ; padding-bottom:20px; }
+	
+section.content .petsale .step { border-bottom:1px #CCC dashed;  margin-top:20px; overflow: hidden; padding:0 0 15px;} 
+section.content .petsale .step .icon {float:right; width:70px;margin-left:15px; margin-right:15px;}
+section.content .petsale .step .contents {float:left; width:225px;margin-left:15px;}
+section.content .petsale .step .contents .title {font-family: '맑은 고딕'; color: #2d2d2d; font-size: 1em; }
+section.content .petsale .step .contents .title strong { color: #007b56; font-size: 1.3em; }
+section.content .petsale .step .contents .text {font-family: '맑은 고딕'; color: #2a2a2a; font-size: 1em; margin-top:8px; line-height:1.5em; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+.list1 > li { margin-left:2px; padding-left:5px; background:url(../images/dot_title2.png) no-repeat 0px 9px; font-family: sans-serif; color: #333; font-size: 1em; margin-top:5px; line-height:20px; }
+
+ol.listNum {margin-left:23px;}
+ol.listNum > li { list-style: decimal !important;  font-family: sans-serif; color: #333;font-size: 1em; margin-top:5px; line-height:20px; }
+
+
+
+/*쇼핑몰 뷰*/
+.shopView {position:relative;overflow:hidden; width:100%; margin:0 auto; color:#222;font-family: '맑은 고딕'; font-size:1em; }
+.shopView > .top { overflow:hidden; margin-top:20px;}
+.shopView > .top > h1{ display:block; line-height:1.5em; text-align:center; background:url(../../images/bg_title.png) no-repeat center 5px; background-size: contain;font-family: 'Nanum Myeongjo', serif; font-size:1.5em; font-weight:normal }
+.shopView > .top > h1 > span{ background:#FFFFFF; padding:0 20px;}
+.shopView > .top .contents { margin-top:10px; overflow:hidden;}
+.shopView > .top .contents .item { float:left; margin:5px; overflow:hidden; width:95px; height:70px; border:1px #d2d2d2 solid; box-shadow:3px 3px 0px rgba(0, 0, 0, 0.2); text-align:center; }
+.shopView > .top .contents .item .title {background:#f4f4f4; line-height:30px;}
+.shopView > .top .contents .item .text { line-height:40px;}
+
+.shopView > .top .contents2 { margin-top:20px; text-align:center;}
+.shopView > .top .contents2 .item .title { font-weight:bold;}
+.shopView > .top .contents2 .item .text { line-height:21px; margin-top:10px;}
+
+.shopView > .imgs {  margin-top:20px; text-align:center; }
+.shopView > .imgs img{ width:340px; margin-top:10px; }
+
+
+.shopView > .detailView { clear:left; margin-top:60px; }
+.shopView > .detailView > .title {padding-left:0;  border-bottom:1px #e1e1e1 solid; border-top:1px #2d2d2d solid; }
+.shopView > .detailView > .contents { font-size:12px; line-height:18px;margin-top:20px;}
+.shopView > .afterNote {display:block;}
+
+
+/*테이블*/
+/* 테이블 */
+.tb1 { color: #333; font-size:0.8em; width:100%; border-top:2px #65574c solid; padding:0; border-spacing:0;border-collapse:collapse;  font-family: sans-serif;   }
+.tb1 caption {font-family:sans-serif;color: #454545; font-size: 1.1em ; margin-bottom:2px; line-height:1.1em; font-weight:bold; background:url(../images/dot_title.png) no-repeat 0px 0px;  padding-left:7px; text-align:left; }
+.tb1 th,.tb1 td{border:1px #CCCCCC solid; padding:6px; }
+.tb1 thead {background-color:#fcfaf8; color:#4f4035; font-weight:800; text-align:center;}
+#content .tbBottom { margin-top:5px; font-family: sans-serif; color: #333333; font-size: 12px; }
+
+
+

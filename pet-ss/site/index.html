@@ -1,0 +1,658 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>퍼피베베</title>
+<meta name="publisher" content="미래시스템 www.web25.co.kr" />
+<meta name="copyright" content="미래시스템 www.web25.co.kr" />
+<meta name="description" content="퍼피베베는 건강한 강아지 분양을 약속드립니다." />
+<meta name="keywords" content="퍼피베베, PUPPYBEBE, 애견분양, 강아지 분양, 미니비숑분양, 말티푸분양, 토이푸들분양, 비숑프리제분양, 비숑분양, 반려견 분양, 강아지, 댕댕이, 펫, 반려동물" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="퍼피베베" />
+<meta property="og:description" content="퍼피베베는 건강한 강아지 분양을 약속드립니다." />
+<meta property="og:image" content="http://puppybebe.com/dd_file/code/system/metatag_0000000000_60dd273c984delogoimg" />
+<meta property="og:url" content="http://puppybebe.com" />
+<meta name="Robots" content="INDEX, FOLLOW" /><link href="css/global.css" rel="stylesheet" type="text/css" />
+<link href="css/layout.css" rel="stylesheet" type="text/css" />
+<link href="css/index_layout.css" rel="stylesheet" type="text/css" />
+<link href="css/common.css" rel="stylesheet" type="text/css" />
+<link href="css/member.css" rel="stylesheet" type="text/css" />
+<script src="js/jquery-1.7.1.min.js"></script>
+<script src="js/slides.min.jquery.js"></script>
+<script>
+$(document).ready(function() { 
+ 
+$(".productListMain li span.img").each(function(){
+	var caption = $(this).children("img").attr("alt");
+	$(this).after("<p class='caption'>"+caption+"</p>"); 
+});
+});
+</script>
+
+<script>
+var UserAgent = navigator.userAgent;
+if(UserAgent.match(/iPhone|iPod|iPad|iPad2|Android|Windows CE|BlackBerry|Symbian|Windows Phone|webOS|Opera Mini|Opera Mobi|POLARIS|IEMobile|lgtelecom|nokia|SonyEricsson/i) != null || UserAgent.match(/LG|SAMSUNG|Samsung/) != null)
+location.href = "/mobile/";
+</script> 
+
+</head>
+<body class="bg">
+
+
+
+
+<script src="js/jquery.cookie.js"></script> 
+    
+    <style>
+.noticepop { position: absolute;  z-index: 9999; display: none; box-shadow: 0 0 5px 2px rgba(0,0,0,.35); line-height:0;}
+.notice-table { }
+.main-td { text-align: center; font-weight: bold; }
+.footer-td { text-align: right; background-color: #666; color:#CCCCCC; line-height:30px; padding-right:10px;}
+.close-text { font-weight: bold;color:#fff; line-height:30px; }
+</style>
+<!--
+<div id="div_notice" class="noticepop" style="left:0px; top:145px;">
+<img src="images/pop_01.gif" >
+<div class="footer-td"><input name="chk_no" id="chk_no" type="checkbox">
+     오늘 하루 이 창을 열지 않음 <A id=lnk_close href="#"><span class="close-text">[닫기]</span></A></div>
+
+</div> 
+-->
+<script>
+    if ($.cookie('notice') == 'done') {
+        $('#div_notice').hide();
+    }
+    else {
+        $('#div_notice').show();
+    }
+   
+    $(function () {
+        $('#lnk_close').click(function () {
+            if ($('#chk_no').is(':checked')) {
+                $.cookie('notice','done', { expires: 1 });
+            }
+               
+            $('#div_notice').hide();
+        });
+           
+        $('#lnk_del_cookie').click(function () {
+            $.removeCookie('notice');
+            $('#chk_no').removeAttr('checked');
+        });
+    });
+</script> 
+<!--
+<div id="div_notice2" class="noticepop" style="left:500px; top:145px;">
+<img src="images/pop_02.jpg" >
+<div class="footer-td"><input name="chk_no2" id="chk_no2" type="checkbox">
+     오늘 하루 이 창을 열지 않음 <A id=lnk_close2 href="#"><span class="close-text">[닫기]</span></A></div>
+
+</div>
+--> 
+<script>
+    if ($.cookie('notice2') == 'done') {
+        $('#div_notice2').hide();
+    }
+    else {
+        $('#div_notice2').show();
+    }
+   
+    $(function () {
+        $('#lnk_close2').click(function () {
+            if ($('#chk_no2').is(':checked')) {
+                $.cookie('notice2','done', { expires: 1 });
+            }
+               
+            $('#div_notice2').hide();
+        });
+           
+        $('#lnk_del_cookie2').click(function () {
+            $.removeCookie('notice2');
+            $('#chk_no2').removeAttr('checked');
+        });
+    });
+</script> 
+
+<!--<div id="div_notice3" class="noticepop" style="left: 0; top: 530px;">
+<img src="popup/180320.png" >
+<div class="footer-td"><input name="chk_no3" id="chk_no3" type="checkbox">
+     오늘 하루 이 창을 열지 않음 <A id=lnk_close3 href="#"><span class="close-text">[닫기]</span></A></div>
+
+</div>
+--> 
+<script>
+    if ($.cookie('notice3') == 'done') {
+        $('#div_notice3').hide();
+    }
+    else {
+        $('#div_notice3').show();
+    }
+   
+    $(function () {
+        $('#lnk_close3').click(function () {
+            if ($('#chk_no3').is(':checked')) {
+                $.cookie('notice3','done', { expires: 1 });
+            }
+               
+            $('#div_notice3').hide();
+        });
+           
+        $('#lnk_del_cookie3').click(function () {
+            $.removeCookie('notice3');
+            $('#chk_no3').removeAttr('checked');
+        });
+    });
+</script> 
+
+
+<!--header -->
+<div id="header">
+  <div id="kakaoBanner">
+    <img src="/images/kakaoBanner.png"  alt=""/> 
+</div>
+
+<div class="wrapper">
+
+<div id="logo"><a href="index.html"><img src="images/logo.png" class="disblock" /></a></div>
+
+
+	<script type="text/javascript">
+function bookmarksite(title,url) {
+   // Internet Explorer
+   if(document.all)
+   {
+       window.external.AddFavorite(url, title);
+   }
+   // Google Chrome
+   else if(window.chrome){
+      alert("Ctrl+D키를 누르시면 즐겨찾기에 추가하실 수 있습니다.");
+   }
+   // Firefox
+   else if (window.sidebar) // firefox
+   {
+       window.sidebar.addPanel(title, url, "");
+   }
+   // Opera
+   else if(window.opera && window.print)
+   { // opera
+      var elem = document.createElement('a');
+      elem.setAttribute('href',url);
+      elem.setAttribute('title',title);
+      elem.setAttribute('rel','sidebar');
+      elem.click();
+   }
+}
+</script>
+<div class="home">
+
+  <ul>
+    <li><a href="/">HOME</a></li>
+    <li><a href="javascript:bookmarksite('퍼피베베','http://')">BOOKMARK</a></li>
+  </ul>
+
+</div>
+	
+
+</div>
+<!-- //wrapper --></div>
+
+
+
+
+<div id="container_wrap">
+
+<div id="content_left">
+
+
+<div class="wrapper">
+
+
+
+
+
+<div id="menu"> 
+	<script type="text/javascript">
+	
+$(document).ready(function () {	
+	
+	$('#nav li').hover(
+	
+		function () {
+			//show its submenu
+			$('ul', this).slideDown(100);
+
+		}, 
+		function () {
+			//hide its submenu
+			$('ul', this).slideUp(100);			
+		}
+	);
+	
+});
+	</script>
+	<style type="text/css">
+	
+	/* remove the list style */
+	#nav {
+		margin:0; 
+		padding:0; 
+		list-style:none;
+	}	
+	
+		/* make the LI display inline */
+		/* it's position relative so that position absolute */
+		/* can be used in submenu */
+		#nav > li {
+			float:; 
+			display:block; 
+			width:; 
+			position:relative;
+			z-index:500; 
+			margin:0 0;
+		}
+		
+		/* this is the parent menu */
+		#nav > li > a {
+			display:block;
+			border-right:0px #d5d5d5 solid; margin:0;
+			line-height:30px; 
+			text-decoration:none; 
+			font-family: 'Roboto', sans-serif;
+			font-weight:400;  font-size:14px; color:#2d2d2d; letter-spacing:0.5px;
+			text-align:; 
+			
+		}
+		#nav > li:first-child > a { border-left:0px #d5d5d5 solid;}
+
+		#nav > li > a:hover {
+			color:#095f4d;
+		}
+	
+		/* you can make a different style for default selected value */
+		#nav a.selected {
+			color:#095f4d;
+		}
+	
+		/* submenu, it's hidden by default */
+		#nav ul {
+			position:absolute; 
+			left:0; 
+			display:none; 
+			margin:0 0 0 -1px; 
+			padding:0; 
+			list-style:none;
+			
+		}
+		
+		#nav ul > li {
+			 
+			width:150px;
+			border-top:1px solid #fff; background-color:#eff4f7;
+		}
+		
+		#nav ul li > a {
+			display:block; 
+			
+			width:150px;
+			line-height:35px; 
+			height:35px;
+			text-decoration:none; 
+			color:#333; 
+			text-align:center; font-size:12px; 
+		}
+
+	</style>
+	<ul id="nav">
+		<li><a href="company.html">PUPPYBEBE</a>
+			
+			<div class="clear"></div>
+		</li>
+		<li><a href="service.html">GUIDE</a>
+			
+			<div class="clear"></div>
+		</li>
+		<li><a href="list_10.html">DOG SALE</a>
+			
+			<div class="clear"></div>
+		</li>
+		<li><a href="list_20.html?area_code=20">SPECIAL ORDER</a>
+			
+			<div class="clear"></div>
+		</li>        
+		<li><a href="delivery.html">HOME DELIVERY</a>
+			
+			<div class="clear"></div>
+		</li>
+        <li><a href="chain.html">FRANCHISE</a>
+			
+			<div class="clear"></div>
+		</li>
+
+        <li><a href="afternote.html">EPILOGUE</a>
+			
+			<div class="clear"></div>
+		</li>
+        <li><a href="map.html">LOCATION</a>
+			
+			<div class="clear"></div>
+		</li>
+	</ul>
+</div>
+
+
+
+
+
+
+
+	<div class="sns">
+    <ul>
+        <li><a href="https://www.instagram.com/bebi_pet1/" target="_blank"><img src="images/top_sns_01.png" /></a></li>
+        <li><a href="#" ><img src="images/top_sns_02.png" /></a></li>
+        <li><a href="#" target="_blank"><img src="images/top_sns_03.png" /></a></li>
+        <li><a href="https://open.kakao.com/o/s3hKnjOd" target="_blank"><img src="images/top_sns_04.png" /></a></li>
+<!--        <li><img src="images/top_sns_04.png" id="kakaoBtn"/></li>-->
+        <!--<li><a href="" target="_blank"><img src="images/top_sns_05.png" /></a></li>-->
+      </ul>
+	</div>
+    <script>
+        const kakaoBtn = document.querySelector('#kakaoBtn');
+        const kakaoBanner = document.querySelector('#kakaoBanner');
+        kakaoBtn.addEventListener('click', function(){
+            kakaoBanner.classList.add('active');
+        });
+        kakaoBanner.addEventListener('click', function(){
+            kakaoBanner.classList.remove('active');
+        });
+    </script>
+    
+    
+	<div id="topTel">
+      <p>CUSTOMER</p>
+      <strong>010.2987.8300</strong>
+      24시간 상담 및 분양<br />
+      월~일요일 연중무휴
+    </div>
+	
+	
+	
+
+</div>
+<!-- //wrapper --></div>
+
+
+<div id="content_right">
+
+<div class="mainbanner">
+
+<div class="left">
+<script type="text/javascript" src="js/slide_setting.js"></script>
+<script type="text/javascript" src="js/slide_setting.min.js"></script>
+<script type="text/javascript">
+$(window).on("load",function(e){
+	maul_setting();
+	maul_gnb();
+
+	$(".main_visual .link_btn").hover(function() {
+		var src_txt = $(this).children("a").children("img").attr("src");
+		$(this).find("> a > img").attr({"src":src_txt.replace("_off","_on")});
+	},function() {
+		var src_txt = $(this).children("a").children("img").attr("src");
+		$(this).find("> a > img").attr({"src":src_txt.replace("_on","_off")});
+		
+	});	
+
+});
+</script>
+             <div class="main_visual">
+                <ul class="imgs">
+                    <li class="li_01" style="background:url(images/mainslide_01.jpg) center; background-size:cover;">
+                       <div class="mb_text" style="margin-top:160px;"><img src="images/mainslide_text_01.png" alt="" /></div>
+                    </li>
+                    
+                    <li class="li_02" style="background:url(images/mainslide_02.jpg) center; background-size:cover;">
+
+                    </li>
+                    
+                </ul>
+                 
+               <!--
+                <ul class="mv_btns">
+                    <li class="on"><a href="javascript:;">메뉴</a></li>
+                    <li><a href="javascript:;">메뉴</a></li>
+                    <li><a href="javascript:;">메뉴</a></li>
+                    <li><a href="javascript:;">메뉴</a></li>
+                    <li class="last"><a href="javascript:;">메뉴</a></li>
+               </ul>
+               -->
+               
+                <!-- 좌우 화살표 -->
+                <div class="bns">
+                <div class="bn bn_left"><a href="javascript:"><img src="images/sp_prev.png" alt="이전" /></a>
+                  <div class="blinder"></div>
+                </div>
+                <div class="bn bn_right"><a href="javascript:"><img src="images/sp_next.png" alt="다음" /></a>
+                  <div class="blinder"></div>
+                </div>
+                </div>
+                <!-- //좌우 화살표 -->
+                
+                </div>
+</div>
+
+<div class="right">
+<div class="title">
+<p>퍼피베베는</p>
+<span><strong>건강한 강아지 분양</strong>을<br>
+<strong>약속</strong>드립니다.</span>
+Healthy Complete and Balanced Pet
+</div>
+
+<div class="quick"><img src="images/mainbanner_quick.gif" alt="" border="0" usemap="#Map" />
+  <map name="Map">
+    <area shape="rect" coords="-1,1,248,171" href="company.html">
+    <area shape="rect" coords="247,2,502,166" href="service.html">
+    <area shape="rect" coords="0,163,254,338" href="chain.html">
+    <area shape="rect" coords="249,164,503,338" href="map.html">
+  </map>
+</div>
+</div>
+
+</div>
+<!-- //mainbanner -->
+
+
+<div class="promise"><img src="images/mainbanner_promise.jpg" alt="" /></div>
+
+
+<div class="pet_list">
+  <div style="margin-bottom:20px;" ><img src="images/new_happy.png" border="0" ></div>
+  <!-- #########################################################################
+  Start Header
+###########################################################################-->
+<ul class="productListMain">
+<li>
+<a href="view.html?actobj=viewgoods&g_key=1000003849">
+<span class="img over_zum"><img src="http://puppybebe.com/dd_file/goods_img/1000/0038/1000003849_images_0_m.jpg"  alt="말티푸"></span>
+</a>
+</li>
+<li>
+<a href="view.html?actobj=viewgoods&g_key=1000003848">
+<span class="img over_zum"><img src="http://puppybebe.com/dd_file/goods_img/1000/0038/1000003848_images_0_m.jpeg"  alt="말티푸"></span>
+</a>
+</li>
+<li>
+<a href="view.html?actobj=viewgoods&g_key=1000003846">
+<span class="img over_zum"><img src="http://puppybebe.com/dd_file/goods_img/1000/0038/1000003846_images_0_m.jpg"  alt="말티푸"></span>
+</a>
+</li>
+<li>
+<a href="view.html?actobj=viewgoods&g_key=1000003845">
+<span class="img over_zum"><img src="http://puppybebe.com/dd_file/goods_img/1000/0038/1000003845_images_0_m.jpg"  alt="EVENT 꼬똥 드 툴레아"></span>
+</a>
+</li>
+<li>
+<a href="view.html?actobj=viewgoods&g_key=1000003844">
+<span class="img over_zum"><img src="http://puppybebe.com/dd_file/goods_img/1000/0038/1000003844_images_0_m.jpg"  alt="꼬 숑"></span>
+</a>
+</li>
+<li>
+<a href="view.html?actobj=viewgoods&g_key=1000003843">
+<span class="img over_zum"><img src="http://puppybebe.com/dd_file/goods_img/1000/0038/1000003843_images_0_m.jpg"  alt="미니 비숑"></span>
+</a>
+</li>
+<li>
+<a href="view.html?actobj=viewgoods&g_key=1000003842">
+<span class="img over_zum"><img src="http://puppybebe.com/dd_file/goods_img/1000/0038/1000003842_images_0_m.jpg"  alt="미니 비숑(수입견)"></span>
+</a>
+</li>
+<li>
+<a href="view.html?actobj=viewgoods&g_key=1000003841">
+<span class="img over_zum"><img src="http://puppybebe.com/dd_file/goods_img/1000/0038/1000003841_images_0_m.jpg"  alt="미니 비숑"></span>
+</a>
+</li>
+<li>
+<a href="view.html?actobj=viewgoods&g_key=1000003839">
+<span class="img over_zum"><img src="http://puppybebe.com/dd_file/goods_img/1000/0038/1000003839_images_0_m.jpg"  alt="말티푸"></span>
+</a>
+</li>
+<li>
+<a href="view.html?actobj=viewgoods&g_key=1000003838">
+<span class="img over_zum"><img src="http://puppybebe.com/dd_file/goods_img/1000/0038/1000003838_images_0_m.jpg"  alt="미니 비숑"></span>
+</a>
+</li>
+<li>
+<a href="view.html?actobj=viewgoods&g_key=1000003836">
+<span class="img over_zum"><img src="http://puppybebe.com/dd_file/goods_img/1000/0038/1000003836_images_0_m.jpg"  alt="말티푸"></span>
+</a>
+</li>
+<li>
+<a href="view.html?actobj=viewgoods&g_key=1000003835">
+<span class="img over_zum"><img src="http://puppybebe.com/dd_file/goods_img/1000/0038/1000003835_images_0_m.jpg"  alt="말티푸"></span>
+</a>
+</li>
+</ul>
+
+</div>
+
+<div class="family"><a href="afternote.html"><img src="images/main_family.jpg" alt="" /></a></div>
+
+</div>
+<!-- //content_right -->
+
+</div>
+<!--//container_wrap -->
+
+
+<!-- 푸터 -->
+<div id="footer">
+  
+
+<div class="address"> <a  href=# onClick="window.open('/pop_privacy.html','pop','resizable=no top=5 left=5 width=520 height=760 scrollbars=yes');return false" ><strong style="color:#">[개인정보취급방침]</strong></a>&nbsp;&nbsp;<a href="https://web25.co.kr/consult2.html#body" target="_blank"><strong>[홈페이지 유지보수]</strong></a>&nbsp;&nbsp;<a href="/admin/" target="_blank"><strong style="color:#">[ADMIN]</strong></a><br />
+	경기도 고양시 덕양구 삼송동 354-6 1층 퍼피베베&nbsp;&nbsp;&nbsp;&nbsp;대표 : 유진희&nbsp;&nbsp;&nbsp;&nbsp;대표전화 : 010.2987.8300<br />
+  사업자등록번호 : 233-17-01529&nbsp;&nbsp;&nbsp;&nbsp;허가번호 : 제3950000-045-2021-0027호&nbsp;&nbsp;&nbsp;&nbsp;매장 운영시간 월~일요일 : 24시연중무휴<br />
+  Copyright(c) 2021 puppybebe.com&nbsp;&nbsp;&nbsp;&nbsp;All Rights Reserved.</div>
+  <div class="tel"> <img src="images/tel_footer.png"></div>
+<div class="logo"> <img src="images/logo_footer.png"></div>
+</div>
+
+
+
+
+
+<style type="text/css">
+  .popup_box 
+  { 
+    display    : none      ; /* Hide the DIV */
+    position   : fixed     ;  
+    _position  : absolute  ; /* hack for internet explorer 6 */  
+    background : #FFFFFF   ;    
+    z-index    : 10000000  ; /* Layering ( on-top of others), if you have lots of layers: I just maximized, you can change it yourself */
+    /* additional features, can be omitted */
+    border     : 0 ;      
+    -moz-box-shadow    : 0 0 5px #8e8e8e ;
+    -webkit-box-shadow : 0 0 5px #8e8e8e ;
+    box-shadow         : 0 0 5px #8e8e8e ;
+    
+  }
+  .popup_box td, .popup_box tr , .popup_box p 
+  { 
+
+    border     : 0 ; padding:0;
+    
+  }
+</style>   
+<SCRIPT language="javascript">
+<!--
+function getCookie( cookieName )
+{
+	var search = cookieName + "=";
+	var cookie = document.cookie;
+
+  // 현재 쿠키가 존재할 경우
+  if( cookie.length > 0 )
+  {
+	  // 해당 쿠키명이 존재하는지 검색한 후 존재하면 위치를 리턴.
+    startIndex = cookie.indexOf( cookieName );
+
+    // 만약 존재한다면
+    if( startIndex != -1 )
+    {
+      // 값을 얻어내기 위해 시작 인덱스 조절
+      startIndex += cookieName.length;
+      // 값을 얻어내기 위해 종료 인덱스 추출
+      endIndex = cookie.indexOf( ";", startIndex );
+      // 만약 종료 인덱스를 못찾게 되면 쿠키 전체길이로 설정
+      if( endIndex == -1) endIndex = cookie.length;
+      // 쿠키값을 추출하여 리턴
+      return unescape( cookie.substring( startIndex + 1, endIndex ) );
+    }
+    else
+    {
+      // 쿠키 내에 해당 쿠키가 존재하지 않을 경우
+      return false;
+    }
+  }
+  else
+  {
+    // 쿠키 자체가 없을 경우
+    return false;
+  }
+}
+//-->
+</SCRIPT>
+
+
+<!-- 팝업 윈도우의 자바스크립트 -->
+<SCRIPT language="javascript">
+<!--
+function setCookie( name, value, expiredays )
+{
+   var todayDate = new Date();
+   todayDate.setDate( todayDate.getDate() + expiredays );
+   document.cookie = name + "=" + escape( value ) + "; path=/; expires=" + todayDate.toGMTString() + ";"
+}
+// -->
+</SCRIPT>
+
+  
+  
+<script type="text/javascript">
+function loadPopupBox(sPopup_id) 
+{ 
+	$("#"+ sPopup_id ).fadeIn("slow") ;
+}
+
+function unloadPopupBox(sPopup_id, iDelay) 
+{ // TO Unload the Popupbox
+	if( iDelay > 0 )
+	{
+		setCookie( sPopup_id, "dd3_popup" + sPopup_id , iDelay ) ;
+	}
+	$("#"+ sPopup_id ).fadeOut("slow");
+}
+</script>   
+</body>
+</html>

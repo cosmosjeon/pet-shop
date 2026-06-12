@@ -1,0 +1,407 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>퍼피베베</title>
+<script>
+var nav1 = "분양" ;
+var nav2 = "말티푸" ;
+var titleText  ="퍼피베베 :: " + nav1 + " > " + nav2 ;
+document.getElementsByTagName("title")[0].innerHTML=titleText;
+
+</script>
+
+<link href="css/sub_layout.css" rel="stylesheet" type="text/css" />
+<link href="css/global.css" rel="stylesheet" type="text/css" />
+<link href="css/layout.css" rel="stylesheet" type="text/css" />
+<link href="css/common.css" rel="stylesheet" type="text/css" />
+<link href="css/bbs.css" rel="stylesheet" type="text/css" />
+<script src="js/jquery-1.7.1.min.js"></script>
+<!--[if lt IE 9]>
+  <script src="js/html5shiv.min.js"></script>
+  <script src="js/respond.min.js"></script>
+<![endif]-->
+
+
+<script>
+$(document).ready(function() { 
+ 
+$(".productListMain li span.img").each(function(){
+	var caption = $(this).children("img").attr("alt");
+	$(this).after("<p class='caption'>"+caption+"</p>"); 
+});
+});
+</script>
+
+</head>
+<body class="bg">
+	
+<!--header -->
+<div id="header"><div id="kakaoBanner">
+    <img src="/images/kakaoBanner.png"  alt=""/> 
+</div>
+
+<div class="wrapper">
+
+<div id="logo"><a href="index.html"><img src="images/logo.png" class="disblock" /></a></div>
+
+
+	<script type="text/javascript">
+function bookmarksite(title,url) {
+   // Internet Explorer
+   if(document.all)
+   {
+       window.external.AddFavorite(url, title);
+   }
+   // Google Chrome
+   else if(window.chrome){
+      alert("Ctrl+D키를 누르시면 즐겨찾기에 추가하실 수 있습니다.");
+   }
+   // Firefox
+   else if (window.sidebar) // firefox
+   {
+       window.sidebar.addPanel(title, url, "");
+   }
+   // Opera
+   else if(window.opera && window.print)
+   { // opera
+      var elem = document.createElement('a');
+      elem.setAttribute('href',url);
+      elem.setAttribute('title',title);
+      elem.setAttribute('rel','sidebar');
+      elem.click();
+   }
+}
+</script>
+<div class="home">
+
+  <ul>
+    <li><a href="/">HOME</a></li>
+    <li><a href="javascript:bookmarksite('퍼피베베','http://')">BOOKMARK</a></li>
+  </ul>
+
+</div>
+	
+
+</div>
+<!-- //wrapper --></div>
+	
+	
+<div id="container_wrap">
+
+<div id="content_left">
+
+
+<div class="wrapper">
+
+
+
+
+
+<div id="menu"> 
+	<script type="text/javascript">
+	
+$(document).ready(function () {	
+	
+	$('#nav li').hover(
+	
+		function () {
+			//show its submenu
+			$('ul', this).slideDown(100);
+
+		}, 
+		function () {
+			//hide its submenu
+			$('ul', this).slideUp(100);			
+		}
+	);
+	
+});
+	</script>
+	<style type="text/css">
+	
+	/* remove the list style */
+	#nav {
+		margin:0; 
+		padding:0; 
+		list-style:none;
+	}	
+	
+		/* make the LI display inline */
+		/* it's position relative so that position absolute */
+		/* can be used in submenu */
+		#nav > li {
+			float:; 
+			display:block; 
+			width:; 
+			position:relative;
+			z-index:500; 
+			margin:0 0;
+		}
+		
+		/* this is the parent menu */
+		#nav > li > a {
+			display:block;
+			border-right:0px #d5d5d5 solid; margin:0;
+			line-height:30px; 
+			text-decoration:none; 
+			font-family: 'Roboto', sans-serif;
+			font-weight:400;  font-size:14px; color:#2d2d2d; letter-spacing:0.5px;
+			text-align:; 
+			
+		}
+		#nav > li:first-child > a { border-left:0px #d5d5d5 solid;}
+
+		#nav > li > a:hover {
+			color:#095f4d;
+		}
+	
+		/* you can make a different style for default selected value */
+		#nav a.selected {
+			color:#095f4d;
+		}
+	
+		/* submenu, it's hidden by default */
+		#nav ul {
+			position:absolute; 
+			left:0; 
+			display:none; 
+			margin:0 0 0 -1px; 
+			padding:0; 
+			list-style:none;
+			
+		}
+		
+		#nav ul > li {
+			 
+			width:150px;
+			border-top:1px solid #fff; background-color:#eff4f7;
+		}
+		
+		#nav ul li > a {
+			display:block; 
+			
+			width:150px;
+			line-height:35px; 
+			height:35px;
+			text-decoration:none; 
+			color:#333; 
+			text-align:center; font-size:12px; 
+		}
+
+	</style>
+	<ul id="nav">
+		<li><a href="company.html">PUPPYBEBE</a>
+			
+			<div class="clear"></div>
+		</li>
+		<li><a href="service.html">GUIDE</a>
+			
+			<div class="clear"></div>
+		</li>
+		<li><a href="list_10.html">DOG SALE</a>
+			
+			<div class="clear"></div>
+		</li>
+		<li><a href="list_20.html?area_code=20">SPECIAL ORDER</a>
+			
+			<div class="clear"></div>
+		</li>        
+		<li><a href="delivery.html">HOME DELIVERY</a>
+			
+			<div class="clear"></div>
+		</li>
+        <li><a href="chain.html">FRANCHISE</a>
+			
+			<div class="clear"></div>
+		</li>
+
+        <li><a href="afternote.html">EPILOGUE</a>
+			
+			<div class="clear"></div>
+		</li>
+        <li><a href="map.html">LOCATION</a>
+			
+			<div class="clear"></div>
+		</li>
+	</ul>
+</div>
+
+
+
+
+
+
+
+	<div class="sns">
+    <ul>
+        <li><a href="https://www.instagram.com/bebi_pet1/" target="_blank"><img src="images/top_sns_01.png" /></a></li>
+        <li><a href="#" ><img src="images/top_sns_02.png" /></a></li>
+        <li><a href="#" target="_blank"><img src="images/top_sns_03.png" /></a></li>
+        <li><a href="https://open.kakao.com/o/s3hKnjOd" target="_blank"><img src="images/top_sns_04.png" /></a></li>
+<!--        <li><img src="images/top_sns_04.png" id="kakaoBtn"/></li>-->
+        <!--<li><a href="" target="_blank"><img src="images/top_sns_05.png" /></a></li>-->
+      </ul>
+	</div>
+    <script>
+        const kakaoBtn = document.querySelector('#kakaoBtn');
+        const kakaoBanner = document.querySelector('#kakaoBanner');
+        kakaoBtn.addEventListener('click', function(){
+            kakaoBanner.classList.add('active');
+        });
+        kakaoBanner.addEventListener('click', function(){
+            kakaoBanner.classList.remove('active');
+        });
+    </script>
+    
+    
+	<div id="topTel">
+      <p>CUSTOMER</p>
+      <strong>010.2987.8300</strong>
+      24시간 상담 및 분양<br />
+      월~일요일 연중무휴
+    </div>
+	
+	
+	
+
+</div>
+<!-- //wrapper --></div>
+
+<div id="content_right">
+
+<div class="visual" style="background:url(images/subtop_01.jpg) center; background-size:cover;"></div>
+
+<div id="container">
+		
+    <!--snb -->
+    <div class="snb">
+        <div class="menu">
+            <ul id="sm">
+                <li><a href='list_10.html?area_code=10'>전체</a></li>                <li class='on' ><a href="list_10.html?area_code=0000000006">말티푸</a></li>
+                                <li  ><a href="list_10.html?area_code=0000000003">토이푸들</a></li>
+                                <li  ><a href="list_10.html?area_code=0000000005">비숑프리제</a></li>
+                                <li  ><a href="list_10.html?area_code=0000000021">꼬똥 드 툴레아</a></li>
+                                <li  ><a href="list_10.html?area_code=0000000002">말티즈</a></li>
+                                <li  ><a href="list_10.html?area_code=0000000012">시 츄</a></li>
+                                <li  ><a href="list_10.html?area_code=0000000011">요크셔 테리어</a></li>
+                                <li  ><a href="list_10.html?area_code=0000000004">포메라니안</a></li>
+                                <li  ><a href="list_10.html?area_code=0000000025">말티폼</a></li>
+                                <li  ><a href="list_10.html?area_code=0000000007">치와와</a></li>
+                                <li  ><a href="list_10.html?area_code=0000000019">몰 키</a></li>
+                                <li  ><a href="list_10.html?area_code=0000000027">골든 두들</a></li>
+                                <li  ><a href="list_10.html?area_code=0000000010">폼스키</a></li>
+                                <li  ><a href="list_10.html?area_code=0000000023">웰시코기</a></li>
+                                <li  ><a href="list_10.html?area_code=0000000014">프렌치불독</a></li>
+                                <li  ><a href="list_10.html?area_code=0000000008">슈나우저</a></li>
+                                <li  ><a href="list_10.html?area_code=0000000015">닥스훈트</a></li>
+                                <li  ><a href="list_10.html?area_code=0000000013">페키니즈</a></li>
+                                <li  ><a href="list_10.html?area_code=0000000020">시바이누</a></li>
+                                <li  ><a href="list_10.html?area_code=0000000028">스탠다드 푸들</a></li>
+                                <li  ><a href="list_10.html?area_code=0000000018">보더 콜리</a></li>
+                                <li  ><a href="list_10.html?area_code=0000000017">EVENT</a></li>
+                            </ul>
+        </div>
+        <script>
+        title.innerHTML = nav1;
+        </script>
+    </div>
+    <!--//snb -->
+		
+    <!--content -->
+	<div id="content">
+        <div class="titleArea">
+            <h1 id="subtitle"></h1>
+            <div id="map">HOME &gt;  <span></span> &gt;  <strong><span></span></strong></div>
+            <script>
+                var map1 = document.getElementById("map").getElementsByTagName("span")[0];
+                var map2 = document.getElementById("map").getElementsByTagName("span")[1];
+                var map3 = document.getElementById("subtitle");
+                map1.innerHTML = nav1;
+                map2.innerHTML = nav2;
+                map3.innerHTML = nav2;
+            </script>
+        </div>
+        <div class="wrapper">
+            
+
+
+
+<div class="shopView">
+    <div class="top">
+        <h1><span>말티푸</span></h1>
+        <div class="contents">
+            <div class='item'><div class='title'>품종</div><div class='text'>말티푸</div></div><div class='item'><div class='title'>애칭</div><div class='text'>소보로</div></div><div class='item'><div class='title'>성별</div><div class='text'>왕자님</div></div><div class='item'><div class='title'>나이</div><div class='text'>2개월</div></div><div class='item'><div class='title'>모색</div><div class='text'>크림 파티</div></div><div class='item'><div class='title'>분양가</div><div class='text'>1,700,000원</div></div>        </div>
+	   
+	   
+	   
+	   
+	<!--건강관리-->   
+        <div class="contents2" style='display:none' >
+    		<div class="item">
+                <!--<div class="title">건강관리</div>-->
+                <div class="text"></div>
+            </div>
+		</div>
+	<!--//건강관리-->	
+    
+    
+    <!-- 고정 이미지 -->
+    <div class="contents">
+    <!--<img src="/images/detail_top.jpg" alt="" />-->
+    <img src="images/detail_tel.gif" alt="" />
+    </div>
+		
+		
+		
+    </div>
+
+    <div class="imgs">
+        <div class="bigImg"><img name="viewgoods_mimage" src="http://puppybebe.com/dd_file/goods_img/1000/0036/1000003638_images_0_m.jpg" style="max-width:800px"></div><div class="bigImg"><img name="viewgoods_mimage" src="http://puppybebe.com/dd_file/goods_img/1000/0036/1000003638_images_1_m.jpg" style="max-width:800px"></div> 
+    </div>
+
+    <div class="detailView">
+		<div class="contents">
+                    </div>
+	</div>
+	
+    <div class="detailView">
+        <div class="contents">
+            <p><img src="/dd_file/tinymce/source/detail_info.gif" alt="" /></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><img src="/dd_file/tinymce/source/detail_bottom4.jpg" alt="" /></p>        </div>
+	</div>	
+</div>
+
+<!-- Skin : /home/hosting_users/adm_w304/www/dd3_maker/cust_shop/_goods/def_clothes2/fc_viewgoods.skin.php -->            
+        </div>
+    </div>
+</div>
+
+<!--//container -->
+
+</div>
+<!-- //container_wrap -->
+
+
+<!--footer -->
+<div id="footer">
+
+
+<div class="address"> <a  href=# onClick="window.open('/pop_privacy.html','pop','resizable=no top=5 left=5 width=520 height=760 scrollbars=yes');return false" ><strong style="color:#">[개인정보취급방침]</strong></a>&nbsp;&nbsp;<a href="https://web25.co.kr/consult2.html#body" target="_blank"><strong>[홈페이지 유지보수]</strong></a>&nbsp;&nbsp;<a href="/admin/" target="_blank"><strong style="color:#">[ADMIN]</strong></a><br />
+	경기도 고양시 덕양구 삼송동 354-6 1층 퍼피베베&nbsp;&nbsp;&nbsp;&nbsp;대표 : 유진희&nbsp;&nbsp;&nbsp;&nbsp;대표전화 : 010.2987.8300<br />
+  사업자등록번호 : 233-17-01529&nbsp;&nbsp;&nbsp;&nbsp;허가번호 : 제3950000-045-2021-0027호&nbsp;&nbsp;&nbsp;&nbsp;매장 운영시간 월~일요일 : 24시연중무휴<br />
+  Copyright(c) 2021 puppybebe.com&nbsp;&nbsp;&nbsp;&nbsp;All Rights Reserved.</div>
+  <div class="tel"> <img src="images/tel_footer.png"></div>
+<div class="logo"> <img src="images/logo_footer.png"></div>
+</div>
+
+<!--//footer -->
+
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+
+/* nav menu styles */
+#nav { 
+  display: block;
+  width: 200px; 
+  margin: 0 auto; 
+  -webkit-box-shadow: 3px 2px 3px rgba(0,0,0,0.3);
+  -moz-box-shadow: 3px 2px 3px rgba(0,0,0,0.3);
+  box-shadow: 3px 2px 3px rgba(0,0,0,0.3);
+}
+
+#nav li { }
+
+#nav > li > a { /* 메인메뉴 기본상태*/
+  display: block; 
+  padding: 9px 17px;
+  font-size: 1.0em;
+  font-weight: bold;
+  color: #4e4e4e;
+  text-align:left;
+  text-decoration: none;
+  border-top:1px #b5b5b5 solid;
+  border-bottom: 0px solid #212121;
+  background-color: #000;
+  background: -webkit-gradient(linear, left top, left bottom, from(#343434), to(#fff));
+  background: -webkit-linear-gradient(top, #fff, #e8e8e8);
+  background: -moz-linear-gradient(top, #fff, #e8e8e8);
+  background: -ms-linear-gradient(top, #fff, #e8e8e8);
+  background: -o-linear-gradient(top, #fff, #e8e8e8);
+  background: linear-gradient(top, #fff, #e8e8e8);
+}
+#nav > li > a:hover, #nav > li > a.open { /* 메인메뉴 활성화*/
+  color: #fff;
+  border-bottom-color: #384f76;
+  background-color: #3170c3;
+  background: -webkit-gradient(linear, left top, left bottom, from(#48b7ed), to(#1499d9));
+  background: -webkit-linear-gradient(top, #408577, #17705d);
+  background: -moz-linear-gradient(top, #408577, #17705d);
+  background: -ms-linear-gradient(top, #408577, #17705d);
+  background: -o-linear-gradient(top, #408577, #17705d);
+  background: linear-gradient(top, #408577, #17705d);
+}
+
+#nav li ul { display: none; background: #fff; padding: 0;} /* 서브메뉴 기본상태*/
+
+#nav li ul li a { 
+  display: block; 
+  background: none;
+  font-size: 1.0em;
+  text-align:left;
+  text-decoration: none;
+  font-weight: 500;
+  color: #5d5d5d;
+  line-height:40px;
+  padding-left:24px;
+  border-bottom:1px #d2d2d2 solid;
+  /*text-shadow: 1px 1px 0px #000; */
+}
+#nav li ul li:last-child a { 
+  border-bottom:0px #d2d2d2 solid;
+  /*text-shadow: 1px 1px 0px #000; */
+}
+#nav li ul li a:hover { /* 메인메뉴 오버시*/
+  background: #656565;
+  color: #fff;
+}

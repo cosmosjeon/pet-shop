@@ -1,0 +1,52 @@
+@charset "utf-8";
+/* 기본 css */
+body {text-decoration:none; font:12px "돋움","돋움체", Arial; color:#434343; line-height:18px; }
+
+form, ul, li, div, h1, h2, h3, h5, h6, span, fieldset { border:0; margin:0; padding:0; }
+html, body, input, select { margin:0; padding:0; }
+ul, ol, li {list-style:none;}
+li img { vertical-align:top;}
+img	{ border:0px;}
+img.disblock {}
+dl, dt, dd { border:0; margin:0; padding:0; }
+
+.formLogin {text-align:left; background-color:white; border-width:1px; border-color:#d7d7d7; border-style:solid; width:83px; height:17px;}
+
+/* A태그 */
+a:link { color:#434343; text-decoration:none; }
+a:visited { color:#434343; text-decoration:none; }
+a:active { color:#434343; text-decoration:none; }
+a:hover  { color:#434343; text-decoration:none; }
+
+
+input.ed { width:97%; height:14px; border:1px solid #9A9A9A; border-right:1px solid #D8D8D8; border-bottom:1px solid #D8D8D8; padding:3px 2px 0 2px; }
+
+/* 기본정렬 */
+.floatL	{ float:left;}
+.floatR	{ float:right;}
+
+
+
+.clearLeft {
+	clear:left;
+	display: inline;
+}
+
+
+.inlineList li {
+	list-style:none;
+	display:inline;
+	float:left;
+}
+
+/* 리스트 */
+
+.listCircle{
+	list-style:circle;
+	margin-left:15px;
+
+	_margin-left:7px;
+
+
+	
+}

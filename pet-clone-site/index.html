@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BB PUPPY Atelier</title>
+    <link rel="icon" href="assets/logo.png">
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <nav class="primary-nav primary-nav-left" aria-label="주요 메뉴">
+          <a href="#about">매장소개</a>
+          <a href="#puppies">강아지분양</a>
+          <a href="#reviews">입양후기</a>
+          <a href="#contact">오시는 길</a>
+        </nav>
+
+        <a class="brand-mark" href="#top" aria-label="BB PUPPY Atelier 홈">
+          <img class="brand-logo" src="assets/logo.png" alt="BB PUPPY">
+        </a>
+
+        <div class="header-contact" aria-label="상담 전화">
+          <span>24시간 연중무휴</span>
+          <a href="tel:010-7699-0531">010-7699-0531</a>
+        </div>
+
+        <button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+      <nav class="mobile-nav" id="mobile-nav" aria-label="모바일 메뉴" hidden>
+        <a href="#about">매장소개</a>
+        <a href="#puppies">강아지분양</a>
+        <a href="#reviews">입양후기</a>
+        <a href="#contact">오시는 길</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero-section">
+        <div class="hero-inner">
+          <div class="hero-copy">
+            <img class="hero-logo" src="assets/logo.png" alt="BB PUPPY">
+            <h1>사랑으로 시작되는 평생의 인연</h1>
+            <p class="hero-lead">
+              건강보장과 전문관리 시스템으로 책임 있는 분양을 약속드립니다.
+              평생 함께할 가족, 비비퍼피에서 소중한 인연을 만나보세요.
+            </p>
+          </div>
+
+          <figure class="hero-image">
+            <img src="assets/story/hero-puppy.webp" alt="BB PUPPY 강아지 클로즈업">
+          </figure>
+        </div>
+      </section>
+
+      <section class="puppy-section" id="puppies">
+        <div class="section-inner">
+          <div class="section-heading">
+            <p class="section-kicker">BB PUPPY - PUPPIES</p>
+            <h2>오늘 만날 수 있는 아가들</h2>
+            <p>비비퍼피의 아기들을 소개합니다.</p>
+          </div>
+
+          <div class="filter-bar" aria-label="견종 필터">
+            <button class="filter-button is-active" type="button" data-filter="all">전체</button>
+            <button class="filter-button" type="button" data-filter="maltipoo">말티푸</button>
+            <button class="filter-button" type="button" data-filter="pomeranian">포메라니안</button>
+            <button class="filter-button" type="button" data-filter="bichon">비숑프리제</button>
+            <button class="filter-button" type="button" data-filter="poodle">푸들</button>
+          </div>
+
+          <div class="puppy-grid" aria-live="polite">
+            <article class="puppy-card" data-category="maltipoo hybrid">
+              <a href="#contact" aria-label="크림 말티푸 상담">
+                <img src="assets/puppies/maltipoo-cream.webp" alt="크림 말티푸 아가">
+                <span class="badge">NEW</span>
+                <div class="puppy-info">
+                  <h3>말티푸 [Maltipoo]</h3>
+                  <p>작은 체구와 차분한 눈빛이 예쁜 여아</p>
+                  <strong>상담문의</strong>
+                </div>
+              </a>
+            </article>
+
+            <article class="puppy-card" data-category="pomeranian">
+              <a href="#contact" aria-label="파티 포메라니안 상담">
+                <img src="assets/puppies/pomeranian-party.webp" alt="파티 포메라니안 아가">
+                <span class="badge">BEST</span>
+                <div class="puppy-info">
+                  <h3>포메라니안 [Pomeranian]</h3>
+                  <p>풍성한 모량과 또렷한 이목구비의 남아</p>
+                  <strong>상담문의</strong>
+                </div>
+              </a>
+            </article>
+
+            <article class="puppy-card" data-category="bichon">
+              <a href="#contact" aria-label="화이트 비숑 상담">
+                <img src="assets/puppies/bichon-white.webp" alt="화이트 비숑 아가">
+                <span class="badge">CARE</span>
+                <div class="puppy-info">
+                  <h3>미니비숑 [BichonFrise]</h3>
+                  <p>동글한 얼굴형과 밝은 성격이 돋보이는 아이</p>
+                  <strong>상담문의</strong>
+                </div>
+              </a>
+            </article>
+
+            <article class="puppy-card" data-category="poodle">
+              <a href="#contact" aria-label="애프리 푸들 상담">
+                <img src="assets/puppies/poodle-apricot.webp" alt="애프리 푸들 아가">
+                <span class="badge">SMALL</span>
+                <div class="puppy-info">
+                  <h3>푸들 [Poodle]</h3>
+                  <p>사람을 좋아하고 교감이 빠른 미니 타입</p>
+                  <strong>상담문의</strong>
+                </div>
+              </a>
+            </article>
+
+            <article class="puppy-card" data-category="coton">
+              <a href="#contact" aria-label="꼬똥드툴레아 상담">
+                <img src="assets/puppies/coton-soft.webp" alt="꼬똥드툴레아 아가">
+                <span class="badge">SOFT</span>
+                <div class="puppy-info">
+                  <h3>꼬똥드툴레아 [Coton]</h3>
+                  <p>폭신한 털결과 순한 표정이 매력적인 아이</p>
+                  <strong>상담문의</strong>
+                </div>
+              </a>
+            </article>
+
+            <article class="puppy-card" data-category="maltese">
+              <a href="#contact" aria-label="말티즈 상담">
+                <img src="assets/puppies/maltese-baby.webp" alt="말티즈 아가">
+                <span class="badge">TINY</span>
+                <div class="puppy-info">
+                  <h3>말티즈 [Maltese]</h3>
+                  <p>깨끗한 모색과 또랑또랑한 눈빛의 여아</p>
+                  <strong>상담문의</strong>
+                </div>
+              </a>
+            </article>
+
+            <article class="puppy-card" data-category="pomeranian">
+              <a href="#contact" aria-label="크림 포메라니안 상담">
+                <img src="assets/puppies/pomeranian-cream.webp" alt="크림 포메라니안 아가">
+                <span class="badge">HOT</span>
+                <div class="puppy-info">
+                  <h3>포메라니안 [Pomeranian]</h3>
+                  <p>밝은 크림빛 모색과 활발한 성격의 남아</p>
+                  <strong>상담문의</strong>
+                </div>
+              </a>
+            </article>
+
+            <article class="puppy-card" data-category="hybrid maltipoo">
+              <a href="#contact" aria-label="하이브리드 베이비 상담">
+                <img src="assets/puppies/hybrid-tiny.webp" alt="하이브리드 아가">
+                <span class="badge">LOVE</span>
+                <div class="puppy-info">
+                  <h3>하이브리드 믹스 [Hybrid Mix]</h3>
+                  <p>작고 건강한 체형에 애교가 많은 아이</p>
+                  <strong>상담문의</strong>
+                </div>
+              </a>
+            </article>
+          </div>
+
+          <p class="empty-state" id="empty-state" hidden>선택한 견종의 아가가 잠시 준비중입니다.</p>
+        </div>
+      </section>
+
+      <section class="category-band" aria-label="분양 카테고리">
+        <div class="section-inner">
+          <div class="category-table">
+            <a href="#puppies">NEW Puppies</a>
+            <a href="#puppies">꼬똥드툴레아</a>
+            <a href="#puppies">말티즈</a>
+            <a href="#puppies">콩시츄</a>
+            <a href="#puppies">말티푸</a>
+            <a href="#puppies">비숑프리제</a>
+            <a href="#puppies">푸들</a>
+            <a href="#puppies">포메라니안</a>
+            <a href="#puppies">하이브리드견</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="intro-strip" id="about">
+        <div class="section-inner intro-grid">
+          <div>
+            <p class="section-kicker">BB PUPPY CARE</p>
+            <h2>첫 만남부터 입양 이후까지 같은 온도로 케어합니다.</h2>
+          </div>
+          <p>
+            아이의 컨디션, 성향, 가족의 생활 패턴을 함께 확인하며 가장 잘 맞는 인연을 안내합니다.
+            분양 전 건강 체크와 입양 후 적응 상담까지 이어지는 조용하고 세심한 매장 경험을 기준으로 구성했습니다.
+          </p>
+        </div>
+      </section>
+
+      <section class="promise-section">
+        <div class="section-inner promise-grid">
+          <figure>
+            <img src="assets/story/hero-family.jpg" alt="분양 전 케어 약속">
+          </figure>
+          <div>
+            <p class="section-kicker">BB PUPPY PROMISE</p>
+            <h2>건강, 성향, 가족의 일상을 함께 보는 분양.</h2>
+            <p>
+              단순히 예쁜 사진만 보여주는 방식이 아니라, 아이의 현재 컨디션과 성장 환경,
+              가족과의 궁합까지 차분하게 확인하는 상담형 페이지로 설계했습니다.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="review-section" id="reviews">
+        <div class="section-inner">
+          <div class="section-heading compact">
+            <p class="section-kicker">BB PUPPY'S PRECIOUS MOMENTS REVIEW</p>
+            <h2>새 가족을 만난 순간들</h2>
+          </div>
+
+          <div class="review-grid">
+            <article class="review-card">
+              <p>“사진으로 본 분위기와 실제 상담 공간이 같아서 안심됐어요. 아이 컨디션 설명도 차분하게 들었습니다.”</p>
+              <strong>말티푸 가족</strong>
+            </article>
+            <article class="review-card">
+              <p>“처음 키우는 강아지라 걱정이 많았는데 준비물과 적응 방법까지 자세히 안내받았습니다.”</p>
+              <strong>포메라니안 가족</strong>
+            </article>
+            <article class="review-card">
+              <p>“입양 후에도 연락이 잘 이어져서 마음이 놓였습니다. 매장 톤이 따뜻하고 정돈되어 있었어요.”</p>
+              <strong>비숑프리제 가족</strong>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-section" id="contact">
+        <div class="section-inner contact-grid">
+          <div>
+            <p class="section-kicker">VISIT BB PUPPY</p>
+            <h2>상담 예약 후 편하게 방문해주세요.</h2>
+            <p>아이의 컨디션을 우선으로 보기 때문에 방문 전 전화 상담을 권장합니다.</p>
+          </div>
+          <dl class="contact-list">
+            <div>
+              <dt>상담전화</dt>
+              <dd><a href="tel:010-7699-0531">010-7699-0531</a></dd>
+            </div>
+            <div>
+              <dt>운영시간</dt>
+              <dd>24시간 연중무휴 예약 상담</dd>
+            </div>
+            <div>
+              <dt>방문안내</dt>
+              <dd>예약 시간에 맞춰 아이 컨디션과 상담실을 준비합니다.</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+    </main>
+
+    <aside class="floating-cta" aria-label="빠른 상담">
+      <a href="#contact"><span>K</span>카톡상담</a>
+      <a href="#reviews"><span>IG</span>입양후기</a>
+      <a href="tel:010-7699-0531"><span>TEL</span>전화예약</a>
+      <a href="#contact"><span>MAP</span>오시는길</a>
+    </aside>
+
+    <footer class="site-footer">
+      <div class="section-inner footer-inner">
+        <a class="footer-brand" href="#top">
+          <img src="assets/logo.png" alt="BB PUPPY">
+          <span>BB PUPPY Atelier</span>
+        </a>
+        <p>프리미엄 강아지 분양 상담 · 건강 체크 · 입양 후 케어</p>
+        <p class="footer-note">방문 전 예약 상담을 통해 아이의 컨디션과 만남 시간을 먼저 확인해주세요.</p>
+      </div>
+    </footer>
+  </body>
+</html>

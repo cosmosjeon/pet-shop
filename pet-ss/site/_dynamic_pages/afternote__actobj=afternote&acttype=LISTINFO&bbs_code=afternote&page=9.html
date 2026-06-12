@@ -1,0 +1,547 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>퍼피베베</title>
+
+<script>
+var nav1 = "커뮤니티";
+var nav2 = "분양후기";
+var titleText  ="퍼피베베 :: " + nav1 + " > " + nav2 ;
+document.getElementsByTagName("title")[0].innerHTML=titleText;
+
+</script>
+
+<link href="css/sub_layout.css" rel="stylesheet" type="text/css" />
+<link href="css/global.css" rel="stylesheet" type="text/css" />
+<link href="css/layout.css" rel="stylesheet" type="text/css" />
+<link href="css/common.css" rel="stylesheet" type="text/css" />
+<link href="css/bbs.css" rel="stylesheet" type="text/css" />
+
+<script src="js/jquery-1.7.1.min.js"></script>
+<!--[if lt IE 9]>
+  <script src="js/html5shiv.min.js"></script>
+  <script src="js/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body class="bg">
+
+
+	
+	
+<!--header -->
+	<div id="header">
+	<div id="kakaoBanner">
+    <img src="/images/kakaoBanner.png"  alt=""/> 
+</div>
+
+<div class="wrapper">
+
+<div id="logo"><a href="index.html"><img src="images/logo.png" class="disblock" /></a></div>
+
+
+	<script type="text/javascript">
+function bookmarksite(title,url) {
+   // Internet Explorer
+   if(document.all)
+   {
+       window.external.AddFavorite(url, title);
+   }
+   // Google Chrome
+   else if(window.chrome){
+      alert("Ctrl+D키를 누르시면 즐겨찾기에 추가하실 수 있습니다.");
+   }
+   // Firefox
+   else if (window.sidebar) // firefox
+   {
+       window.sidebar.addPanel(title, url, "");
+   }
+   // Opera
+   else if(window.opera && window.print)
+   { // opera
+      var elem = document.createElement('a');
+      elem.setAttribute('href',url);
+      elem.setAttribute('title',title);
+      elem.setAttribute('rel','sidebar');
+      elem.click();
+   }
+}
+</script>
+<div class="home">
+
+  <ul>
+    <li><a href="/">HOME</a></li>
+    <li><a href="javascript:bookmarksite('퍼피베베','http://')">BOOKMARK</a></li>
+  </ul>
+
+</div>
+	
+
+</div>
+<!-- //wrapper -->	</div>
+	
+<div id="container_wrap">
+
+<div id="content_left">
+
+
+<div class="wrapper">
+
+
+
+
+
+<div id="menu"> 
+	<script type="text/javascript">
+	
+$(document).ready(function () {	
+	
+	$('#nav li').hover(
+	
+		function () {
+			//show its submenu
+			$('ul', this).slideDown(100);
+
+		}, 
+		function () {
+			//hide its submenu
+			$('ul', this).slideUp(100);			
+		}
+	);
+	
+});
+	</script>
+	<style type="text/css">
+	
+	/* remove the list style */
+	#nav {
+		margin:0; 
+		padding:0; 
+		list-style:none;
+	}	
+	
+		/* make the LI display inline */
+		/* it's position relative so that position absolute */
+		/* can be used in submenu */
+		#nav > li {
+			float:; 
+			display:block; 
+			width:; 
+			position:relative;
+			z-index:500; 
+			margin:0 0;
+		}
+		
+		/* this is the parent menu */
+		#nav > li > a {
+			display:block;
+			border-right:0px #d5d5d5 solid; margin:0;
+			line-height:30px; 
+			text-decoration:none; 
+			font-family: 'Roboto', sans-serif;
+			font-weight:400;  font-size:14px; color:#2d2d2d; letter-spacing:0.5px;
+			text-align:; 
+			
+		}
+		#nav > li:first-child > a { border-left:0px #d5d5d5 solid;}
+
+		#nav > li > a:hover {
+			color:#095f4d;
+		}
+	
+		/* you can make a different style for default selected value */
+		#nav a.selected {
+			color:#095f4d;
+		}
+	
+		/* submenu, it's hidden by default */
+		#nav ul {
+			position:absolute; 
+			left:0; 
+			display:none; 
+			margin:0 0 0 -1px; 
+			padding:0; 
+			list-style:none;
+			
+		}
+		
+		#nav ul > li {
+			 
+			width:150px;
+			border-top:1px solid #fff; background-color:#eff4f7;
+		}
+		
+		#nav ul li > a {
+			display:block; 
+			
+			width:150px;
+			line-height:35px; 
+			height:35px;
+			text-decoration:none; 
+			color:#333; 
+			text-align:center; font-size:12px; 
+		}
+
+	</style>
+	<ul id="nav">
+		<li><a href="company.html">PUPPYBEBE</a>
+			
+			<div class="clear"></div>
+		</li>
+		<li><a href="service.html">GUIDE</a>
+			
+			<div class="clear"></div>
+		</li>
+		<li><a href="list_10.html">DOG SALE</a>
+			
+			<div class="clear"></div>
+		</li>
+		<li><a href="list_20.html?area_code=20">SPECIAL ORDER</a>
+			
+			<div class="clear"></div>
+		</li>        
+		<li><a href="delivery.html">HOME DELIVERY</a>
+			
+			<div class="clear"></div>
+		</li>
+        <li><a href="chain.html">FRANCHISE</a>
+			
+			<div class="clear"></div>
+		</li>
+
+        <li><a href="afternote.html">EPILOGUE</a>
+			
+			<div class="clear"></div>
+		</li>
+        <li><a href="map.html">LOCATION</a>
+			
+			<div class="clear"></div>
+		</li>
+	</ul>
+</div>
+
+
+
+
+
+
+
+	<div class="sns">
+    <ul>
+        <li><a href="https://www.instagram.com/bebi_pet1/" target="_blank"><img src="images/top_sns_01.png" /></a></li>
+        <li><a href="#" ><img src="images/top_sns_02.png" /></a></li>
+        <li><a href="#" target="_blank"><img src="images/top_sns_03.png" /></a></li>
+        <li><a href="https://open.kakao.com/o/s3hKnjOd" target="_blank"><img src="images/top_sns_04.png" /></a></li>
+<!--        <li><img src="images/top_sns_04.png" id="kakaoBtn"/></li>-->
+        <!--<li><a href="" target="_blank"><img src="images/top_sns_05.png" /></a></li>-->
+      </ul>
+	</div>
+    <script>
+        const kakaoBtn = document.querySelector('#kakaoBtn');
+        const kakaoBanner = document.querySelector('#kakaoBanner');
+        kakaoBtn.addEventListener('click', function(){
+            kakaoBanner.classList.add('active');
+        });
+        kakaoBanner.addEventListener('click', function(){
+            kakaoBanner.classList.remove('active');
+        });
+    </script>
+    
+    
+	<div id="topTel">
+      <p>CUSTOMER</p>
+      <strong>010.2987.8300</strong>
+      24시간 상담 및 분양<br />
+      월~일요일 연중무휴
+    </div>
+	
+	
+	
+
+</div>
+<!-- //wrapper --></div>
+
+
+<div id="content_right">
+	
+	<div class="visual" style="background:url(images/subtop_01.jpg) center; background-size:cover;"></div>
+
+
+
+
+	<div id="container">
+		
+    <!--snb 
+    <div class="snb">
+        <div class="menu">
+	<ul id="sm">
+
+			<li class="no1"><a href="qna.html">질문게시판</a></li>
+			<li class="no2"><a href="afternote.html">분양후기게시판</a></li>
+			</ul>        </div>
+        <script>
+	$("#sm li.no2").eq(0).addClass("on");
+	var title = document.getElementById("title");
+        title.innerHTML = nav1;
+        </script>
+    </div>
+   //snb -->
+
+
+
+<!--content -->
+		<div id="content">
+		
+			<div class="titleArea">
+				<h1 id="subtitle"></h1>
+				<div id="map">HOME &gt;  <span></span> &gt;  <strong><span></span></strong></div>
+				<script>
+				 var map1 = document.getElementById("map").getElementsByTagName("span")[0];
+				 var map2 = document.getElementById("map").getElementsByTagName("span")[1];
+				 var map3 = document.getElementById("subtitle");
+				 map1.innerHTML = nav1;
+				 map2.innerHTML = nav2;
+				 map3.innerHTML = nav2;
+				 </script>
+			   </div>
+			
+			<div class="wrapper">
+				<style type="text/css">
+<!--
+P, UL {margin-top: 0px;margin-bottom: 0px;}
+FORM {PADDING-RIGHT: 0px; DISPLAY: inline; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px}
+
+.DD_menu_top {font-family:굴림; font-size: 9pt; color: black; text-decoration: none;}
+.DD_menu_top A{font-family:굴림; font-size: 9pt; color: black; text-decoration: none;}
+.DD_menu_top A:link   	{font-family:굴림; font-size: 9pt; color: black; text-decoration: none;}
+.DD_menu_top A:visited  {font-family:굴림; font-size: 9pt; color: black; text-decoration: none;}
+.DD_menu_top A:hover	  {font-family:굴림; font-size: 9pt; color: #FF4000; text-decoration: none;}
+
+.DD_menu_box {font-size: 9pt; font-family:굴림; LETTER-SPACING: -1px; line-height: 140%; background:white ; border:solid 1 white;}
+.DD_menu_box A{font-family:굴림; font-size: 9pt; color: gray; text-decoration: none;}
+.DD_menu_box A:link   	{font-family:굴림; font-size: 9pt; color: gray; text-decoration: none;}
+.DD_menu_box A:visited  {font-family:굴림; font-size: 9pt; color: gray; text-decoration: none;}
+.DD_menu_box A:hover	  {font-family:굴림; font-size: 9pt; COLOR: black; text-decoration: none;}
+
+.DD_top_msg A{font-family:굴림; font-size: 9pt; color: black; text-decoration: none;}
+.DD_top_msg A:link   	{FONT-SIZE: 9pt; LINE-HEIGHT: 20px; FONT-FAMILY: verdana, 굴림; color: black; text-decoration: none;}
+.DD_top_msg A:visited  {FONT-SIZE: 9pt; LINE-HEIGHT: 20px; FONT-FAMILY: verdana, 굴림; color: black; text-decoration: none;}
+.DD_top_msg A:hover	  {FONT-SIZE: 9pt; LINE-HEIGHT: 20px; FONT-FAMILY: verdana, 굴림; color: #6683DF; text-decoration: none;}
+.DD_top_msg {FONT-SIZE: 9pt; COLOR: #555555; LINE-HEIGHT: 20px; FONT-FAMILY: verdana, 굴림; }
+
+.DD_cell_white   {FONT-SIZE: 12px; COLOR: #555555; BACKGROUND-COLOR: #ffffff;}
+.DD_cell_white  A:active   { color:#555555; text-decoration: none;}
+.DD_cell_white  A:link   	 { color:#555555; text-decoration: none;}
+.DD_cell_white  A:visited  { color:#555555; text-decoration: none;}
+.DD_cell_white  A:hover	   { color:#000; text-decoration: none;}
+
+.DD_cell_lblue   {FONT-SIZE: 9pt; COLOR: #555555; BACKGROUND-COLOR: #BEC7EB;FONT-FAMILY:돋움; LETTER-SPACING:0px;}
+.DD_cell_gray    {FONT-SIZE: 9pt; COLOR: #555555; BACKGROUND-COLOR: #E7E4DB;FONT-FAMILY:돋움; LETTER-SPACING:0px;}
+.DD_cell_blank   {FONT-SIZE: 9pt; COLOR: #555555; FONT-FAMILY:돋움; LETTER-SPACING:0px;}
+.DD_cell_blank  A:active   { color:#3787D9; text-decoration: none;}
+.DD_cell_blank  A:link   	 { color:#3787D9; text-decoration: none;}
+.DD_cell_blank  A:visited  { color:#3787D9; text-decoration: none;}
+.DD_cell_blank  A:hover	   { color:#3787D9; text-decoration: none;}
+
+.DD_cell_hangul  {FONT-SIZE: 9pt; COLOR: #555555; FONT-FAMILY:굴림; LETTER-SPACING:0px; }
+
+.DD_input_text  {color:#666666;padding:2px;margin:2px;font-size:12px;background-color: #FFFFFF;border: 1px solid #C6C6C6;}
+.DD_input_file  {color:#666666;padding:2px;font-size:12px;background-color: #FFFFFF;border: 1px solid #C6C6C6;}
+
+.DD_select      {font-family :돋움;PADDING-TOP: 2px; color:#666666;font-size:11px;background-color: #FFFFFF;border: 1px solid #C6C6C6;height:19px}
+.DD_input_blue  {font-family :돋움;PADDING-TOP: 2px; color:#0000FF;font-size:12px;background-color: #FFFFFF;border: 1px solid #C6C6C6;}
+.DD_input_red   {font-family :돋움;PADDING-TOP: 2px; color:red;font-size:12px;background-color: #FFFFFF;border: 1px solid #C6C6C6;}
+.DD_input_none  {font-family :돋움;PADDING-TOP: 2px; color:#666666;font-size:12px;background-color: #FFFFFF;border: 0px none;}
+
+.DD_button_blue   {color:#FFFFFF;padding:2px;font-size:12px;background-color: #3787D9;border:1px solid #1A528A;}
+.DD_button_dgray  {color:#FFFFFF;padding:2px;font-size:12px;background-color: #808080;border:1px solid #000000;}
+.DD_button_green  {color:#FFFFFF;padding:2px;font-size:12px;background-color: #20AD07;border:1px solid #136604;}
+.DD_button_red    {color:#FFFFFF;padding:2px;font-size:12px;background-color: #E4403F;border:1px solid #7B1111;}
+
+.DD_div_none    {font-family :돋움;color:#666666;font-size:12px;border: 0px none;}
+.DD_div_scrollbox {BORDER-RIGHT: 0px; PADDING-RIGHT: 0px; BORDER-TOP: 0px; PADDING-LEFT: 0px; SCROLLBAR-WIDTH:10px; SCROLLBAR-FACE-COLOR: #ffffff; PADDING-BOTTOM: 0px; SCROLLBAR-HIGHLIGHT-COLOR: #f2f2f2; OVERFLOW:auto; BORDER-LEFT: 0px; SCROLLBAR-SHADOW-COLOR: #7f7f7f; COLOR: #686868; SCROLLBAR-3DLIGHT-COLOR: #ffffff; SCROLLBAR-ARROW-COLOR: #666666; PADDING-TOP: 0px; BORDER-BOTTOM: 0px; SCROLLBAR-DARKSHADOW-COLOR: #ffffff; SCROLLBAR-BASE-COLOR: #ffffff}
+-->
+</style>
+<!-- List Tag Search -->
+   
+    
+<div class="bbsSort">
+ 검색 : <font color="#2D8CF9">849</font> 개
+</div>
+<script>
+  function fn_afternote_fctest()
+  {
+    var winopts = "scrollbars=yes, resizable=yes,left=100,top=100,width=700,height=400";
+    board = window.open("http://puppybebe.com/dd3_maker/_mgr.main/fc_popup.html?actobj=pp_xboard&bbs_code=afternote" , 'fo_join', winopts);
+  }
+</script>
+<div class="bbsSearch">
+    <form name="afternote_se" action="/afternote.html" method=get>
+    <input type=hidden name=actobj    value="afternote">
+    <input type=hidden name=acttype   value="LISTINFO">
+    <input type=hidden name=bbs_code  value="afternote">
+            <input type="hidden" name="sub_code" value="" />
+        
+    제 목 :
+    <INPUT class="i_text md" name='subject' value=''>
+    <span class="btnArea"><span class="btn"><a href="javascript:fn_afternote_search()">검색</a></span></span>
+</form>
+</div>
+<script>
+function fn_afternote_search()
+{
+afternote_se.submit() ;
+}
+</script>
+
+<ul class="galleryList">
+<a href="javascript:afternote_view('79769088796155_64fefc44916f3')">
+<li>
+	<div class="pic"><img src="http://puppybebe.com/dd_file/dd3_file/2023/09/11/phpJrXmfw.jpeg" width="100%" height="100%" border="0"></div>
+	<div class="contents"> 
+        <span class="title">
+                        23.09.11 말티푸 분양 후기 입니다^^        </span> 
+    </div>
+</li>
+</a>
+<a href="javascript:afternote_view('79769088806247_64feee008c2a2')">
+<li>
+	<div class="pic"><img src="http://puppybebe.com/dd_file/dd3_file/2023/09/11/phphsY71d.jpeg" width="100%" height="100%" border="0"></div>
+	<div class="contents"> 
+        <span class="title">
+                        23.09.11 비숑 프리제 분양 후기 입니다^^        </span> 
+    </div>
+</li>
+</a>
+<a href="javascript:afternote_view('79769089816953_64fd8cc6c1be7')">
+<li>
+	<div class="pic"><img src="http://puppybebe.com/dd_file/dd3_file/2023/09/10/phpUq8DEw.jpeg" width="100%" height="100%" border="0"></div>
+	<div class="contents"> 
+        <span class="title">
+                        23.09.10 말티푸 분양 후기 입니다^^        </span> 
+    </div>
+</li>
+</a>
+<a href="javascript:afternote_view('79769089826177_64fd807e93199')">
+<li>
+	<div class="pic"><img src="http://puppybebe.com/dd_file/dd3_file/2023/09/10/phplAh20E.jpeg" width="100%" height="100%" border="0"></div>
+	<div class="contents"> 
+        <span class="title">
+                        23.09.10 말티푸 분양 후기 입니다^^        </span> 
+    </div>
+</li>
+</a>
+<a href="javascript:afternote_view('79769089877283_64fd379403d73')">
+<li>
+	<div class="pic"><img src="http://puppybebe.com/dd_file/dd3_file/2023/09/10/phpDu1hEF.jpeg" width="100%" height="100%" border="0"></div>
+	<div class="contents"> 
+        <span class="title">
+                        23.09.09 말티푸 분양 후기 입니다^^        </span> 
+    </div>
+</li>
+</a>
+<a href="javascript:afternote_view('79769091809446_64faf2011641c')">
+<li>
+	<div class="pic"><img src="http://puppybebe.com/dd_file/dd3_file/2023/09/08/phpV7hovs.jpeg" width="100%" height="100%" border="0"></div>
+	<div class="contents"> 
+        <span class="title">
+                        23.09.08 비숑 프리제 분양 후기 입니다^^        </span> 
+    </div>
+</li>
+</a>
+<a href="javascript:afternote_view('79769091809493_64faf1d2c3256')">
+<li>
+	<div class="pic"><img src="http://puppybebe.com/dd_file/dd3_file/2023/09/08/phpzvR8Vn.jpeg" width="100%" height="100%" border="0"></div>
+	<div class="contents"> 
+        <span class="title">
+                        23.09.08 비숑 프리제 분양 후기 입니다^^        </span> 
+    </div>
+</li>
+</a>
+<a href="javascript:afternote_view('79769095817349_64f5a2da09187')">
+<li>
+	<div class="pic"><img src="http://puppybebe.com/dd_file/dd3_file/2023/09/04/phpmTsLQN.jpeg" width="100%" height="100%" border="0"></div>
+	<div class="contents"> 
+        <span class="title">
+                        23.09.04 비숑 프리제 분양 후기 입니다^^        </span> 
+    </div>
+</li>
+</a>
+<a href="javascript:afternote_view('79769096819961_64f44b36126a1')">
+<li>
+	<div class="pic"><img src="http://puppybebe.com/dd_file/dd3_file/2023/09/03/phphJgtYJ.jpeg" width="100%" height="100%" border="0"></div>
+	<div class="contents"> 
+        <span class="title">
+                        23.09.03 말티푸 분양 후기 입니다^^        </span> 
+    </div>
+</li>
+</a>
+<a href="javascript:afternote_view('79769098787555_64f1d80c46916')">
+<li>
+	<div class="pic"><img src="http://puppybebe.com/dd_file/dd3_file/2023/09/01/php3SMUnL.jpeg" width="100%" height="100%" border="0"></div>
+	<div class="contents"> 
+        <span class="title">
+                        23.09.01 말티푸 분양 후기 입니다^^        </span> 
+    </div>
+</li>
+</a>
+</ul>
+<div class="paginate"> 
+  <div class="paginate">
+<a href="/afternote.html?actobj=afternote&acttype=LISTINFO&bbs_code=afternote&page=1">&lt;</a>
+ <a href='/afternote.html?actobj=afternote&acttype=LISTINFO&bbs_code=afternote&page=1'>1</a>  <a href='/afternote.html?actobj=afternote&acttype=LISTINFO&bbs_code=afternote&page=2'>2</a>  <a href='/afternote.html?actobj=afternote&acttype=LISTINFO&bbs_code=afternote&page=3'>3</a>  <a href='/afternote.html?actobj=afternote&acttype=LISTINFO&bbs_code=afternote&page=4'>4</a>  <a href='/afternote.html?actobj=afternote&acttype=LISTINFO&bbs_code=afternote&page=5'>5</a>  <a href='/afternote.html?actobj=afternote&acttype=LISTINFO&bbs_code=afternote&page=6'>6</a>  <a href='/afternote.html?actobj=afternote&acttype=LISTINFO&bbs_code=afternote&page=7'>7</a>  <a href='/afternote.html?actobj=afternote&acttype=LISTINFO&bbs_code=afternote&page=8'>8</a>  <a href='/afternote.html?actobj=afternote&acttype=LISTINFO&bbs_code=afternote&page=9' class='on'>9</a>  <a href='/afternote.html?actobj=afternote&acttype=LISTINFO&bbs_code=afternote&page=10'>10</a> <a href="/afternote.html?actobj=afternote&acttype=LISTINFO&bbs_code=afternote&page=11">&gt;</a>
+</div>
+</div>
+<div class="btnArea"> 
+  </div>
+
+<script language="javascript">
+function afternote_view(sBbs_key)
+{
+  location.href = "/afternote.html?actobj=afternote&acttype=VIEWINFO&bbs_code=afternote&bbs_key="+sBbs_key+"" ;
+}
+function fn_afternote_insert()
+{
+  location.href = "/afternote.html?actobj=afternote&acttype=INSERTINFO&bbs_code=afternote" ;
+}
+</script>
+
+
+			</div>
+		</div>
+		
+<!--//content -->
+	
+	
+	
+	
+		
+
+	</div>
+	
+</div>
+<!-- //container_wrap -->
+	
+	
+<!--<div class="bottom_tel"><img src="images/bottom_tel.jpg" alt="" /></div>-->	
+	
+	
+<!--footer -->
+	<div id="footer">
+		
+
+<div class="address"> <a  href=# onClick="window.open('/pop_privacy.html','pop','resizable=no top=5 left=5 width=520 height=760 scrollbars=yes');return false" ><strong style="color:#">[개인정보취급방침]</strong></a>&nbsp;&nbsp;<a href="https://web25.co.kr/consult2.html#body" target="_blank"><strong>[홈페이지 유지보수]</strong></a>&nbsp;&nbsp;<a href="/admin/" target="_blank"><strong style="color:#">[ADMIN]</strong></a><br />
+	경기도 고양시 덕양구 삼송동 354-6 1층 퍼피베베&nbsp;&nbsp;&nbsp;&nbsp;대표 : 유진희&nbsp;&nbsp;&nbsp;&nbsp;대표전화 : 010.2987.8300<br />
+  사업자등록번호 : 233-17-01529&nbsp;&nbsp;&nbsp;&nbsp;허가번호 : 제3950000-045-2021-0027호&nbsp;&nbsp;&nbsp;&nbsp;매장 운영시간 월~일요일 : 24시연중무휴<br />
+  Copyright(c) 2021 puppybebe.com&nbsp;&nbsp;&nbsp;&nbsp;All Rights Reserved.</div>
+  <div class="tel"> <img src="images/tel_footer.png"></div>
+<div class="logo"> <img src="images/logo_footer.png"></div>
+	</div>
+	
+<!--//footer -->
+
+
+</body>
+</html>

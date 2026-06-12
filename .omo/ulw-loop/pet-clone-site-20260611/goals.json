@@ -1,0 +1,61 @@
+{
+  "version": 1,
+  "createdAt": "2026-06-11T11:56:40.094Z",
+  "updatedAt": "2026-06-11T12:40:20.273Z",
+  "briefPath": ".omo/ulw-loop/pet-clone-site-20260611/brief.md",
+  "goalsPath": ".omo/ulw-loop/pet-clone-site-20260611/goals.json",
+  "ledgerPath": ".omo/ulw-loop/pet-clone-site-20260611/ledger.jsonl",
+  "codexGoalMode": "aggregate",
+  "goals": [
+    {
+      "id": "G001-build-a-new-static-puppy-shop-websit",
+      "title": "Build a new static puppy-shop website under /Users/cosmos/Documents/p...",
+      "objective": "Build a new static puppy-shop website under /Users/cosmos/Documents/pet that feels immediately almost identical in mood to local references pet-ss2 and pet-ss. Reuse local design patterns and assets heavily: BB PUPPY-like header, beige/charcoal/Pretendard visual language, hero with puppy imagery, babies category grid, product cards, review/contact sections, floating CTA rail, and responsive mobile behavior. Must write tests before implementation, capture RED then GREEN output, serve locally, and perform browser QA screenshots/artifacts. Do not publish or copy sensitive tokens; do not use backend dependencies.",
+      "status": "complete",
+      "successCriteria": [
+        {
+          "id": "C001",
+          "scenario": "Browser use: start python3 -m http.server 8790 in pet-clone-site, open http://127.0.0.1:8790/index.html with headless Chrome 1440x1300; PASS iff screenshot contains BB PUPPY-style centered logo/header, beige hero, puppies grid, floating CTA rail, and footer without backend errors blocking render. Automated test paired: node --test pet-clone-site/tests/site-structure.test.mjs --test-name-pattern desktop-source-heavy-layout.",
+          "userModel": "happy",
+          "expectedEvidence": ".omo/ulw-loop/pet-clone-site-20260611/evidence/C001-desktop-browser.png plus RED/GREEN test logs .omo/ulw-loop/pet-clone-site-20260611/evidence/C001-red.txt and C001-green.txt",
+          "capturedEvidence": "RED: evidence/C001-red.txt failed before files existed. GREEN: evidence/C001-green.txt passes node --test. Browser: evidence/C001-desktop-browser.png shows centered BB PUPPY header/logo, split beige hero, puppy grid, floating CTA, footer; browser-qa.json desktopState has 8 cards, heroRect 411px, footer true, no request failures.",
+          "status": "pass",
+          "capturedAt": "2026-06-11T12:30:19.943Z"
+        },
+        {
+          "id": "C002",
+          "scenario": "Browser use: start python3 -m http.server 8790 in pet-clone-site, open http://127.0.0.1:8790/index.html with headless Chrome mobile viewport 390x1200; click category button [data-filter='pomeranian']; PASS iff mobile header remains usable, grid filters to pomeranian cards, empty state remains hidden, and no text clipping is visible. Automated test paired: node --test pet-clone-site/tests/site-structure.test.mjs --test-name-pattern mobile-filter-and-empty-state.",
+          "userModel": "edge",
+          "expectedEvidence": ".omo/ulw-loop/pet-clone-site-20260611/evidence/C002-mobile-filter.png plus RED/GREEN test logs .omo/ulw-loop/pet-clone-site-20260611/evidence/C002-red.txt and C002-green.txt",
+          "capturedEvidence": "RED: evidence/C002-red.txt failed before files existed. GREEN: evidence/C002-green.txt passes node --test. Browser: evidence/C002-mobile-filter.png after real click [data-filter=pomeranian]; browser-qa.json activeFilter=pomeranian, visibleCards=2, hiddenEmptyState=true, titleClearOfCta=true, overflowX=false.",
+          "status": "pass",
+          "capturedAt": "2026-06-11T12:30:19.974Z"
+        },
+        {
+          "id": "C003",
+          "scenario": "HTTP call: with pet-clone-site served at http://127.0.0.1:8790, run curl -i for /index.html, /styles.css, /app.js, and selected copied assets; PASS iff each returns HTTP/1.0 200 or HTTP/1.1 200 and grep of new source finds no instagram_access_token, access_token, puppybebe.com, bbpuppy.co.kr, imweb.me absolute outbound source links. Automated test paired: node --test pet-clone-site/tests/site-structure.test.mjs --test-name-pattern no-sensitive-or-remote-runtime-leaks.",
+          "userModel": "regression",
+          "expectedEvidence": ".omo/ulw-loop/pet-clone-site-20260611/evidence/C003-http-and-safety.txt plus RED/GREEN test logs .omo/ulw-loop/pet-clone-site-20260611/evidence/C003-red.txt and C003-green.txt",
+          "capturedEvidence": "Tightened RED: evidence/C003-red.txt fails on forbidden runtime leak pet-ss before marker removal. GREEN: evidence/C003-green.txt passes node --test after removal and favicon link. HTTP/safety: evidence/C003-http-and-safety.txt regenerated at 2026-06-11T12:38:06Z shows 200 for index/styles/app/logo/favicon/hero/assets and forbidden scan passes for tokens, external URLs, source domains, pet-ss/pet-ss2/source-reference, and internal reference copy. Browser: browser-qa.json has hasSourceReferenceAttr=false and hasInternalFooterCopy=false. Cleanup: server stopped, lsof port 8790 empty.",
+          "status": "pass",
+          "capturedAt": "2026-06-11T12:40:02.400Z"
+        }
+      ],
+      "attempt": 0,
+      "createdAt": "2026-06-11T11:56:40.094Z",
+      "updatedAt": "2026-06-11T12:40:20.273Z",
+      "completedAt": "2026-06-11T12:40:20.273Z",
+      "evidence": "Implemented pet-clone-site static BB PUPPY-style site. Tests: RED captured for missing files plus tightened C003 leak RED, current C001/C002/C003 green logs pass. Browser QA: desktop and mobile screenshots captured; visual QA Pass A/B and final ultrawork reviewer PASS. HTTP/safety: 200s for current index/styles/app/assets and no token/external/source-reference leaks. Server cleaned up; port 8790 is free."
+    }
+  ],
+  "codexObjective": "Complete the durable ulw-loop plan in .omo/ulw-loop/pet-clone-site-20260611/goals.json, including later accepted/appended stories, under the original brief constraints; use .omo/ulw-loop/pet-clone-site-20260611/ledger.jsonl as the audit trail.",
+  "aggregateCompletion": {
+    "status": "complete",
+    "completedAt": "2026-06-11T12:40:20.273Z",
+    "evidence": "Implemented pet-clone-site static BB PUPPY-style site. Tests: RED captured for missing files plus tightened C003 leak RED, current C001/C002/C003 green logs pass. Browser QA: desktop and mobile screenshots captured; visual QA Pass A/B and final ultrawork reviewer PASS. HTTP/safety: 200s for current index/styles/app/assets and no token/external/source-reference leaks. Server cleaned up; port 8790 is free.",
+    "codexGoal": {
+      "status": "complete",
+      "objective": "Complete the durable ulw-loop plan in .omo/ulw-loop/pet-clone-site-20260611/goals.json, including later accepted/appended stories, under the original brief constraints; use .omo/ulw-loop/pet-clone-site-20260611/ledger.jsonl as the audit trail."
+    }
+  }
+}
