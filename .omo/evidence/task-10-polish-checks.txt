@@ -1,0 +1,79 @@
+# Task 10 polish checks
+Date: 2026-06-13T15:20:03Z
+
+## RED proof before fix
+Initial forbidden scan failed because site-structure.test.mjs carried direct forbidden literals while asserting runtime files do not leak them.
+Captured offending matches before fix: BB PUPPY / 비비퍼피 / 010-7699-0531 / token/domain literals in pet-clone-site/tests/site-structure.test.mjs.
+
+## GREEN: node --test pet-clone-site/tests/site-structure.test.mjs
+✔ healthdog-brand-branches-and-sections (1.68025ms)
+✔ proof-and-generated-assets-exist (0.453708ms)
+✔ runtime-sources-have-no-forbidden-strings-and-local-assets-exist (0.7885ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 3
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 41.723917
+
+## GREEN: forbidden runtime string scan across pet-clone-site
+FORBIDDEN_SCAN=PASS no forbidden runtime strings found
+
+## files over 5MB
+OVER_5MB=PASS no files over 5MB
+
+## files over 1.5MB advisory
+ADVISORY=PASS no files over 1.5MB listed above
+
+## tel links
+29:          <a href="tel:1600-4533">1600-4533</a>
+59:              <a class="button button-dark" href="tel:1600-4533">전화 상담 1600-4533</a>
+73:            <a href="tel:1600-4533">대표번호 1600-4533</a>
+379:              <dd><a href="tel:1600-4533">1600-4533</a></dd>
+395:      <a href="tel:1600-4533"><span>TEL</span>전화상담</a>
+
+## target blank rel noopener
+{
+  "externalBlank": 6,
+  "missingNoopener": 0
+}
+
+## image alt summary
+{
+  "imgCount": 25,
+  "missingAlt": 0
+}
+
+## generated poster/banner nearby DOM summaries
+307:            <img src="assets/healthdog/generated/care-promise-poster.svg" alt="헬스독 평생 케어 약속 포스터">
+311:            <h2>헬스독 평생 케어 약속</h2>
+313:              분양 전부터 분양 후까지, 보호자와 반려견이 안심할 수 있도록 건강 체크 안내,
+324:            <h2 id="promise-banner-title">처음부터 건강하게, 가까운 6개 지점에서 투명하게.</h2>
+327:            <img src="assets/healthdog/generated/promise-banner.svg" alt="처음부터 건강하게, 실제 후기와 투명한 상담, 가까운 6개 지점 안내 배너">
+
+## sticky CTA CSS
+675:.floating-cta {
+689:.floating-cta a {
+702:.floating-cta a:last-child {
+703:  border-bottom: 0;
+706:.floating-cta span {
+819:  .floating-cta {
+826:    padding-bottom: 76px;
+934:  .floating-cta {
+937:    bottom: 0;
+946:  .floating-cta a {
+948:    min-height: 72px;
+950:    border-bottom: 0;
+953:  .floating-cta a:last-child {
+957:  .floating-cta span {
+
+## cleanup
+No server started for shell checks; temporary /tmp/task-10-over5mb.txt removed.
+
+## mobile footer browser evidence
+- Screenshot: `.omo/evidence/task-10-mobile-footer.png` cropped from a temporary Chrome window opened at `http://127.0.0.1:8790/index.html#contact`.
+- Metrics: `.omo/evidence/task-10-mobile-footer-metrics.json`.
+- Metric summary: no horizontal overflow, body padding-bottom `76px`, sticky CTA height `74px`, footer text present above CTA.
+- Cleanup: temporary Chrome profile `/tmp/healthdog-visible-chrome.*` removed; local server stopped with Ctrl-C; `lsof -nP -iTCP:8790 -sTCP:LISTEN` returned no listener.

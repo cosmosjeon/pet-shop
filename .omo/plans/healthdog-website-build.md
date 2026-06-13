@@ -372,7 +372,7 @@ Critical path: Todo 1 -> Todo 4 -> Todo 5 -> Todo 7 -> Todo 9 -> Todo 11.
   - In-app browser: navigate, resize desktop/mobile, screenshot, click filters, click mobile nav, click sticky CTAs, click branch map links.
   Commit: N | Verification only | Evidence files
 
-- [ ] 10. Polish performance, accessibility, and local hygiene
+- [x] 10. Polish performance, accessibility, and local hygiene
   What to do / Must NOT do
   - Add meaningful `alt` text for logo, pet photos, review photos, generated poster/banner.
   - Ensure phone CTAs use `tel:1600-4533`.

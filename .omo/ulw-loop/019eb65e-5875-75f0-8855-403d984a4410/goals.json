@@ -1,7 +1,7 @@
 {
   "version": 1,
   "createdAt": "2026-06-12T12:59:44.215Z",
-  "updatedAt": "2026-06-12T13:00:30.950Z",
+  "updatedAt": "2026-06-13T15:08:07.836Z",
   "briefPath": ".omo/ulw-loop/019eb65e-5875-75f0-8855-403d984a4410/brief.md",
   "goalsPath": ".omo/ulw-loop/019eb65e-5875-75f0-8855-403d984a4410/goals.json",
   "ledgerPath": ".omo/ulw-loop/019eb65e-5875-75f0-8855-403d984a4410/ledger.jsonl",
@@ -11,7 +11,7 @@
       "id": "G001-execute-the-approved-prometheus-plan",
       "title": "Execute the approved Prometheus plan at .omo/plans/healthdog-website-...",
       "objective": "Execute the approved Prometheus plan at .omo/plans/healthdog-website-build.md end-to-end. Use the Prometheus plan checkboxes as the authoritative task breakdown; verify with automated commands, real browser/manual QA evidence, independent review, cleanup receipts, atomic commits, and the already requested GitHub push when complete.",
-      "status": "pending",
+      "status": "in_progress",
       "successCriteria": [
         {
           "id": "C001",
@@ -38,10 +38,12 @@
           "status": "pending"
         }
       ],
-      "attempt": 0,
+      "attempt": 1,
       "createdAt": "2026-06-12T12:59:44.215Z",
-      "updatedAt": "2026-06-12T13:00:30.950Z"
+      "updatedAt": "2026-06-13T15:08:07.836Z",
+      "startedAt": "2026-06-13T15:08:07.836Z"
     }
   ],
-  "codexObjective": "Complete the durable ulw-loop plan in .omo/ulw-loop/019eb65e-5875-75f0-8855-403d984a4410/goals.json, including later accepted/appended stories, under the original brief constraints; use .omo/ulw-loop/019eb65e-5875-75f0-8855-403d984a4410/ledger.jsonl as the audit trail."
+  "codexObjective": "Complete the durable ulw-loop plan in .omo/ulw-loop/019eb65e-5875-75f0-8855-403d984a4410/goals.json, including later accepted/appended stories, under the original brief constraints; use .omo/ulw-loop/019eb65e-5875-75f0-8855-403d984a4410/ledger.jsonl as the audit trail.",
+  "activeGoalId": "G001-execute-the-approved-prometheus-plan"
 }

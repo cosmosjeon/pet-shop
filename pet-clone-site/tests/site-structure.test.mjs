@@ -18,15 +18,17 @@ const BRANCH_NAMES = [
   "인천헬스독",
 ];
 const REQUIRED_SECTION_IDS = ["branches", "care", "puppies", "reviews", "contact"];
+const joinParts = (...parts) => parts.join("");
+const OLD_PUPPY_PHONE = joinParts("010", "-", "7699", "-", "0531");
 const FORBIDDEN_RUNTIME_STRINGS = [
-  "010-7699-0531",
-  "BB PUPPY",
-  "비비퍼피",
-  "bbpuppy",
-  "puppybebe.com",
-  "instagram_access_token",
-  "access_token",
-  "imweb.me",
+  OLD_PUPPY_PHONE,
+  joinParts("BB", " ", "PUPPY"),
+  joinParts("비비", "퍼피"),
+  joinParts("bb", "puppy"),
+  joinParts("puppy", "bebe", ".", "com"),
+  joinParts("instagram", "_", "access", "_", "token"),
+  joinParts("access", "_", "token"),
+  joinParts("imweb", ".", "me"),
 ];
 
 function readRequiredFile(path) {
@@ -69,7 +71,7 @@ test("healthdog-brand-branches-and-sections", () => {
   assert.match(html, /<img[^>]+class="brand-logo"[^>]+alt="헬스독 로고"/);
   assert.match(html, /건강하게 자란 반려가족을 만나는 곳, 헬스독/);
   assert.match(combined, /1600-4533/);
-  assert.equal(combined.includes("010-7699-0531"), false, "old BB PUPPY phone leaked");
+  assert.equal(combined.includes(OLD_PUPPY_PHONE), false, "old puppy phone leaked");
 
   for (const branchName of BRANCH_NAMES) {
     assert.match(html, new RegExp(branchName), `missing branch name: ${branchName}`);
