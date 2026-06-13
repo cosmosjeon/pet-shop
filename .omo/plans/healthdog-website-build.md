@@ -289,7 +289,7 @@ Critical path: Todo 1 -> Todo 4 -> Todo 5 -> Todo 7 -> Todo 9 -> Todo 11.
   - Console evidence: list browser console messages after interaction; save no-error result to `.omo/evidence/task-6-console.txt`.
   Commit: Y | `feat(site): wire healthdog interactions` | `pet-clone-site/app.js`, optional `pet-clone-site/content.js`, tests
 
-- [ ] 7. Replace structure tests with Health Dog assertions
+- [x] 7. Replace structure tests with Health Dog assertions
   What to do / Must NOT do
   - Update `pet-clone-site/tests/site-structure.test.mjs` from BB PUPPY assertions to Health Dog assertions.
   - Tests must assert:
@@ -317,7 +317,7 @@ Critical path: Todo 1 -> Todo 4 -> Todo 5 -> Todo 7 -> Todo 9 -> Todo 11.
   - Shell evidence: `node --test pet-clone-site/tests/site-structure.test.mjs > .omo/evidence/task-7-node-test.txt`.
   Commit: Y | `test(site): assert healthdog structure` | `pet-clone-site/tests/site-structure.test.mjs`
 
-- [ ] 8. Verify and wire branch map links
+- [x] 8. Verify and wire branch map links
   What to do / Must NOT do
   - Attempt to verify direct Naver Place links for all six branches using browser or web lookup.
   - If exact direct Place ID is ambiguous, use the fallback Naver Map search URL from `updated-build-plan.md`.

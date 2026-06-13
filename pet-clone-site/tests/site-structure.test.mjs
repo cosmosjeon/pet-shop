@@ -7,102 +7,128 @@ const SITE_ROOT = resolve(import.meta.dirname, "..");
 const INDEX_PATH = join(SITE_ROOT, "index.html");
 const STYLES_PATH = join(SITE_ROOT, "styles.css");
 const SCRIPT_PATH = join(SITE_ROOT, "app.js");
+const CONTENT_PATH = join(SITE_ROOT, "content.js");
+const RUNTIME_SOURCE_PATHS = [INDEX_PATH, STYLES_PATH, SCRIPT_PATH, CONTENT_PATH];
+const BRANCH_NAMES = [
+  "창원헬스독",
+  "부산헬스독",
+  "송파헬스독",
+  "수원헬스독",
+  "평택헬스독",
+  "인천헬스독",
+];
+const REQUIRED_SECTION_IDS = ["branches", "care", "puppies", "reviews", "contact"];
+const FORBIDDEN_RUNTIME_STRINGS = [
+  "010-7699-0531",
+  "BB PUPPY",
+  "비비퍼피",
+  "bbpuppy",
+  "puppybebe.com",
+  "instagram_access_token",
+  "access_token",
+  "imweb.me",
+];
 
 function readRequiredFile(path) {
   assert.ok(existsSync(path), `expected file to exist: ${path}`);
   return readFileSync(path, "utf8");
 }
 
-function extractLocalAssetPaths(html) {
-  const matches = [...html.matchAll(/\b(?:src|href)=["']([^"']+)["']/g)];
-  return matches
-    .map((match) => match[1])
-    .filter((value) => !value.startsWith("#"))
-    .filter((value) => !value.startsWith("tel:"))
-    .filter((value) => !value.startsWith("mailto:"))
-    .filter((value) => !value.startsWith("javascript:"));
+function extractReferences(html) {
+  return [...html.matchAll(/\b(?:src|href)=["']([^"']+)["']/g)].map((match) => match[1]);
 }
 
-test("desktop-source-heavy-layout", () => {
-  // Given: a static page intended to feel like the pet-ss2/pet-ss references.
+function isLocalReference(value) {
+  return (
+    !value.startsWith("#") &&
+    !value.startsWith("//") &&
+    !/^[a-z][a-z0-9+.-]*:/i.test(value)
+  );
+}
+
+function extractLocalAssetPaths(html) {
+  return extractReferences(html)
+    .filter(isLocalReference)
+    .map((value) => value.split(/[?#]/)[0])
+    .filter(Boolean);
+}
+
+function extractExternalUrls(html) {
+  return extractReferences(html).filter((value) => /^https?:\/\//i.test(value));
+}
+
+function readRuntimeSources() {
+  return RUNTIME_SOURCE_PATHS.map((path) => readRequiredFile(path)).join("\n");
+}
+
+test("healthdog-brand-branches-and-sections", () => {
   const html = readRequiredFile(INDEX_PATH);
-  const css = readRequiredFile(STYLES_PATH);
+  const combined = readRuntimeSources();
 
-  // When: the source is inspected for the desktop visual contract.
-  const productCards = [...html.matchAll(/class="puppy-card\b/g)];
-  const sectionIds = ["about", "puppies", "reviews", "contact"];
+  assert.match(html, /<title>헬스독 \| 건강하게 자란 반려가족 상담<\/title>/);
+  assert.match(html, /<img[^>]+class="brand-logo"[^>]+alt="헬스독 로고"/);
+  assert.match(html, /건강하게 자란 반려가족을 만나는 곳, 헬스독/);
+  assert.match(combined, /1600-4533/);
+  assert.equal(combined.includes("010-7699-0531"), false, "old BB PUPPY phone leaked");
 
-  // Then: the same family markers are present as real DOM, not a flat screenshot.
-  assert.match(html, /<header class="site-header"/);
-  assert.match(html, /<img[^>]+class="brand-logo"/);
-  assert.match(html, /매장소개/);
-  assert.match(html, /강아지분양/);
-  assert.match(html, /입양후기/);
-  assert.match(html, /오시는 길/);
-  assert.match(html, /사랑으로 시작되는 평생의 인연/);
-  assert.match(html, /BB PUPPY\s*[-–]\s*PUPPIES/);
-  assert.ok(productCards.length >= 8, "expected at least eight puppy cards");
-  for (const sectionId of sectionIds) {
-    assert.match(html, new RegExp(`id="${sectionId}"`), `missing #${sectionId}`);
+  for (const branchName of BRANCH_NAMES) {
+    assert.match(html, new RegExp(branchName), `missing branch name: ${branchName}`);
   }
-  assert.match(html, /class="floating-cta"/);
-  assert.match(css, /--brand:\s*#363636/);
-  assert.match(css, /--accent:\s*#bfb49c/);
-  assert.match(css, /--soft:\s*#fcf9f5/);
-  assert.match(css, /max-width:\s*1280px/);
+  for (const sectionId of REQUIRED_SECTION_IDS) {
+    assert.match(html, new RegExp(`id=["']${sectionId}["']`), `missing #${sectionId}`);
+  }
+
+  const puppyCards = [...html.matchAll(/class=["'][^"']*\bpuppy-card\b/g)];
+  assert.ok(puppyCards.length >= 12, "expected at least twelve puppy cards");
 });
 
-test("mobile-filter-and-empty-state", () => {
-  // Given: the mobile surface should stay usable and support category filtering.
+test("proof-and-generated-assets-exist", () => {
   const html = readRequiredFile(INDEX_PATH);
-  const css = readRequiredFile(STYLES_PATH);
-  const js = readRequiredFile(SCRIPT_PATH);
+  const localAssetPaths = extractLocalAssetPaths(html);
+  const reviewProofPaths = localAssetPaths.filter((assetPath) =>
+    assetPath.startsWith("assets/healthdog/reviews/"),
+  );
+  const generatedAssetPaths = localAssetPaths.filter((assetPath) =>
+    assetPath.startsWith("assets/healthdog/generated/"),
+  );
 
-  // When: the source is inspected for responsive and filter behavior.
-  const filterButtons = [...html.matchAll(/data-filter="([^"]+)"/g)].map((match) => match[1]);
-  const pomeranianCards = [...html.matchAll(/data-category="[^"]*pomeranian[^"]*"/g)];
+  assert.ok(reviewProofPaths.length >= 6, "expected review proof images in the HTML");
+  assert.ok(
+    [
+      "assets/healthdog/generated/care-promise-poster.svg",
+      "assets/healthdog/generated/promise-banner.svg",
+      "assets/healthdog/generated/service-guide-grid.svg",
+    ].every((assetPath) => generatedAssetPaths.includes(assetPath)),
+    "expected all generated Health Dog assets to be referenced",
+  );
 
-  // Then: mobile navigation, filter targets, and empty state behavior are implemented.
-  assert.match(html, /class="mobile-menu-toggle"/);
-  assert.ok(filterButtons.includes("all"), "missing all filter");
-  assert.ok(filterButtons.includes("pomeranian"), "missing pomeranian filter");
-  assert.ok(pomeranianCards.length >= 2, "expected at least two pomeranian cards");
-  assert.match(html, /id="empty-state"/);
-  assert.match(css, /@media\s*\(max-width:\s*760px\)/);
-  assert.match(css, /\.floating-cta/);
-  assert.match(js, /querySelectorAll\('\[data-filter\]'\)/);
-  assert.match(js, /toggleAttribute\("hidden"/);
-  assert.match(js, /category\.includes\(selectedFilter\)/);
+  for (const localPath of [...reviewProofPaths, ...generatedAssetPaths]) {
+    const target = join(dirname(INDEX_PATH), localPath);
+    assert.ok(existsSync(target), `referenced Health Dog asset is missing: ${localPath}`);
+  }
 });
 
-test("no-sensitive-or-remote-runtime-leaks", () => {
-  // Given: source mirrors contain absolute URLs and token-like runtime values.
-  const files = [INDEX_PATH, STYLES_PATH, SCRIPT_PATH];
-  const contents = files.map((path) => readRequiredFile(path));
-  const html = contents[0];
-  const combined = contents.join("\n");
-
-  // When: the new site source and asset references are inspected.
-  const forbidden = [
-    "instagram_access_token",
-    "access_token",
-    "puppybebe.com",
-    "bbpuppy.co.kr",
-    "imweb.me",
-    "pet-ss",
-    "pet-ss2",
-    "source-reference",
-    "http://",
-    "https://",
-  ];
+test("runtime-sources-have-no-forbidden-strings-and-local-assets-exist", () => {
+  const html = readRequiredFile(INDEX_PATH);
+  const combined = readRuntimeSources();
   const localAssetPaths = extractLocalAssetPaths(html);
+  const externalUrls = extractExternalUrls(html);
+  const naverMapUrls = externalUrls.filter((url) => url.startsWith("https://map.naver.com/"));
 
-  // Then: the runtime is self-contained and all referenced local files exist.
-  for (const value of forbidden) {
+  for (const value of FORBIDDEN_RUNTIME_STRINGS) {
     assert.equal(combined.includes(value), false, `forbidden leak found: ${value}`);
   }
+
   assert.ok(localAssetPaths.includes("styles.css"), "expected stylesheet reference");
+  assert.ok(localAssetPaths.includes("content.js"), "expected content script reference");
   assert.ok(localAssetPaths.includes("app.js"), "expected script reference");
+  assert.ok(naverMapUrls.length >= BRANCH_NAMES.length, "expected Naver map links for branches");
+  assert.equal(
+    localAssetPaths.some((localPath) => /^https?:\/\//i.test(localPath)),
+    false,
+    "local asset validation must ignore external URLs",
+  );
+
   for (const localPath of localAssetPaths) {
     const target = join(dirname(INDEX_PATH), localPath);
     assert.ok(existsSync(target), `referenced local asset is missing: ${localPath}`);
