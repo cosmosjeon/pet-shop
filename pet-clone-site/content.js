@@ -154,7 +154,7 @@
         { label: "푸들", value: "poodle" },
         { label: "비숑", value: "bichon" },
         { label: "소형견", value: "small" },
-        { label: "중대형견", value: "medium-large" },
+        { label: "중대형견", value: "medium" },
       ],
     },
 

@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import { existsSync, readFileSync } from "node:fs";
 import { dirname, join, resolve } from "node:path";
 import { test } from "node:test";
+import vm from "node:vm";
 
 const SITE_ROOT = resolve(import.meta.dirname, "..");
 const INDEX_PATH = join(SITE_ROOT, "index.html");
@@ -18,6 +19,20 @@ const BRANCH_NAMES = [
   "인천헬스독",
 ];
 const REQUIRED_SECTION_IDS = ["branches", "care", "puppies", "reviews", "contact"];
+const REQUIRED_RETAINED_HEALTHDOG_ASSETS = [
+  "assets/healthdog/pets/pet-13-basket-panda.webp",
+  "assets/healthdog/pets/pet-14-gray-basket.webp",
+  "assets/healthdog/pets/pet-15-black-handheld.webp",
+  "assets/healthdog/pets/pet-16-brown-closeup.webp",
+  "assets/healthdog/pets/pet-17-white-lounge.webp",
+  "assets/healthdog/pets/pet-18-tricolor-closeup.webp",
+  "assets/healthdog/reviews/review-04-vertical-sign.webp",
+  "assets/healthdog/reviews/review-07-lobby-proof.webp",
+  "assets/healthdog/reviews/review-08-pair-proof.webp",
+  "assets/healthdog/reviews/review-10-social-card.webp",
+  "assets/healthdog/reviews/review-11-text-proof.webp",
+  "assets/healthdog/reviews/review-12-text-proof.webp",
+];
 const joinParts = (...parts) => parts.join("");
 const OLD_PUPPY_PHONE = joinParts("010", "-", "7699", "-", "0531");
 const FORBIDDEN_RUNTIME_STRINGS = [
@@ -59,6 +74,22 @@ function extractExternalUrls(html) {
   return extractReferences(html).filter((value) => /^https?:\/\//i.test(value));
 }
 
+function extractAttributeValues(html, attributeName) {
+  const attributePattern = new RegExp(`\\b${attributeName}=["']([^"']+)["']`, "g");
+  return [...html.matchAll(attributePattern)].map((match) => match[1]);
+}
+
+function parseHealthDogContent() {
+  const source = readRequiredFile(CONTENT_PATH);
+  const sandbox = {
+    module: { exports: {} },
+  };
+
+  vm.runInNewContext(source, sandbox, { filename: CONTENT_PATH });
+  assert.ok(sandbox.module.exports?.filters?.pet, "expected content.js to export pet filters");
+  return sandbox.module.exports;
+}
+
 function readRuntimeSources() {
   return RUNTIME_SOURCE_PATHS.map((path) => readRequiredFile(path)).join("\n");
 }
@@ -81,7 +112,34 @@ test("healthdog-brand-branches-and-sections", () => {
   }
 
   const puppyCards = [...html.matchAll(/class=["'][^"']*\bpuppy-card\b/g)];
-  assert.ok(puppyCards.length >= 12, "expected at least twelve puppy cards");
+  assert.ok(puppyCards.length >= 18, "expected at least eighteen puppy cards");
+});
+
+test("content-pet-filters-match-rendered-filter-and-card-category-values", () => {
+  const html = readRequiredFile(INDEX_PATH);
+  const content = parseHealthDogContent();
+  const contentFilterValues = Array.from(content.filters.pet, (filter) =>
+    String(filter.value),
+  ).sort();
+  const renderedFilterValues = extractAttributeValues(html, "data-filter").sort();
+  const cardCategoryTokens = new Set(
+    extractAttributeValues(html, "data-category").flatMap((value) =>
+      value.split(/\s+/).filter((token) => token && token !== "all"),
+    ),
+  );
+
+  assert.deepEqual(
+    contentFilterValues,
+    renderedFilterValues,
+    "content.js pet filter values must exactly match rendered data-filter values",
+  );
+
+  for (const token of cardCategoryTokens) {
+    assert.ok(
+      contentFilterValues.includes(token),
+      `card category token must exist in rendered/content filter values: ${token}`,
+    );
+  }
 });
 
 test("proof-and-generated-assets-exist", () => {
@@ -103,6 +161,13 @@ test("proof-and-generated-assets-exist", () => {
     ].every((assetPath) => generatedAssetPaths.includes(assetPath)),
     "expected all generated Health Dog assets to be referenced",
   );
+
+  for (const retainedAssetPath of REQUIRED_RETAINED_HEALTHDOG_ASSETS) {
+    assert.ok(
+      localAssetPaths.includes(retainedAssetPath),
+      `expected retained Health Dog asset to be referenced: ${retainedAssetPath}`,
+    );
+  }
 
   for (const localPath of [...reviewProofPaths, ...generatedAssetPaths]) {
     const target = join(dirname(INDEX_PATH), localPath);
