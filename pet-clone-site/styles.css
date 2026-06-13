@@ -384,7 +384,7 @@ h3 {
 }
 
 .filter-bar {
-  display: none;
+  display: flex;
   flex-wrap: wrap;
   gap: 10px;
   margin-bottom: 26px;
