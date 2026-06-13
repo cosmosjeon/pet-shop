@@ -1,7 +1,7 @@
 {
   "version": 1,
   "createdAt": "2026-06-12T12:59:44.215Z",
-  "updatedAt": "2026-06-13T15:08:07.836Z",
+  "updatedAt": "2026-06-13T16:14:19.114Z",
   "briefPath": ".omo/ulw-loop/019eb65e-5875-75f0-8855-403d984a4410/brief.md",
   "goalsPath": ".omo/ulw-loop/019eb65e-5875-75f0-8855-403d984a4410/goals.json",
   "ledgerPath": ".omo/ulw-loop/019eb65e-5875-75f0-8855-403d984a4410/ledger.jsonl",
@@ -18,16 +18,18 @@
           "scenario": "Browser happy path: after all Prometheus checkboxes complete, start python3 -m http.server 8790 --directory pet-clone-site, open http://127.0.0.1:8790/index.html in the in-app browser, capture desktop and mobile screenshots; PASS iff first viewport clearly presents 헬스독, phone 1600-4533, real pet imagery, branch CTA, and no broken major layout.",
           "userModel": "happy",
           "expectedEvidence": ".omo/evidence/task-9-desktop-fullpage.png + .omo/evidence/task-9-mobile-fullpage.png + .omo/evidence/task-9-visual-qa.md with cleanup receipt for server/browser state",
-          "capturedEvidence": null,
-          "status": "pending"
+          "capturedEvidence": "Browser happy path passed: .omo/evidence/task-9-desktop-fullpage.png, .omo/evidence/task-9-mobile-fullpage.png, .omo/evidence/task-9-visual-qa.md, .omo/evidence/final-browser-smoke.json; final metrics show Health Dog first viewport, 1600-4533, 18 puppy cards, 12 proof cards, 37 images, 0 broken images, mobile overflow false | cleanup: closed in-app browser tab and reset viewport; stopped python http.server session 3439; lsof -nP -iTCP:8790 -sTCP:LISTEN returned empty; review subagents closed",
+          "status": "pass",
+          "capturedAt": "2026-06-13T16:14:19.083Z"
         },
         {
           "id": "C002",
           "scenario": "Regression and guardrail commands: run node --test pet-clone-site/tests/site-structure.test.mjs, rg required Health Dog strings, and rg forbidden BB PUPPY/secret/commerce/unconfirmed medical-claim strings; PASS iff tests pass, required data is present, forbidden strings are absent or documented as source-only false positives in evidence.",
           "userModel": "edge",
           "expectedEvidence": ".omo/evidence/task-11-final-commands.txt + .omo/evidence/final-scope-fidelity.txt with exact command outputs and cleanup receipt",
-          "capturedEvidence": null,
-          "status": "pending"
+          "capturedEvidence": "Regression/guardrail passed: .omo/evidence/task-11-final-commands.txt, .omo/evidence/final-scope-fidelity.txt, .omo/evidence/final-code-quality.txt; node:test 4/4 pass; app/content node --check pass; required Health Dog strings present; forbidden/stale strings absent; no checkout/cart or unconfirmed medical claims | cleanup: no QA server/browser/worker left open; lsof 8790 empty",
+          "status": "pass",
+          "capturedAt": "2026-06-13T16:14:19.114Z"
         },
         {
           "id": "C003",
@@ -40,7 +42,7 @@
       ],
       "attempt": 1,
       "createdAt": "2026-06-12T12:59:44.215Z",
-      "updatedAt": "2026-06-13T15:08:07.836Z",
+      "updatedAt": "2026-06-13T16:14:19.114Z",
       "startedAt": "2026-06-13T15:08:07.836Z"
     }
   ],

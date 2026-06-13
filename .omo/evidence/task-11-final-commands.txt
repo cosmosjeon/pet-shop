@@ -1,0 +1,153 @@
+# Todo 11 final commands
+timestamp: 2026-06-13T16:10:07.358Z
+head: a11e12b
+## node --test pet-clone-site/tests/site-structure.test.mjs
+$ node --test pet-clone-site/tests/site-structure.test.mjs
+TAP version 13
+# Subtest: healthdog-brand-branches-and-sections
+ok 1 - healthdog-brand-branches-and-sections
+  ---
+  duration_ms: 1.765583
+  type: 'test'
+  ...
+# Subtest: content-pet-filters-match-rendered-filter-and-card-category-values
+ok 2 - content-pet-filters-match-rendered-filter-and-card-category-values
+  ---
+  duration_ms: 1.03975
+  type: 'test'
+  ...
+# Subtest: proof-and-generated-assets-exist
+ok 3 - proof-and-generated-assets-exist
+  ---
+  duration_ms: 0.516
+  type: 'test'
+  ...
+# Subtest: runtime-sources-have-no-forbidden-strings-and-local-assets-exist
+ok 4 - runtime-sources-have-no-forbidden-strings-and-local-assets-exist
+  ---
+  duration_ms: 1.597
+  type: 'test'
+  ...
+1..4
+# tests 4
+# suites 0
+# pass 4
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 62.604875
+exit=0
+
+## node --check pet-clone-site/app.js
+$ node --check pet-clone-site/app.js
+exit=0
+
+## node --check pet-clone-site/content.js
+$ node --check pet-clone-site/content.js
+exit=0
+
+## git status --short --branch
+$ git status --short --branch
+## main...origin/main [ahead 10]
+ M .omo/ulw-loop/019eb65e-5875-75f0-8855-403d984a4410/ledger.jsonl
+?? .omo/evidence/final-ai-slop-cleaner.txt
+?? .omo/evidence/final-browser-smoke.json
+?? .omo/evidence/final-code-quality.txt
+?? .omo/evidence/final-debugging-audit.md
+?? .omo/evidence/final-manual-qa.md
+?? .omo/evidence/final-scope-fidelity.txt
+?? .omo/evidence/omo-bug-audit-20260614.md
+?? .omo/evidence/task-11-final-commands.txt
+exit=0
+
+## git diff --stat origin/main...HEAD
+$ git diff --stat origin/main...HEAD
+ .omo/boulder.json                                  |  14 +
+ .omo/drafts/healthdog-website-plan-gate.md         |  36 ++
+ .omo/evidence/task-1-asset-board.jpg               | Bin 0 -> 892077 bytes
+ .omo/evidence/task-1-assets-list.txt               |  37 ++
+ .omo/evidence/task-1-source-asset-cleanup.txt      |  53 +++
+ .omo/evidence/task-10-mobile-footer-metrics.json   |   1 +
+ .omo/evidence/task-10-mobile-footer.png            | Bin 0 -> 112868 bytes
+ .omo/evidence/task-10-polish-checks.txt            |  79 ++++
+ .omo/evidence/task-2-content-scan.txt              |  48 ++
+ .omo/evidence/task-3-generated-desktop.png         | Bin 0 -> 437329 bytes
+ .omo/evidence/task-3-generated-korean-review.md    |  73 +++
+ .omo/evidence/task-3-generated-mobile.png          | Bin 0 -> 253659 bytes
+ .omo/evidence/task-4-html-baseline.txt             |  20 +
+ .omo/evidence/task-4-html-checks.txt               | 192 ++++++++
+ .omo/evidence/task-4-html-desktop.png              | Bin 0 -> 4035471 bytes
+ .omo/evidence/task-5-baseline.txt                  |  21 +
+ .omo/evidence/task-5-css-scan.txt                  |  35 ++
+ .omo/evidence/task-5-desktop.png                   | Bin 0 -> 18570768 bytes
+ .omo/evidence/task-5-mobile.png                    | Bin 0 -> 11201673 bytes
+ .omo/evidence/task-6-baseline.txt                  |  10 +
+ .omo/evidence/task-6-console.txt                   | 169 +++++++
+ .omo/evidence/task-6-filter.png                    | Bin 0 -> 704624 bytes
+ .omo/evidence/task-7-node-test.txt                 |  45 ++
+ .omo/evidence/task-8-branch-link-check.md          |  29 ++
+ .omo/evidence/task-8-map-links.txt                 |  29 ++
+ .omo/evidence/task-9-branch-cta.png                | Bin 0 -> 114119 bytes
+ .omo/evidence/task-9-browser-metrics.json          |   1 +
+ .omo/evidence/task-9-desktop-fullpage.png          | Bin 0 -> 6041196 bytes
+ .omo/evidence/task-9-filter-state.png              | Bin 0 -> 306354 bytes
+ .omo/evidence/task-9-generated-korean-crop.png     | Bin 0 -> 277936 bytes
+ .omo/evidence/task-9-image-diff.json               |  19 +
+ .omo/evidence/task-9-mobile-fullpage.png           | Bin 0 -> 12937042 bytes
+ .omo/evidence/task-9-visual-qa.md                  |  65 +++
+ .omo/plans/healthdog-website-build.md              | 464 ++++++++++++++++++++
+ .omo/start-work/ledger.jsonl                       |  14 +
+ .omo/start-work/notepad.md                         |  27 ++
+ .../019eb65e-5875-75f0-8855-403d984a4410/brief.md  |   1 +
+ .../goals.json                                     |  49 +++
+ .../ledger.jsonl                                   |   7 +
+ pet-clone-site/app.js                              |  60 ++-
+ .../healthdog/generated/care-promise-poster.svg    |  83 ++++
+ .../assets/healthdog/generated/promise-banner.svg  |  71 +++
+ .../healthdog/generated/service-guide-grid.svg     | 102 +++++
+ .../assets/healthdog/logo/healthdog-logo.png       | Bin 0 -> 56245 bytes
+ .../healthdog/pets/pet-01-white-outdoor.webp       | Bin 0 -> 161286 bytes
+ .../assets/healthdog/pets/pet-02-brown-desk.webp   | Bin 0 -> 192772 bytes
+ .../healthdog/pets/pet-03-black-white-desk.webp    | Bin 0 -> 176438 bytes
+ .../assets/healthdog/pets/pet-04-tan-handheld.webp | Bin 0 -> 293798 bytes
+ .../healthdog/pets/pet-05-black-tan-outdoor.webp   | Bin 0 -> 423084 bytes
+ .../assets/healthdog/pets/pet-06-lap-pair.webp     | Bin 0 -> 341220 bytes
+ .../healthdog/pets/pet-07-charcoal-desk.webp       | Bin 0 -> 227942 bytes
+ .../healthdog/pets/pet-08-gray-handheld.webp       | Bin 0 -> 368388 bytes
+ .../assets/healthdog/pets/pet-09-white-turf.webp   | Bin 0 -> 415610 bytes
+ .../healthdog/pets/pet-10-black-white-outdoor.webp | Bin 0 -> 226678 bytes
+ .../healthdog/pets/pet-11-basket-black-white.webp  | Bin 0 -> 136454 bytes
+ .../assets/healthdog/pets/pet-12-black-pair.webp   | Bin 0 -> 113064 bytes
+ .../assets/healthdog/pets/pet-13-basket-panda.webp | Bin 0 -> 151766 bytes
+ .../assets/healthdog/pets/pet-14-gray-basket.webp  | Bin 0 -> 150808 bytes
+ .../healthdog/pets/pet-15-black-handheld.webp      | Bin 0 -> 205364 bytes
+ .../healthdog/pets/pet-16-brown-closeup.webp       | Bin 0 -> 84556 bytes
+ .../assets/healthdog/pets/pet-17-white-lounge.webp | Bin 0 -> 159500 bytes
+ .../healthdog/pets/pet-18-tricolor-closeup.webp    | Bin 0 -> 170424 bytes
+ .../healthdog/prompts/care-promise-poster.md       |  23 +
+ .../assets/healthdog/prompts/promise-banner.md     |  20 +
+ .../assets/healthdog/prompts/service-guide-grid.md |  24 +
+ .../healthdog/reviews/review-01-store-proof.webp   | Bin 0 -> 49306 bytes
+ .../healthdog/reviews/review-02-poodle-proof.webp  | Bin 0 -> 42846 bytes
+ .../reviews/review-03-portrait-proof.webp          | Bin 0 -> 40278 bytes
+ .../healthdog/reviews/review-04-vertical-sign.webp | Bin 0 -> 205600 bytes
+ .../healthdog/reviews/review-05-sofa-proof.webp    | Bin 0 -> 201890 bytes
+ .../healthdog/reviews/review-06-family-proof.webp  | Bin 0 -> 294162 bytes
+ .../healthdog/reviews/review-07-lobby-proof.webp   | Bin 0 -> 165340 bytes
+ .../healthdog/reviews/review-08-pair-proof.webp    | Bin 0 -> 29492 bytes
+ .../reviews/review-09-pomeranian-proof.webp        | Bin 0 -> 36664 bytes
+ .../healthdog/reviews/review-10-social-card.webp   | Bin 0 -> 33330 bytes
+ .../healthdog/reviews/review-11-text-proof.webp    | Bin 0 -> 43356 bytes
+ .../healthdog/reviews/review-12-text-proof.webp    | Bin 0 -> 47926 bytes
+ pet-clone-site/content.js                          | 243 ++++++++++
+ pet-clone-site/index.html                          | 487 +++++++++++++++------
+ pet-clone-site/styles.css                          | 207 +++++++--
+ pet-clone-site/tests/site-structure.test.mjs       | 241 ++++++----
+ 81 files changed, 2829 insertions(+), 270 deletions(-)
+exit=0
+
+## forbidden runtime/source scan
+$ bash -lc rg -n "BB PUPPY|비비퍼피|010-7699-0531|instagram_access_token|access_token|imweb.me|puppybebe.com|medium-large|placeholderPolicy" pet-clone-site
+exit=1
+FORBIDDEN_SCAN_RESULT=PASS no matches in pet-clone-site

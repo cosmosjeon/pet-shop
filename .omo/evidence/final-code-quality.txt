@@ -1,0 +1,54 @@
+# Final verification wave: F2 code quality
+timestamp: 2026-06-13T16:10:07.358Z
+head: a11e12b
+
+## node --test pet-clone-site/tests/site-structure.test.mjs
+$ node --test pet-clone-site/tests/site-structure.test.mjs
+TAP version 13
+# Subtest: healthdog-brand-branches-and-sections
+ok 1 - healthdog-brand-branches-and-sections
+  ---
+  duration_ms: 1.765583
+  type: 'test'
+  ...
+# Subtest: content-pet-filters-match-rendered-filter-and-card-category-values
+ok 2 - content-pet-filters-match-rendered-filter-and-card-category-values
+  ---
+  duration_ms: 1.03975
+  type: 'test'
+  ...
+# Subtest: proof-and-generated-assets-exist
+ok 3 - proof-and-generated-assets-exist
+  ---
+  duration_ms: 0.516
+  type: 'test'
+  ...
+# Subtest: runtime-sources-have-no-forbidden-strings-and-local-assets-exist
+ok 4 - runtime-sources-have-no-forbidden-strings-and-local-assets-exist
+  ---
+  duration_ms: 1.597
+  type: 'test'
+  ...
+1..4
+# tests 4
+# suites 0
+# pass 4
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 62.604875
+exit=0
+
+## node --check pet-clone-site/app.js
+$ node --check pet-clone-site/app.js
+exit=0
+
+## node --check pet-clone-site/content.js
+$ node --check pet-clone-site/content.js
+exit=0
+
+## stale identity / secret / contract mismatch scan
+$ bash -lc rg -n "BB PUPPY|비비퍼피|010-7699-0531|instagram_access_token|access_token|imweb.me|puppybebe.com|medium-large|placeholderPolicy" pet-clone-site
+exit=1
+F2_RESULT=PASS tests/checks passed and stale identity/secret/contract strings absent.

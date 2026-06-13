@@ -1,0 +1,199 @@
+# Final verification wave: F1 plan compliance + F4 scope fidelity
+timestamp: 2026-06-13T16:10:07.358Z
+head: a11e12b
+
+## F1 required Health Dog runtime/data strings
+$ bash -lc rg -n "헬스독|1600-4533|창원헬스독|부산헬스독|송파헬스독|수원헬스독|평택헬스독|인천헬스독|무료분양인증" pet-clone-site
+pet-clone-site/assets/healthdog/prompts/care-promise-poster.md:11:- `헬스독 평생 케어 약속`
+pet-clone-site/assets/healthdog/prompts/service-guide-grid.md:11:- `헬스독 소개`
+pet-clone-site/assets/healthdog/generated/care-promise-poster.svg:2:  <title id="title">헬스독 평생 케어 약속 포스터</title>
+pet-clone-site/assets/healthdog/generated/care-promise-poster.svg:3:  <desc id="desc">헬스독 평생 케어 약속, 건강 체크 안내, 초보 보호자 케어, 사후 상담, 지점 방문 상담을 담은 포스터 그래픽입니다.</desc>
+pet-clone-site/assets/healthdog/generated/care-promise-poster.svg:34:    <text class="posterTitle" x="0" y="78">헬스독 평생</text>
+pet-clone-site/assets/healthdog/generated/service-guide-grid.svg:2:  <title id="title">헬스독 서비스 안내 그래픽</title>
+pet-clone-site/assets/healthdog/generated/service-guide-grid.svg:3:  <desc id="desc">헬스독 소개, 분양 상담, 건강 케어, 지점 위치, 실제 후기, 빠른 상담을 3x2 그리드로 안내하는 그래픽입니다.</desc>
+pet-clone-site/assets/healthdog/generated/service-guide-grid.svg:54:    <text class="tileTitle" x="125" y="107">헬스독 소개</text>
+pet-clone-site/content.js:6:      companyName: "헬스독",
+pet-clone-site/content.js:17:      name: "헬스독",
+pet-clone-site/content.js:18:      fullName: "헬스독",
+pet-clone-site/content.js:19:      mainPhone: "1600-4533",
+pet-clone-site/content.js:20:      phoneHref: "tel:1600-4533",
+pet-clone-site/content.js:21:      headline: "건강하게 자란 반려가족을 만나는 곳, 헬스독",
+pet-clone-site/content.js:28:      { label: "헬스독 케어", href: "#care" },
+pet-clone-site/content.js:36:        label: "전화 상담 1600-4533",
+pet-clone-site/content.js:37:        href: "tel:1600-4533",
+pet-clone-site/content.js:38:        ariaLabel: "헬스독 전화 상담 1600-4533",
+pet-clone-site/content.js:56:      headline: "건강하게 자란 반려가족을 만나는 곳, 헬스독",
+pet-clone-site/content.js:60:        "대표번호 1600-4533",
+pet-clone-site/content.js:71:          title: "헬스독 소개",
+pet-clone-site/content.js:72:          body: "전국 지점에서 반려가족 상담을 돕는 헬스독 브랜드 안내",
+pet-clone-site/content.js:88:          body: "실제 보호자 후기와 무료분양인증 사진 중심의 신뢰 자료",
+pet-clone-site/content.js:92:          body: "대표번호 1600-4533으로 가까운 지점 상담 연결",
+pet-clone-site/content.js:101:        name: "창원헬스독",
+pet-clone-site/content.js:109:        name: "부산헬스독",
+pet-clone-site/content.js:117:        name: "송파헬스독",
+pet-clone-site/content.js:125:        name: "수원헬스독",
+pet-clone-site/content.js:133:        name: "평택헬스독",
+pet-clone-site/content.js:142:        name: "인천헬스독",
+pet-clone-site/content.js:179:      title: "헬스독 평생 케어 약속",
+pet-clone-site/content.js:199:      proofLabel: "무료분양인증",
+pet-clone-site/content.js:215:      contactLine: "대표번호 1600-4533",
+pet-clone-site/content.js:220:        { label: "전화상담", href: "tel:1600-4533" },
+pet-clone-site/content.js:225:        { label: "전화상담", href: "tel:1600-4533" },
+pet-clone-site/content.js:231:      companyName: "헬스독",
+pet-clone-site/content.js:232:      representativePhone: "1600-4533",
+pet-clone-site/tests/site-structure.test.mjs:14:  "창원헬스독",
+pet-clone-site/tests/site-structure.test.mjs:15:  "부산헬스독",
+pet-clone-site/tests/site-structure.test.mjs:16:  "송파헬스독",
+pet-clone-site/tests/site-structure.test.mjs:17:  "수원헬스독",
+pet-clone-site/tests/site-structure.test.mjs:18:  "평택헬스독",
+pet-clone-site/tests/site-structure.test.mjs:19:  "인천헬스독",
+pet-clone-site/tests/site-structure.test.mjs:101:  assert.match(html, /<title>헬스독 \| 건강하게 자란 반려가족 상담<\/title>/);
+pet-clone-site/tests/site-structure.test.mjs:102:  assert.match(html, /<img[^>]+class="brand-logo"[^>]+alt="헬스독 로고"/);
+pet-clone-site/tests/site-structure.test.mjs:103:  assert.match(html, /건강하게 자란 반려가족을 만나는 곳, 헬스독/);
+pet-clone-site/tests/site-structure.test.mjs:104:  assert.match(combined, /1600-4533/);
+pet-clone-site/assets/healthdog/generated/promise-banner.svg:2:  <title id="title">헬스독 약속 배너</title>
+pet-clone-site/assets/healthdog/generated/promise-banner.svg:3:  <desc id="desc">처음부터 건강하게, 실제 후기와 투명한 상담, 가까운 6개 지점을 강조하는 헬스독 3열 약속 배너입니다.</desc>
+pet-clone-site/index.html:6:    <title>헬스독 | 건강하게 자란 반려가족 상담</title>
+pet-clone-site/index.html:17:          <a href="#care">헬스독 케어</a>
+pet-clone-site/index.html:23:        <a class="brand-mark" href="#top" aria-label="헬스독 홈">
+pet-clone-site/index.html:24:          <img class="brand-logo" src="assets/healthdog/logo/healthdog-logo.png" alt="헬스독 로고">
+pet-clone-site/index.html:29:          <a href="tel:1600-4533">1600-4533</a>
+pet-clone-site/index.html:41:        <a href="#care">헬스독 케어</a>
+pet-clone-site/index.html:52:            <img class="hero-logo" src="assets/healthdog/logo/healthdog-logo.png" alt="헬스독">
+pet-clone-site/index.html:54:            <h1>건강하게 자란 반려가족을 만나는 곳, 헬스독</h1>
+pet-clone-site/index.html:59:              <a class="button button-dark" href="tel:1600-4533">전화 상담 1600-4533</a>
+pet-clone-site/index.html:65:            <img src="assets/healthdog/pets/pet-01-white-outdoor.webp" alt="헬스독에서 만날 수 있는 하얀 반려견">
+pet-clone-site/index.html:70:      <section class="category-band" aria-label="헬스독 신뢰 정보">
+pet-clone-site/index.html:73:            <a href="tel:1600-4533">대표번호 1600-4533</a>
+pet-clone-site/index.html:88:            <img src="assets/healthdog/generated/service-guide-grid.svg" alt="헬스독 소개, 분양 상담, 건강 케어, 지점 위치, 실제 후기, 빠른 상담 안내">
+pet-clone-site/index.html:97:            <h2>가까운 헬스독 지점 안내</h2>
+pet-clone-site/index.html:101:          <div class="review-grid" aria-label="헬스독 지점 목록">
+pet-clone-site/index.html:103:              <strong>창원헬스독</strong>
+pet-clone-site/index.html:108:              <strong>부산헬스독</strong>
+pet-clone-site/index.html:113:              <strong>송파헬스독</strong>
+pet-clone-site/index.html:118:              <strong>수원헬스독</strong>
+pet-clone-site/index.html:123:              <strong>평택헬스독</strong>
+pet-clone-site/index.html:128:              <strong>인천헬스독</strong>
+pet-clone-site/index.html:156:              <a href="#contact" aria-label="헬스독 아이 01 상담">
+pet-clone-site/index.html:157:                <img src="assets/healthdog/pets/pet-01-white-outdoor.webp" alt="헬스독 실제 반려견 사진 01">
+pet-clone-site/index.html:160:                  <h3>헬스독 아이 01</h3>
+pet-clone-site/index.html:168:              <a href="#contact" aria-label="헬스독 아이 02 상담">
+pet-clone-site/index.html:169:                <img src="assets/healthdog/pets/pet-02-brown-desk.webp" alt="헬스독 실제 반려견 사진 02">
+pet-clone-site/index.html:172:                  <h3>헬스독 아이 02</h3>
+pet-clone-site/index.html:180:              <a href="#contact" aria-label="헬스독 아이 03 상담">
+pet-clone-site/index.html:181:                <img src="assets/healthdog/pets/pet-03-black-white-desk.webp" alt="헬스독 실제 반려견 사진 03">
+pet-clone-site/index.html:184:                  <h3>헬스독 아이 03</h3>
+pet-clone-site/index.html:192:              <a href="#contact" aria-label="헬스독 아이 04 상담">
+pet-clone-site/index.html:193:                <img src="assets/healthdog/pets/pet-04-tan-handheld.webp" alt="헬스독 실제 반려견 사진 04">
+pet-clone-site/index.html:196:                  <h3>헬스독 아이 04</h3>
+pet-clone-site/index.html:204:              <a href="#contact" aria-label="헬스독 아이 05 상담">
+pet-clone-site/index.html:205:                <img src="assets/healthdog/pets/pet-05-black-tan-outdoor.webp" alt="헬스독 실제 반려견 사진 05">
+pet-clone-site/index.html:208:                  <h3>헬스독 아이 05</h3>
+pet-clone-site/index.html:216:              <a href="#contact" aria-label="헬스독 아이 06 상담">
+pet-clone-site/index.html:217:                <img src="assets/healthdog/pets/pet-06-lap-pair.webp" alt="헬스독 실제 반려견 사진 06">
+pet-clone-site/index.html:220:                  <h3>헬스독 아이 06</h3>
+pet-clone-site/index.html:228:              <a href="#contact" aria-label="헬스독 아이 07 상담">
+pet-clone-site/index.html:229:                <img src="assets/healthdog/pets/pet-07-charcoal-desk.webp" alt="헬스독 실제 반려견 사진 07">
+pet-clone-site/index.html:232:                  <h3>헬스독 아이 07</h3>
+pet-clone-site/index.html:240:              <a href="#contact" aria-label="헬스독 아이 08 상담">
+pet-clone-site/index.html:241:                <img src="assets/healthdog/pets/pet-08-gray-handheld.webp" alt="헬스독 실제 반려견 사진 08">
+pet-clone-site/index.html:244:                  <h3>헬스독 아이 08</h3>
+pet-clone-site/index.html:252:              <a href="#contact" aria-label="헬스독 아이 09 상담">
+pet-clone-site/index.html:253:                <img src="assets/healthdog/pets/pet-09-white-turf.webp" alt="헬스독 실제 반려견 사진 09">
+pet-clone-site/index.html:256:                  <h3>헬스독 아이 09</h3>
+pet-clone-site/index.html:264:              <a href="#contact" aria-label="헬스독 아이 10 상담">
+pet-clone-site/index.html:265:                <img src="assets/healthdog/pets/pet-10-black-white-outdoor.webp" alt="헬스독 실제 반려견 사진 10">
+pet-clone-site/index.html:268:                  <h3>헬스독 아이 10</h3>
+pet-clone-site/index.html:276:              <a href="#contact" aria-label="헬스독 아이 11 상담">
+pet-clone-site/index.html:277:                <img src="assets/healthdog/pets/pet-11-basket-black-white.webp" alt="헬스독 실제 반려견 사진 11">
+pet-clone-site/index.html:280:                  <h3>헬스독 아이 11</h3>
+pet-clone-site/index.html:288:              <a href="#contact" aria-label="헬스독 아이 12 상담">
+pet-clone-site/index.html:289:                <img src="assets/healthdog/pets/pet-12-black-pair.webp" alt="헬스독 실제 반려견 사진 12">
+pet-clone-site/index.html:292:                  <h3>헬스독 아이 12</h3>
+pet-clone-site/index.html:300:              <a href="#contact" aria-label="헬스독 아이 13 상담">
+pet-clone-site/index.html:301:                <img src="assets/healthdog/pets/pet-13-basket-panda.webp" alt="헬스독 실제 반려견 사진 13">
+pet-clone-site/index.html:304:                  <h3>헬스독 아이 13</h3>
+pet-clone-site/index.html:312:              <a href="#contact" aria-label="헬스독 아이 14 상담">
+pet-clone-site/index.html:313:                <img src="assets/healthdog/pets/pet-14-gray-basket.webp" alt="헬스독 실제 반려견 사진 14">
+pet-clone-site/index.html:316:                  <h3>헬스독 아이 14</h3>
+pet-clone-site/index.html:324:              <a href="#contact" aria-label="헬스독 아이 15 상담">
+pet-clone-site/index.html:325:                <img src="assets/healthdog/pets/pet-15-black-handheld.webp" alt="헬스독 실제 반려견 사진 15">
+pet-clone-site/index.html:328:                  <h3>헬스독 아이 15</h3>
+pet-clone-site/index.html:336:              <a href="#contact" aria-label="헬스독 아이 16 상담">
+pet-clone-site/index.html:337:                <img src="assets/healthdog/pets/pet-16-brown-closeup.webp" alt="헬스독 실제 반려견 사진 16">
+pet-clone-site/index.html:340:                  <h3>헬스독 아이 16</h3>
+pet-clone-site/index.html:348:              <a href="#contact" aria-label="헬스독 아이 17 상담">
+pet-clone-site/index.html:349:                <img src="assets/healthdog/pets/pet-17-white-lounge.webp" alt="헬스독 실제 반려견 사진 17">
+pet-clone-site/index.html:352:                  <h3>헬스독 아이 17</h3>
+pet-clone-site/index.html:360:              <a href="#contact" aria-label="헬스독 아이 18 상담">
+pet-clone-site/index.html:361:                <img src="assets/healthdog/pets/pet-18-tricolor-closeup.webp" alt="헬스독 실제 반려견 사진 18">
+pet-clone-site/index.html:364:                  <h3>헬스독 아이 18</h3>
+pet-clone-site/index.html:379:            <img src="assets/healthdog/generated/care-promise-poster.svg" alt="헬스독 평생 케어 약속 포스터">
+pet-clone-site/index.html:383:            <h2>헬스독 평생 케어 약속</h2>
+pet-clone-site/index.html:409:            <p>무료분양인증 사진은 후기와 상담 신뢰를 확인하는 proof 자료로만 배치했습니다.</p>
+pet-clone-site/index.html:414:              <img src="assets/healthdog/reviews/review-01-store-proof.webp" alt="헬스독 실제 보호자 후기 인증 사진 01">
+pet-clone-site/index.html:415:              <strong>무료분양인증</strong>
+pet-clone-site/index.html:418:              <img src="assets/healthdog/reviews/review-02-poodle-proof.webp" alt="헬스독 실제 보호자 후기 인증 사진 02">
+pet-clone-site/index.html:419:              <strong>무료분양인증</strong>
+pet-clone-site/index.html:422:              <img src="assets/healthdog/reviews/review-03-portrait-proof.webp" alt="헬스독 실제 보호자 후기 인증 사진 03">
+pet-clone-site/index.html:423:              <strong>무료분양인증</strong>
+pet-clone-site/index.html:426:              <img src="assets/healthdog/reviews/review-04-vertical-sign.webp" alt="헬스독 실제 보호자 후기 인증 사진 04">
+pet-clone-site/index.html:427:              <strong>무료분양인증</strong>
+pet-clone-site/index.html:430:              <img src="assets/healthdog/reviews/review-05-sofa-proof.webp" alt="헬스독 실제 보호자 후기 인증 사진 05">
+pet-clone-site/index.html:431:              <strong>무료분양인증</strong>
+pet-clone-site/index.html:434:              <img src="assets/healthdog/reviews/review-06-family-proof.webp" alt="헬스독 실제 보호자 후기 인증 사진 06">
+pet-clone-site/index.html:435:              <strong>무료분양인증</strong>
+pet-clone-site/index.html:438:              <img src="assets/healthdog/reviews/review-07-lobby-proof.webp" alt="헬스독 실제 보호자 후기 인증 사진 07">
+pet-clone-site/index.html:439:              <strong>무료분양인증</strong>
+pet-clone-site/index.html:442:              <img src="assets/healthdog/reviews/review-08-pair-proof.webp" alt="헬스독 실제 보호자 후기 인증 사진 08">
+pet-clone-site/index.html:443:              <strong>무료분양인증</strong>
+pet-clone-site/index.html:446:              <img src="assets/healthdog/reviews/review-09-pomeranian-proof.webp" alt="헬스독 실제 보호자 후기 인증 사진 09">
+pet-clone-site/index.html:447:              <strong>무료분양인증</strong>
+pet-clone-site/index.html:450:              <img src="assets/healthdog/reviews/review-10-social-card.webp" alt="헬스독 실제 보호자 후기 인증 사진 10">
+pet-clone-site/index.html:451:              <strong>무료분양인증</strong>
+pet-clone-site/index.html:454:              <img src="assets/healthdog/reviews/review-11-text-proof.webp" alt="헬스독 실제 보호자 후기 인증 사진 11">
+pet-clone-site/index.html:455:              <strong>무료분양인증</strong>
+pet-clone-site/index.html:458:              <img src="assets/healthdog/reviews/review-12-text-proof.webp" alt="헬스독 실제 보호자 후기 인증 사진 12">
+pet-clone-site/index.html:459:              <strong>무료분양인증</strong>
+pet-clone-site/index.html:475:              <dd><a href="tel:1600-4533">1600-4533</a></dd>
+pet-clone-site/index.html:491:      <a href="tel:1600-4533"><span>TEL</span>전화상담</a>
+pet-clone-site/index.html:500:          <img src="assets/healthdog/logo/healthdog-logo.png" alt="헬스독 로고">
+pet-clone-site/index.html:501:          <span>헬스독</span>
+pet-clone-site/index.html:503:        <p>건강한 반려가족 상담 · 전국 6개 지점 · 대표번호 1600-4533</p>
+exit=0
+
+F1_RESULT=PASS required brand, phone, branches, and review proof terms are present.
+
+## Asset/card coverage
+puppy_cards=
+proof_cards=
+pet_assets=18
+review_assets=12
+
+## F4 scope-fidelity scan
+$ bash -lc rg -n "가격|무료|수술|할인|보장|장바구니|결제|checkout|cart" pet-clone-site || true
+pet-clone-site/content.js:10:        "가격 정보는 확인 전까지 노출하지 않습니다.",
+pet-clone-site/content.js:12:        "확인되지 않은 의료 보장, 치료 보장, 수술 할인 문구를 사용하지 않습니다.",
+pet-clone-site/content.js:88:          body: "실제 보호자 후기와 무료분양인증 사진 중심의 신뢰 자료",
+pet-clone-site/content.js:199:      proofLabel: "무료분양인증",
+pet-clone-site/index.html:409:            <p>무료분양인증 사진은 후기와 상담 신뢰를 확인하는 proof 자료로만 배치했습니다.</p>
+pet-clone-site/index.html:415:              <strong>무료분양인증</strong>
+pet-clone-site/index.html:419:              <strong>무료분양인증</strong>
+pet-clone-site/index.html:423:              <strong>무료분양인증</strong>
+pet-clone-site/index.html:427:              <strong>무료분양인증</strong>
+pet-clone-site/index.html:431:              <strong>무료분양인증</strong>
+pet-clone-site/index.html:435:              <strong>무료분양인증</strong>
+pet-clone-site/index.html:439:              <strong>무료분양인증</strong>
+pet-clone-site/index.html:443:              <strong>무료분양인증</strong>
+pet-clone-site/index.html:447:              <strong>무료분양인증</strong>
+pet-clone-site/index.html:451:              <strong>무료분양인증</strong>
+pet-clone-site/index.html:455:              <strong>무료분양인증</strong>
+pet-clone-site/index.html:459:              <strong>무료분양인증</strong>
+exit=0
+
+F4_INTERPRETATION:
+- 무료 matches are expected for 무료분양인증 review/proof emphasis.
+- 가격/보장 matches are guardrail metadata saying those claims are not exposed before confirmation.
+- No 장바구니, 결제, checkout, or cart matches were found.
+- No pricing UX, checkout/cart UX, fake generated inventory text, or unconfirmed medical/surgery discount claim is visible in runtime HTML.
+F4_RESULT=PASS with documented intentional policy/proof matches.

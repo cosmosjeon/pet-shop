@@ -397,7 +397,7 @@ Critical path: Todo 1 -> Todo 4 -> Todo 5 -> Todo 7 -> Todo 9 -> Todo 11.
   - Browser evidence: mobile footer/sticky CTA screenshot `.omo/evidence/task-10-mobile-footer.png`.
   Commit: Y | `fix(site): polish healthdog qa details` | Any touched `pet-clone-site/` files
 
-- [ ] 11. Final self-review, repository state, and push
+- [x] 11. Final self-review, repository state, and push
   What to do / Must NOT do
   - Review the full diff against `origin/main`.
   - Confirm all commits are atomic enough and messages describe actual work.
@@ -425,16 +425,16 @@ Critical path: Todo 1 -> Todo 4 -> Todo 5 -> Todo 7 -> Todo 9 -> Todo 11.
 ## Final verification wave
 After ALL todos.
 > Runs in parallel where tooling allows. ALL must APPROVE. Surface results and wait for the user's explicit okay before declaring complete.
-- [ ] F1. Plan compliance audit
+- [x] F1. Plan compliance audit
   - Verify each Must Have is visible in runtime or data files.
   - Command evidence: `rg -n "헬스독|1600-4533|창원헬스독|부산헬스독|송파헬스독|수원헬스독|평택헬스독|인천헬스독|무료분양인증" pet-clone-site`
-- [ ] F2. Code quality review
+- [x] F2. Code quality review
   - Inspect `index.html`, `styles.css`, `app.js`, and tests for stale names, brittle selectors, missing null guards, and huge assets.
   - Command evidence: `node --test pet-clone-site/tests/site-structure.test.mjs`
-- [ ] F3. Real manual QA
+- [x] F3. Real manual QA
   - Drive the local site through the in-app browser on desktop and mobile.
   - Required evidence: desktop/mobile screenshots, filter interaction, generated Korean crop, branch link URLs.
-- [ ] F4. Scope fidelity
+- [x] F4. Scope fidelity
   - Confirm no ecommerce checkout, fake pricing, fake generated inventory, or unconfirmed medical claims were introduced.
   - Command evidence: `rg -n "가격|무료|수술|할인|보장|장바구니|결제|checkout|cart" pet-clone-site`
 
