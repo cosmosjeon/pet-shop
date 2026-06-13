@@ -1,7 +1,7 @@
 {
   "version": 1,
   "createdAt": "2026-06-12T12:59:44.215Z",
-  "updatedAt": "2026-06-13T16:14:19.114Z",
+  "updatedAt": "2026-06-13T16:17:22.656Z",
   "briefPath": ".omo/ulw-loop/019eb65e-5875-75f0-8855-403d984a4410/brief.md",
   "goalsPath": ".omo/ulw-loop/019eb65e-5875-75f0-8855-403d984a4410/goals.json",
   "ledgerPath": ".omo/ulw-loop/019eb65e-5875-75f0-8855-403d984a4410/ledger.jsonl",
@@ -11,7 +11,7 @@
       "id": "G001-execute-the-approved-prometheus-plan",
       "title": "Execute the approved Prometheus plan at .omo/plans/healthdog-website-...",
       "objective": "Execute the approved Prometheus plan at .omo/plans/healthdog-website-build.md end-to-end. Use the Prometheus plan checkboxes as the authoritative task breakdown; verify with automated commands, real browser/manual QA evidence, independent review, cleanup receipts, atomic commits, and the already requested GitHub push when complete.",
-      "status": "in_progress",
+      "status": "complete",
       "successCriteria": [
         {
           "id": "C001",
@@ -36,16 +36,36 @@
           "scenario": "Final review and git delivery: independent reviewer audits final diff/evidence, debugging hypotheses are checked, git status is clean except intentional state, and the verified commit is pushed to origin/main as previously requested; PASS iff reviewer approval, push result, and commit hash are recorded.",
           "userModel": "regression",
           "expectedEvidence": ".omo/evidence/final-review-verdict.md + .omo/evidence/final-debugging-audit.md + .omo/evidence/task-11-final-commands.txt + pushed commit hash",
-          "capturedEvidence": null,
-          "status": "pending"
+          "capturedEvidence": "Final review and git delivery passed: .omo/evidence/final-review-verdict.md, .omo/evidence/final-debugging-audit.md, .omo/evidence/task-11-final-commands.txt; review-work lanes passed after fixing code-quality blockers; git push origin main succeeded; git ls-remote origin refs/heads/main == 4778986c3a845419e1bc0b1b8f88aafba347743c | cleanup: all review subagents closed; browser tab closed; 8790 listener empty; working tree clean at pushed commit before this ULW metadata record",
+          "status": "pass",
+          "capturedAt": "2026-06-13T16:16:03.616Z"
         }
       ],
       "attempt": 1,
       "createdAt": "2026-06-12T12:59:44.215Z",
-      "updatedAt": "2026-06-13T16:14:19.114Z",
-      "startedAt": "2026-06-13T15:08:07.836Z"
+      "updatedAt": "2026-06-13T16:17:22.656Z",
+      "startedAt": "2026-06-13T15:08:07.836Z",
+      "completedAt": "2026-06-13T16:17:22.656Z",
+      "evidence": "All criteria C001/C002/C003 pass. Evidence: task-9 visual QA screenshots, final-browser-smoke.json, task-11 final commands, final-scope-fidelity, final-review-verdict, final-debugging-audit, final-ai-slop-cleaner, pushed hash 4778986c3a845419e1bc0b1b8f88aafba347743c."
     }
   ],
   "codexObjective": "Complete the durable ulw-loop plan in .omo/ulw-loop/019eb65e-5875-75f0-8855-403d984a4410/goals.json, including later accepted/appended stories, under the original brief constraints; use .omo/ulw-loop/019eb65e-5875-75f0-8855-403d984a4410/ledger.jsonl as the audit trail.",
-  "activeGoalId": "G001-execute-the-approved-prometheus-plan"
+  "aggregateCompletion": {
+    "status": "complete",
+    "completedAt": "2026-06-13T16:17:22.656Z",
+    "evidence": "All criteria C001/C002/C003 pass. Evidence: task-9 visual QA screenshots, final-browser-smoke.json, task-11 final commands, final-scope-fidelity, final-review-verdict, final-debugging-audit, final-ai-slop-cleaner, pushed hash 4778986c3a845419e1bc0b1b8f88aafba347743c.",
+    "codexGoal": {
+      "goal": {
+        "threadId": "019eb65e-5875-75f0-8855-403d984a4410",
+        "objective": "Complete the durable ulw-loop plan in .omo/ulw-loop/019eb65e-5875-75f0-8855-403d984a4410/goals.json, including later accepted/appended stories, under the original brief constraints; use .omo/ulw-loop/019eb65e-5875-75f0-8855-403d984a4410/ledger.jsonl as the audit trail.",
+        "status": "complete",
+        "tokensUsed": 893927,
+        "timeUsedSeconds": 4545,
+        "createdAt": 1781362851,
+        "updatedAt": 1781367421
+      },
+      "remainingTokens": null,
+      "completionBudgetReport": "Goal achieved. Report final usage from this tool result structured goal fields."
+    }
+  }
 }
