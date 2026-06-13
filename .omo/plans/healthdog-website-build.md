@@ -218,7 +218,7 @@ Critical path: Todo 1 -> Todo 4 -> Todo 5 -> Todo 7 -> Todo 9 -> Todo 11.
   - Browser evidence: run `python3 -m http.server 8790 --directory pet-clone-site`, navigate in in-app browser to `http://127.0.0.1:8790/index.html`, save full-page screenshot `.omo/evidence/task-4-html-desktop.png`.
   Commit: Y | `feat(site): rebuild healthdog page structure` | `pet-clone-site/index.html`
 
-- [ ] 5. Rework CSS visual system and responsive layout
+- [x] 5. Rework CSS visual system and responsive layout
   What to do / Must NOT do
   - Update `styles.css` to Health Dog tokens:
     - `--ink`: deep charcoal/navy
@@ -263,7 +263,7 @@ Critical path: Todo 1 -> Todo 4 -> Todo 5 -> Todo 7 -> Todo 9 -> Todo 11.
   - Shell evidence: `rg -n "letter-spacing|font-size|@media|position: fixed" pet-clone-site/styles.css > .omo/evidence/task-5-css-scan.txt`.
   Commit: Y | `style(site): apply healthdog visual system` | `pet-clone-site/styles.css`
 
-- [ ] 6. Update JavaScript interactions for Health Dog filters, menu, and CTAs
+- [x] 6. Update JavaScript interactions for Health Dog filters, menu, and CTAs
   What to do / Must NOT do
   - Keep or refactor existing mobile menu and category filtering in `app.js`.
   - Support filter chips: `전체`, `말티푸`, `포메라니안`, `푸들`, `비숑`, `소형견`, `중대형견`.

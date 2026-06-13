@@ -1,11 +1,16 @@
 :root {
-  --brand: #363636;
-  --accent: #bfb49c;
-  --soft: #fcf9f5;
+  --ink: #363636;
+  --health-purple: #7657a6;
+  --health-navy: #253e5a;
+  --mint: #dff4ec;
+  --warm: #fff5e8;
+  --brand: var(--ink);
+  --accent: var(--health-purple);
+  --soft: var(--warm);
   --paper: #ffffff;
-  --ink-soft: #6f6a61;
-  --line: #e6ded2;
-  --olive: #6f755f;
+  --ink-soft: #69645d;
+  --line: #e9ded2;
+  --olive: #677a60;
   --rose: #ad7c74;
   --container: 1280px;
   color: var(--brand);
@@ -23,7 +28,7 @@ html {
 
 body {
   margin: 0;
-  background: var(--paper);
+  background: #fffaf3;
   color: var(--brand);
   font-size: 16px;
   line-height: 1.65;
@@ -67,7 +72,7 @@ textarea {
   top: 0;
   z-index: 40;
   background: rgba(255, 255, 255, 0.96);
-  border-bottom: 1px solid rgba(230, 222, 210, 0.86);
+  border-bottom: 1px solid rgba(233, 222, 210, 0.86);
   backdrop-filter: blur(16px);
 }
 
@@ -93,12 +98,17 @@ textarea {
   display: inline-flex;
   align-items: center;
   min-height: 44px;
+  border-bottom: 2px solid transparent;
 }
 
 .primary-nav a:hover,
 .header-contact a:hover,
 .mobile-nav a:hover {
   color: var(--accent);
+}
+
+.primary-nav a:hover {
+  border-color: var(--mint);
 }
 
 .brand-mark {
@@ -150,6 +160,19 @@ textarea {
   width: 18px;
   height: 2px;
   background: var(--brand);
+  transition: transform 160ms ease, opacity 160ms ease;
+}
+
+.mobile-menu-toggle[aria-expanded="true"] span:first-child {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.mobile-menu-toggle[aria-expanded="true"] span:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-menu-toggle[aria-expanded="true"] span:last-child {
+  transform: translateY(-7px) rotate(-45deg);
 }
 
 .mobile-nav {
@@ -157,7 +180,7 @@ textarea {
 }
 
 .hero-section {
-  background: var(--soft);
+  background: linear-gradient(135deg, var(--warm) 0%, var(--paper) 56%, var(--mint) 100%);
   border-bottom: 1px solid var(--line);
 }
 
@@ -206,19 +229,19 @@ p {
 h1 {
   margin: 0;
   color: var(--brand);
-  font-size: clamp(30px, 2.7vw, 40px);
+  font-size: clamp(32px, 2.6rem, 42px);
   font-weight: 400;
   line-height: 1.12;
 }
 
 .hero-copy h1 {
-  color: var(--accent);
+  color: var(--health-navy);
 }
 
 h2 {
   margin: 0;
   color: var(--brand);
-  font-size: clamp(28px, 3vw, 44px);
+  font-size: clamp(28px, 2.35rem, 38px);
   font-weight: 300;
   line-height: 1.26;
 }
@@ -262,16 +285,33 @@ h3 {
   border-radius: 8px;
   font-size: 15px;
   font-weight: 600;
+  transition: background 160ms ease, border-color 160ms ease, color 160ms ease, transform 160ms ease;
 }
 
 .button-dark {
-  background: var(--brand);
+  background: var(--health-navy);
+  border-color: var(--health-navy);
   color: var(--paper);
 }
 
 .button-light {
-  background: transparent;
+  border-color: rgba(54, 54, 54, 0.18);
+  background: rgba(255, 255, 255, 0.72);
   color: var(--brand);
+}
+
+.button:hover {
+  transform: translateY(-1px);
+}
+
+.button-dark:hover {
+  background: var(--health-purple);
+  border-color: var(--health-purple);
+}
+
+.button-light:hover {
+  border-color: var(--health-purple);
+  color: var(--health-purple);
 }
 
 .hero-image {
@@ -300,6 +340,21 @@ h3 {
   align-items: end;
 }
 
+.intro-grid figure {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--warm);
+  box-shadow: 0 18px 44px rgba(37, 62, 90, 0.08);
+}
+
+.intro-grid img {
+  width: 100%;
+  min-height: 260px;
+  object-fit: cover;
+}
+
 .intro-grid p:last-child,
 .promise-grid p,
 .contact-grid p {
@@ -309,7 +364,7 @@ h3 {
 }
 
 .puppy-section {
-  background: var(--paper);
+  background: #fffaf3;
   padding: 54px 0 90px;
 }
 
@@ -348,29 +403,31 @@ h3 {
 
 .filter-button.is-active,
 .filter-button:hover {
-  border-color: var(--brand);
-  background: var(--brand);
+  border-color: var(--health-purple);
+  background: var(--health-purple);
   color: var(--paper);
 }
 
 .puppy-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 48px 16px;
+  gap: 22px;
 }
 
 .puppy-card {
   position: relative;
   min-width: 0;
-  border: 0;
-  border-radius: 0;
-  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--paper);
   overflow: hidden;
-  transition: transform 180ms ease;
+  box-shadow: 0 14px 34px rgba(54, 54, 54, 0.07);
+  transition: transform 180ms ease, box-shadow 180ms ease;
 }
 
 .puppy-card:hover {
   transform: translateY(-3px);
+  box-shadow: 0 20px 48px rgba(37, 62, 90, 0.12);
 }
 
 .puppy-card.is-hidden {
@@ -384,28 +441,46 @@ h3 {
 
 .puppy-card img {
   width: 100%;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 4 / 5;
   object-fit: cover;
   background: #f6f2ed;
 }
 
 .badge {
-  display: none;
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  display: inline-grid;
+  place-items: center;
+  min-width: 48px;
+  min-height: 28px;
+  padding: 0 10px;
+  border-radius: 999px;
+  background: rgba(37, 62, 90, 0.88);
+  color: var(--paper);
+  font-size: 11px;
+  font-weight: 800;
 }
 
 .puppy-info {
   display: grid;
-  gap: 0;
-  padding: 15px 8px 0;
-  text-align: center;
+  gap: 8px;
+  padding: 16px;
+  text-align: left;
 }
 
 .puppy-info p {
-  display: none;
+  display: block;
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 14px;
+  line-height: 1.5;
 }
 
 .puppy-info strong {
-  display: none;
+  display: inline-flex;
+  color: var(--health-purple);
+  font-size: 14px;
 }
 
 .empty-state {
@@ -419,15 +494,18 @@ h3 {
 }
 
 .category-band {
-  padding: 0;
+  padding: 18px 0;
   background: var(--paper);
 }
 
 .category-table {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   border-top: 1px solid var(--line);
   border-left: 1px solid var(--line);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 14px 34px rgba(54, 54, 54, 0.06);
 }
 
 .category-table a {
@@ -440,16 +518,17 @@ h3 {
   color: #5c574f;
   font-size: 16px;
   background: var(--paper);
+  word-break: keep-all;
 }
 
 .category-table a:hover {
   color: var(--paper);
-  background: var(--brand);
+  background: var(--health-navy);
 }
 
 .promise-section {
   padding: 94px 0;
-  background: #f3eee5;
+  background: var(--mint);
 }
 
 .promise-grid {
@@ -461,8 +540,11 @@ h3 {
 
 .promise-grid figure {
   margin: 0;
+  border: 1px solid rgba(37, 62, 90, 0.12);
   border-radius: 8px;
   overflow: hidden;
+  background: var(--paper);
+  box-shadow: 0 20px 50px rgba(37, 62, 90, 0.11);
 }
 
 .promise-grid img {
@@ -496,6 +578,7 @@ h3 {
   border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--soft);
+  box-shadow: 0 12px 28px rgba(54, 54, 54, 0.05);
 }
 
 .review-card p {
@@ -507,9 +590,42 @@ h3 {
   color: var(--brand);
 }
 
+.branch-card {
+  background: var(--paper);
+}
+
+.branch-card strong {
+  color: var(--health-navy);
+  font-size: 21px;
+}
+
+.branch-card .button {
+  justify-self: start;
+  min-height: 42px;
+  padding: 0 16px;
+}
+
+.proof-card {
+  min-height: 0;
+  gap: 0;
+  padding: 0;
+  overflow: hidden;
+  background: var(--paper);
+}
+
+.proof-card img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.proof-card strong {
+  padding: 18px 20px 20px;
+}
+
 .contact-section {
   padding: 92px 0;
-  background: #3d3b37;
+  background: var(--health-navy);
   color: var(--paper);
 }
 
@@ -592,7 +708,7 @@ h3 {
   width: 34px;
   height: 34px;
   border-radius: 50%;
-  background: var(--soft);
+  background: var(--mint);
   color: var(--accent);
   font-size: 11px;
   font-weight: 800;
@@ -600,7 +716,7 @@ h3 {
 
 .site-footer {
   padding: 42px 0 52px;
-  background: #2f2d2a;
+  background: #1f2f43;
   color: rgba(255, 255, 255, 0.72);
 }
 
@@ -691,6 +807,10 @@ h3 {
     object-position: center top;
   }
 
+  .category-table {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .puppy-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
@@ -726,11 +846,11 @@ h3 {
   }
 
   h1 {
-    font-size: clamp(34px, 12vw, 48px);
+    font-size: 34px;
   }
 
   h2 {
-    font-size: clamp(26px, 8vw, 34px);
+    font-size: 29px;
   }
 
   .hero-lead {
@@ -788,10 +908,6 @@ h3 {
 
   .puppy-info p {
     font-size: 13px;
-  }
-
-  .category-table {
-    grid-template-columns: 1fr 1fr;
   }
 
   .category-table a {

@@ -1,0 +1,169 @@
+1:const filterButtons = document.querySelectorAll('[data-filter]');
+3:const emptyState = document.querySelector("#empty-state");
+4:const menuToggle = document.querySelector(".mobile-menu-toggle");
+8:function isAllFilter(filter) {
+9:  return allFilters.has(filter);
+27:  for (const button of filterButtons) {
+28:    const buttonFilter = button.dataset.filter || "all";
+35:    const categories = (card.dataset.category || "").split(/\s+/).filter(Boolean);
+50:  if (menuToggle) {
+51:    menuToggle.setAttribute("aria-expanded", "false");
+58:for (const button of filterButtons) {
+59:  button.addEventListener("click", () => {
+60:    const selectedFilter = button.dataset.filter || "all";
+66:if (menuToggle) {
+67:  menuToggle.addEventListener("click", () => {
+68:    const willOpen = menuToggle.getAttribute("aria-expanded") !== "true";
+69:    menuToggle.setAttribute("aria-expanded", String(willOpen));
+78:  navLink.addEventListener("click", closeMobileNav);
+82:const hasInitialFilter = [...filterButtons].some((button) => button.dataset.filter === initialFilter);
+
+Source review:
+- Filter click listeners are attached only while iterating `filterButtons`, which is a `querySelectorAll("[data-filter]")` NodeList; if filters are absent, no listener target is dereferenced.
+- The mobile menu click listener is attached only inside `if (menuToggle)`, and the listener checks `mobileNav` before changing `hidden`.
+- Mobile nav link listeners iterate `mobileNav ? mobileNav.querySelectorAll("a") : []`; if `#mobile-nav` is absent, the loop has no listener targets.
+- `closeMobileNav()` rechecks `menuToggle` and `mobileNav` before mutating either element.
+
+--- Wave2-BrowserQA Todos 5/6 browser console section ---
+timestamp_utc: 2026-06-13T01:15:37Z
+server: python3 -m http.server 8790 --directory pet-clone-site
+url: http://127.0.0.1:8790/index.html
+browser: Chrome DevTools automation
+actions:
+- opened http://127.0.0.1:8790/index.html
+- captured desktop full-page screenshot at 1440x1400 viewport to .omo/evidence/task-5-desktop.png
+- captured mobile full-page screenshot at 390x844 viewport to .omo/evidence/task-5-mobile.png
+- clicked mobile menu button and observed expanded mobile navigation with no console messages
+- navigated to http://127.0.0.1:8790/index.html#puppies
+- clicked visible filter chip "전체" and captured active filter screenshot to .omo/evidence/task-6-filter.png
+console_messages: none
+console_errors: 0
+console_warnings: 0
+dom_health:
+- title: 헬스독 | 건강하게 자란 반려가족 상담
+- active_filter: [{"text":"전체","filter":"all"}]
+- puppy_cards: total=12 visible=12 hidden=0
+- images: total=25 broken=0
+- viewport_after_filter: width=500 height=844 scrollY=3271
+- document_scroll: width=500 height=10615 horizontal_overflow=false
+- mobile_menu_aria_expanded_after_reload: false
+- sticky_cta_rect_after_filter: x=0 y=770 width=500 height=74
+visual_scan:
+- no broken images detected by DOM naturalWidth/naturalHeight checks
+- no blank generated graphics observed in screenshots/snapshot
+- no major overlap or hero overflow observed
+- mobile sticky CTA remains at viewport bottom and did not cover active filter or card content during the checked state
+--- end Wave2-BrowserQA browser console section ---
+
+--- Todo6-FilterHTML fix verification ---
+timestamp_local: 2026-06-13
+changed_file: pet-clone-site/index.html
+summary:
+- Added expected filter chips for all, maltipoo, pomeranian, poodle, bichon, small, medium.
+- Updated 12 puppy-card data-category values so each card has all, a size token, and a breed grouping token.
+commands:
+- rg -n 'data-filter="(all|maltipoo|pomeranian|poodle|bichon|small|medium)"|data-category' pet-clone-site/index.html
+  result: PASS; found 7 filter buttons and 12 puppy-card data-category attributes.
+- node --check pet-clone-site/app.js
+  result: PASS; no syntax errors reported.
+- node parser check over pet-clone-site/index.html
+  result: PASS; filters=[all,maltipoo,pomeranian,poodle,bichon,small,medium], cardCount=12, coverage={maltipoo:3,pomeranian:2,poodle:4,bichon:3,small:8,medium:4}.
+risks:
+- Category tokens are UI grouping metadata only; visible card copy remains generic and does not assert exact breed identity.
+--- end Todo6-FilterHTML fix verification ---
+
+--- Todo6 leftover QA server cleanup ---
+timestamp_local: 2026-06-13
+scope: no product edits
+target: Python http.server PID 94532, cwd /Users/cosmos/Documents/pet/pet-clone-site, port 8790
+result:
+- PID 94532 was not present and no process was listening on TCP port 8790, so no kill was issued.
+- Verified `lsof -nP -iTCP:8790 -sTCP:LISTEN` returned no listener.
+--- end Todo6 leftover QA server cleanup ---
+
+--- Todo6 bounded pomeranian proof worker failure ---
+timestamp_local: 2026-06-13
+worker: Hubble the 4th
+result: inconclusive; no pomeranian proof section appended and no replacement screenshot timestamp observed.
+cleanup: server PID 10980 from port 8790 was killed by orchestrator if cwd matched pet-clone-site; follow-up lsof recorded below by command output.
+impact: Todo 6 remains unconfirmed until pomeranian browser proof is captured.
+--- end Todo6 bounded pomeranian proof worker failure ---
+
+--- Todo6 in-app-browser click-state proof ---
+timestamp_utc: 2026-06-13T01:56:50.472Z
+action: opened #puppies in in-app browser, clicked button[data-filter="pomeranian"].
+pass: true
+state: {
+  "active": [
+    {
+      "filter": "pomeranian",
+      "text": "포메라니안"
+    }
+  ],
+  "brokenImages": [],
+  "documentScroll": {
+    "height": 9183,
+    "horizontalOverflow": false,
+    "width": 500
+  },
+  "emptyStateHidden": true,
+  "hiddenCards": 10,
+  "hiddenCategories": [
+    "all small maltipoo",
+    "all small poodle",
+    "all small bichon",
+    "all medium poodle"
+  ],
+  "imageCount": 25,
+  "title": "헬스독 | 건강하게 자란 반려가족 상담",
+  "totalCards": 12,
+  "url": "http://127.0.0.1:8790/index.html#pomeranian",
+  "viewport": {
+    "height": 844,
+    "scrollY": 3321,
+    "width": 500
+  },
+  "visibleCards": 2,
+  "visibleCategories": [
+    "all small pomeranian",
+    "all medium pomeranian"
+  ]
+}
+console_warnings_errors: []
+notes: screenshot capture from in-app browser timed out after click; separate Chrome CLI screenshot will refresh .omo/evidence/task-6-filter.png for the same #pomeranian filtered browser state.
+--- end Todo6 in-app-browser click-state proof ---
+
+--- Todo6 DevTools screenshot and cleanup receipt ---
+timestamp_local: 2026-06-13 11:00 KST
+reason: delegated browser QA workers stalled repeatedly; orchestrator captured QA-only browser evidence after recording the deviation.
+browser_surface:
+- Chrome DevTools opened http://127.0.0.1:8790/index.html#puppies against the local static server.
+- Forced reload with cache ignored after the first snapshot showed stale cached DOM.
+- Confirmed current filters=[all,maltipoo,pomeranian,poodle,bichon,small,medium].
+- Clicked button[data-filter="pomeranian"] in the page context.
+result:
+- url=http://127.0.0.1:8790/index.html#pomeranian
+- active_filter=[{"text":"포메라니안","filter":"pomeranian"}]
+- puppy_cards: total=12 visible=2 hidden=10
+- visible_categories=["all small pomeranian","all medium pomeranian"]
+- empty_state_hidden=true
+- broken_images=[]
+- horizontal_overflow=false
+- console_messages=none
+screenshot:
+- refreshed .omo/evidence/task-6-filter.png from DevTools viewport screenshot
+- file size: 688K
+- dimensions: pixelWidth=1000 pixelHeight=1688
+cleanup:
+- in-app browser temporary viewport reset and temporary tab close attempted.
+- local server session 28830 stopped with Ctrl-C.
+- verified `lsof -nP -iTCP:8790 -sTCP:LISTEN` returned no listener.
+- verified no remaining `healthdog-chrome`, `Google Chrome.*headless`, or `http.server 8790` process except the verification command itself.
+- verified no /tmp/healthdog-chrome.* temp profile directories remain.
+adversarial:
+- stale_state: forced reload proved browser was using current index.html filter DOM before the screenshot.
+- dirty_worktree: QA-only evidence update; product files not edited in this direct QA step.
+- misleading_success_output: pass supported by in-app browser click-state DOM, DevTools DOM counts, console check, and screenshot file metadata.
+- hung_or_long_commands: hung Chrome CLI screenshot attempt was interrupted; no residual process/temp profile remained.
+- repeated_interruptions: three delegated browser QA attempts were inconclusive, so direct QA was used as a bounded recovery path.
+--- end Todo6 DevTools screenshot and cleanup receipt ---

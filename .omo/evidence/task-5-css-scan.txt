@@ -1,0 +1,35 @@
+18:  letter-spacing: 0;
+33:  font-size: 16px;
+35:  letter-spacing: 0;
+56:  letter-spacing: 0;
+93:  font-size: 15px;
+120:  font-size: 13px;
+135:  font-size: 13px;
+141:  font-size: 20px;
+212:  font-size: 13px;
+232:  font-size: clamp(32px, 2.6rem, 42px);
+244:  font-size: clamp(28px, 2.35rem, 38px);
+251:  font-size: 19px;
+260:  font-size: 15px;
+286:  font-size: 15px;
+363:  font-size: 17px;
+461:  font-size: 11px;
+476:  font-size: 14px;
+483:  font-size: 14px;
+519:  font-size: 16px;
+599:  font-size: 21px;
+675:  position: fixed;
+697:  font-size: 12px;
+713:  font-size: 11px;
+751:  font-size: 13px;
+754:@media (max-width: 1080px) {
+795:    font-size: 14px;
+823:@media (max-width: 760px) {
+840:    font-size: 12px;
+849:    font-size: 34px;
+853:    font-size: 29px;
+857:    font-size: 16px;
+910:    font-size: 13px;
+916:    font-size: 14px;
+959:    font-size: 10px;
+963:@media (max-width: 430px) {

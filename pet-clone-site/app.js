@@ -3,51 +3,81 @@ const puppyCards = document.querySelectorAll("[data-category]");
 const emptyState = document.querySelector("#empty-state");
 const menuToggle = document.querySelector(".mobile-menu-toggle");
 const mobileNav = document.querySelector("#mobile-nav");
+const allFilters = new Set(["all", "전체"]);
+
+function isAllFilter(filter) {
+  return allFilters.has(filter);
+}
+
+function getInitialFilter() {
+  if (!location.hash) {
+    return "all";
+  }
+
+  try {
+    return decodeURIComponent(location.hash.slice(1));
+  } catch {
+    return location.hash.slice(1);
+  }
+}
 
 function setFilter(selectedFilter) {
   let visibleCards = 0;
 
   for (const button of filterButtons) {
-    button.classList.toggle("is-active", button.dataset.filter === selectedFilter);
+    const buttonFilter = button.dataset.filter || "all";
+    const isActive =
+      buttonFilter === selectedFilter || (isAllFilter(buttonFilter) && isAllFilter(selectedFilter));
+    button.classList.toggle("is-active", isActive);
   }
 
   for (const card of puppyCards) {
-    const category = card.dataset.category || "";
-    const shouldShow = selectedFilter === "all" || category.includes(selectedFilter);
+    const categories = (card.dataset.category || "").split(/\s+/).filter(Boolean);
+    const shouldShow = isAllFilter(selectedFilter) || categories.includes(selectedFilter);
     card.classList.toggle("is-hidden", !shouldShow);
     if (shouldShow) {
       visibleCards += 1;
     }
   }
 
-  emptyState.toggleAttribute("hidden", visibleCards > 0);
+  if (emptyState) {
+    emptyState.toggleAttribute("hidden", visibleCards > 0);
+  }
 }
 
 function closeMobileNav() {
   document.body.classList.remove("nav-open");
-  menuToggle.setAttribute("aria-expanded", "false");
-  mobileNav.hidden = true;
+  if (menuToggle) {
+    menuToggle.setAttribute("aria-expanded", "false");
+  }
+  if (mobileNav) {
+    mobileNav.hidden = true;
+  }
 }
 
 for (const button of filterButtons) {
   button.addEventListener("click", () => {
     const selectedFilter = button.dataset.filter || "all";
     setFilter(selectedFilter);
-    history.replaceState(null, "", selectedFilter === "all" ? "#puppies" : `#${selectedFilter}`);
+    history.replaceState(null, "", isAllFilter(selectedFilter) ? "#puppies" : `#${selectedFilter}`);
   });
 }
 
-menuToggle.addEventListener("click", () => {
-  const isExpanded = menuToggle.getAttribute("aria-expanded") === "true";
-  menuToggle.setAttribute("aria-expanded", String(!isExpanded));
-  mobileNav.hidden = isExpanded;
-  document.body.classList.toggle("nav-open", !isExpanded);
-});
+if (menuToggle) {
+  menuToggle.addEventListener("click", () => {
+    const willOpen = menuToggle.getAttribute("aria-expanded") !== "true";
+    menuToggle.setAttribute("aria-expanded", String(willOpen));
+    if (mobileNav) {
+      mobileNav.hidden = !willOpen;
+    }
+    document.body.classList.toggle("nav-open", willOpen);
+  });
+}
 
-for (const navLink of mobileNav.querySelectorAll("a")) {
+for (const navLink of mobileNav ? mobileNav.querySelectorAll("a") : []) {
   navLink.addEventListener("click", closeMobileNav);
 }
 
-const initialFilter = location.hash ? location.hash.slice(1) : "all";
+const initialFilter = getInitialFilter();
 const hasInitialFilter = [...filterButtons].some((button) => button.dataset.filter === initialFilter);
 setFilter(hasInitialFilter ? initialFilter : "all");

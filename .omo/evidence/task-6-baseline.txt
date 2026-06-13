@@ -1,0 +1,10 @@
+Todo 6 baseline before the bounded JS-only patch.
+
+Old app.js selector risks:
+- `menuToggle.addEventListener(...)` was called after `document.querySelector(".mobile-menu-toggle")` without a null guard.
+- `mobileNav.hidden = ...` and `mobileNav.querySelectorAll("a")` were called after `document.querySelector("#mobile-nav")` without a null guard.
+- `emptyState.toggleAttribute(...)` was called after `document.querySelector("#empty-state")` without a null guard.
+
+Current HTML filter state:
+- `pet-clone-site/index.html` currently has one filter chip: `<button class="filter-button is-active" type="button" data-filter="all">전체</button>`.
+- Current cards use `data-category="all healthdog"`; breed and size chips such as `말티푸`, `포메라니안`, `푸들`, `비숑`, `소형견`, and `중대형견` are not present yet.
