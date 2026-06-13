@@ -341,7 +341,7 @@ Critical path: Todo 1 -> Todo 4 -> Todo 5 -> Todo 7 -> Todo 9 -> Todo 11.
   - Shell evidence: `rg -n "map.naver.com" pet-clone-site > .omo/evidence/task-8-map-links.txt`.
   Commit: Y | `feat(site): add healthdog branch map links` | `pet-clone-site/index.html`, `pet-clone-site/app.js` or `content.js`, tests
 
-- [ ] 9. Run browser visual QA across desktop and mobile
+- [x] 9. Run browser visual QA across desktop and mobile
   What to do / Must NOT do
   - Start local static server: `python3 -m http.server 8790 --directory pet-clone-site`.
   - Open `http://127.0.0.1:8790/index.html` in the in-app browser.

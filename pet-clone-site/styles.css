@@ -549,8 +549,9 @@ h3 {
 
 .promise-grid img {
   width: 100%;
-  height: clamp(330px, 42vw, 520px);
-  object-fit: cover;
+  height: auto;
+  aspect-ratio: 3 / 4;
+  object-fit: contain;
 }
 
 .promise-grid h2,
