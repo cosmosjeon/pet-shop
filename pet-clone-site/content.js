@@ -204,7 +204,7 @@
         "sourceFolder",
         "visibleText",
       ],
-      placeholderPolicy:
+      proofImagePolicy:
         "후기 이미지는 제공된 실제 review/proof 사진만 사용하고 임의 후기는 작성하지 않습니다.",
     },
 
