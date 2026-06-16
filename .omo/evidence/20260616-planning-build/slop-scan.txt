@@ -1,0 +1,11 @@
+{
+  "pass": true,
+  "files": [
+    "pet-clone-site/index.html",
+    "pet-clone-site/styles.css",
+    "pet-clone-site/app.js",
+    "pet-clone-site/content.js",
+    "pet-clone-site/tests/site-structure.test.mjs"
+  ],
+  "note": "ai-slop-cleaner CLI not installed; concrete slop/debug-pattern scan used as no-op fallback."
+}

@@ -1,0 +1,6 @@
+Commands run and passing:
+node --test pet-clone-site/tests/site-structure.test.mjs
+node --check pet-clone-site/app.js
+node --check pet-clone-site/content.js
+Playwright desktop/mobile screenshots and interactions via bundled runtime
+Exact forbidden copy scan: PASS

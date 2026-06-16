@@ -1,0 +1,70 @@
+{
+  "version": 1,
+  "createdAt": "2026-06-16T11:44:31.983Z",
+  "updatedAt": "2026-06-16T13:20:28.116Z",
+  "briefPath": ".omo/ulw-loop/healthdog-planning-20260616/brief.md",
+  "goalsPath": ".omo/ulw-loop/healthdog-planning-20260616/goals.json",
+  "ledgerPath": ".omo/ulw-loop/healthdog-planning-20260616/ledger.jsonl",
+  "codexGoalMode": "aggregate",
+  "goals": [
+    {
+      "id": "G001-build-the-health-dog-homepage-exactl",
+      "title": "Build the Health Dog homepage exactly from /Users/cosmos/Downloads/he...",
+      "objective": "Build the Health Dog homepage exactly from /Users/cosmos/Downloads/healthdog_homepage_planning (2).md into the current pet-clone-site, preserving working static delivery, browser QA, evidence, and cleanup receipts.",
+      "status": "complete",
+      "successCriteria": [
+        {
+          "id": "C001",
+          "scenario": "Browser happy path: run the static site, open /index.html at desktop 1440x1200 and mobile 390x1100, capture screenshots; PASS iff the page visibly implements the planning doc sequence: 3 hero messages/slides, Health Dog intro, six branch cards with channel actions, named pet cards with branch/status tags, review/source cards, trust/care cards, content hub, and final 상담 CTA without broken major layout.",
+          "userModel": "happy",
+          "expectedEvidence": ".omo/evidence/20260616-planning-build/desktop-fullpage.png + .omo/evidence/20260616-planning-build/mobile-fullpage.png + browser metrics JSON with cleanup receipt",
+          "capturedEvidence": "Desktop/mobile happy path PASS. Evidence: .omo/evidence/20260616-planning-build/desktop-fullpage.png, mobile-fullpage.png, browser-metrics.json, cleanup-receipt.md. Planning sequence visible; no horizontal overflow; zero broken images.",
+          "status": "pass",
+          "capturedAt": "2026-06-16T12:56:15.436Z"
+        },
+        {
+          "id": "C002",
+          "scenario": "Browser interaction edge path: in the running page, use branch/type/status filters and consultation branch selector; PASS iff filtering exposes expected cards and empty state only when appropriate, mobile nav opens/closes, and branch-specific 상담/네이버/인스타/블로그 actions remain reachable.",
+          "userModel": "edge",
+          "expectedEvidence": ".omo/evidence/20260616-planning-build/interaction-metrics.json + filter-state screenshot with cleanup receipt",
+          "capturedEvidence": "Interaction edge path PASS. Evidence: .omo/evidence/20260616-planning-build/interaction-metrics.json and filter-state.png. Hero dots, Suwon branch filter, cat filter, Songpa branch selector actions, and mobile nav open/close passed.",
+          "status": "pass",
+          "capturedAt": "2026-06-16T12:56:15.672Z"
+        },
+        {
+          "id": "C003",
+          "scenario": "Regression and guardrail commands: run node --test pet-clone-site/tests/site-structure.test.mjs, node --check app.js/content.js, scan runtime sources for stale brand/secret/forbidden hard-sell or medical-guarantee copy; PASS iff tests/checks pass, all local assets exist, six Naver links exist, and no prohibited phrases like 최저가 보장/100% 보장/무조건 건강/당일 데려가세요 leak into runtime.",
+          "userModel": "regression",
+          "expectedEvidence": ".omo/evidence/20260616-planning-build/final-commands.txt + scope-fidelity.txt with cleanup receipt",
+          "capturedEvidence": "Regression/guardrail PASS. Evidence: final-node-test.txt, final-app-check.txt, final-content-check.txt, forbidden-scan.txt, visual-qa-report.md, final-commands.txt. LSP diagnostics unavailable because workspace lacks TypeScript installation.",
+          "status": "pass",
+          "capturedAt": "2026-06-16T12:56:17.445Z"
+        }
+      ],
+      "attempt": 1,
+      "createdAt": "2026-06-16T11:44:31.983Z",
+      "updatedAt": "2026-06-16T13:20:28.116Z",
+      "startedAt": "2026-06-16T11:49:06.673Z",
+      "completedAt": "2026-06-16T13:20:28.116Z",
+      "evidence": "Health Dog planning-doc homepage implemented in pet-clone-site. Tests/checks/browser QA/visual QA evidence pass; dev server is available at http://127.0.0.1:8790/index.html. Review-work subagents unavailable due OAuth 401, recorded in quality gate."
+    }
+  ],
+  "codexObjective": "Complete the durable ulw-loop plan in .omo/ulw-loop/healthdog-planning-20260616/goals.json, including later accepted/appended stories, under the original brief constraints; use .omo/ulw-loop/healthdog-planning-20260616/ledger.jsonl as the audit trail.",
+  "aggregateCompletion": {
+    "status": "complete",
+    "completedAt": "2026-06-16T13:20:28.116Z",
+    "evidence": "Health Dog planning-doc homepage implemented in pet-clone-site. Tests/checks/browser QA/visual QA evidence pass; dev server is available at http://127.0.0.1:8790/index.html. Review-work subagents unavailable due OAuth 401, recorded in quality gate.",
+    "codexGoal": {
+      "goal": {
+        "threadId": "019eb65e-5875-75f0-8855-403d984a4410",
+        "objective": "Complete the durable ulw-loop plan in .omo/ulw-loop/healthdog-planning-20260616/goals.json, including later accepted/appended stories, under the original brief constraints; use .omo/ulw-loop/healthdog-planning-20260616/ledger.jsonl as the audit trail.",
+        "status": "complete",
+        "tokensUsed": 344758,
+        "timeUsedSeconds": 1555,
+        "createdAt": 1781610604,
+        "updatedAt": 1781614763
+      },
+      "completionBudgetReport": "Goal achieved. Final structured usage from update_goal: tokensUsed 344758, timeUsedSeconds 1555."
+    }
+  }
+}

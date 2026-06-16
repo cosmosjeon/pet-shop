@@ -1,0 +1,12 @@
+{
+  "goal": {
+    "threadId": "019eb65e-5875-75f0-8855-403d984a4410",
+    "objective": "Complete the durable ulw-loop plan in .omo/ulw-loop/healthdog-planning-20260616/goals.json, including later accepted/appended stories, under the original brief constraints; use .omo/ulw-loop/healthdog-planning-20260616/ledger.jsonl as the audit trail.",
+    "status": "complete",
+    "tokensUsed": 344758,
+    "timeUsedSeconds": 1555,
+    "createdAt": 1781610604,
+    "updatedAt": 1781614763
+  },
+  "completionBudgetReport": "Goal achieved. Final structured usage from update_goal: tokensUsed 344758, timeUsedSeconds 1555."
+}

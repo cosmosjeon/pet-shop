@@ -19,6 +19,40 @@ const BRANCH_NAMES = [
   "인천헬스독",
 ];
 const REQUIRED_SECTION_IDS = ["branches", "care", "puppies", "reviews", "contact"];
+const PLANNING_DOC_SECTION_IDS = [
+  "about",
+  "branches",
+  "puppies",
+  "reviews",
+  "trust",
+  "stories",
+  "contact",
+];
+const PLANNING_DOC_REQUIRED_COPY = [
+  "건강한 만남을 준비하는 안심분양 브랜드, 헬스독",
+  "6개의 지점, 하나의 안심 기준",
+  "우리 가족에게 맞는 아이를 함께 찾아드립니다",
+  "헬스독은 건강한 만남을 먼저 생각합니다",
+  "가까운 헬스독 지점을 찾아보세요",
+  "헬스독에서 기다리는 아이들",
+  "헬스독을 통해 가족이 된 이야기",
+  "헬스독이 신중하게 만남을 준비하는 방법",
+  "헬스독의 더 많은 이야기를 확인해보세요",
+  "어떤 아이가 우리 가족에게 맞을지 고민된다면",
+];
+const PLANNING_DOC_FILTERS = [
+  "all",
+  "dog",
+  "cat",
+  "changwon",
+  "suwon",
+  "busan",
+  "pyeongtaek",
+  "incheon",
+  "songpa",
+  "free",
+  "responsibility",
+];
 const REQUIRED_RETAINED_HEALTHDOG_ASSETS = [
   "assets/healthdog/pets/pet-13-basket-panda.webp",
   "assets/healthdog/pets/pet-14-gray-basket.webp",
@@ -113,6 +147,33 @@ test("healthdog-brand-branches-and-sections", () => {
 
   const puppyCards = [...html.matchAll(/class=["'][^"']*\bpuppy-card\b/g)];
   assert.ok(puppyCards.length >= 18, "expected at least eighteen puppy cards");
+});
+
+test("planning-doc-homepage-scope-is-rendered", () => {
+  const html = readRequiredFile(INDEX_PATH);
+  const content = parseHealthDogContent();
+
+  for (const sectionId of PLANNING_DOC_SECTION_IDS) {
+    assert.match(html, new RegExp(`id=["']${sectionId}["']`), `missing planning section #${sectionId}`);
+  }
+
+  for (const copy of PLANNING_DOC_REQUIRED_COPY) {
+    assert.ok(html.includes(copy), `missing planning-doc copy: ${copy}`);
+  }
+
+  for (const filter of PLANNING_DOC_FILTERS) {
+    assert.ok(
+      html.includes(`data-filter="${filter}"`) || html.includes(`value="${filter}"`),
+      `missing planning-doc filter: ${filter}`,
+    );
+  }
+
+  assert.ok(content.heroSlides?.length >= 3, "expected three planning-doc hero slides");
+  assert.ok(content.branches?.every((branch) => branch.phone), "expected every branch to expose a phone");
+  assert.ok(content.branches?.every((branch) => branch.instagramUrl), "expected every branch to expose Instagram");
+  assert.ok(content.availablePets?.items?.length >= 12, "expected named pet items");
+  assert.ok(content.reviews?.items?.length >= 6, "expected sourced review items");
+  assert.ok(content.contentHub?.items?.length >= 5, "expected Instagram/blog content hub cards");
 });
 
 test("content-pet-filters-match-rendered-filter-and-card-category-values", () => {

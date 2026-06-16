@@ -1,0 +1,1 @@
+Build the Health Dog homepage exactly from /Users/cosmos/Downloads/healthdog_homepage_planning (2).md into the current pet-clone-site, preserving working static delivery, browser QA, evidence, and cleanup receipts.

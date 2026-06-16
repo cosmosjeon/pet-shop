@@ -1,0 +1,22 @@
+{
+  "pass": true,
+  "forbidden": [
+    "최저가 보장",
+    "100% 보장",
+    "무조건 건강",
+    "당일 데려가세요",
+    "완벽 보장",
+    "instagram_access_token",
+    "access_token",
+    "비비퍼피",
+    "BB PUPPY",
+    "puppybebe.com",
+    "010-7699-0531"
+  ],
+  "files": [
+    "pet-clone-site/index.html",
+    "pet-clone-site/styles.css",
+    "pet-clone-site/app.js",
+    "pet-clone-site/content.js"
+  ]
+}
