@@ -222,13 +222,13 @@ h3 {
 
 h1 {
   max-width: 660px;
-  font-size: clamp(40px, 5vw, 68px);
+  font-size: 64px;
   font-weight: 850;
   line-height: 1.05;
 }
 
 h2 {
-  font-size: clamp(30px, 3.6vw, 48px);
+  font-size: 44px;
   font-weight: 820;
   line-height: 1.16;
 }
@@ -309,6 +309,11 @@ h3 {
   height: 100%;
   min-height: 560px;
   object-fit: cover;
+}
+
+.hero-image img[src$="promise-banner.svg"] {
+  object-fit: contain;
+  background: var(--sage-dark);
 }
 
 .hero-map img {
@@ -430,6 +435,7 @@ h3 {
 }
 
 .intro-card-grid,
+.service-guide,
 .branch-grid,
 .trust-grid,
 .story-grid {
@@ -439,6 +445,7 @@ h3 {
 }
 
 .intro-card-grid article,
+.service-card,
 .branch-card,
 .trust-grid article,
 .story-grid a,
@@ -449,19 +456,22 @@ h3 {
   box-shadow: 0 12px 28px rgba(57, 48, 40, 0.06);
 }
 
-.intro-card-grid article {
+.intro-card-grid article,
+.service-card {
   display: grid;
   gap: 12px;
   padding: 28px;
 }
 
-.intro-card-grid span {
+.intro-card-grid span,
+.service-card span {
   color: var(--sage-dark);
   font-size: 13px;
   font-weight: 900;
 }
 
 .intro-card-grid p,
+.service-card p,
 .branch-card p,
 .trust-grid p,
 .story-grid p,
@@ -626,6 +636,17 @@ h3 {
   line-height: 1.45;
 }
 
+.puppy-info ul,
+.care-text-equivalent ul {
+  display: grid;
+  gap: 6px;
+  margin: 4px 0 0;
+  padding-left: 18px;
+  color: var(--ink-soft);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
 .puppy-info .pet-branch {
   color: var(--sage-dark);
   font-size: 13px;
@@ -701,17 +722,49 @@ h3 {
 .generated-assets {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: start;
   gap: 18px;
   margin-top: 28px;
 }
 
 .generated-assets img {
   width: 100%;
-  height: 260px;
-  object-fit: cover;
+  height: auto;
+  min-height: clamp(220px, 28vw, 520px);
+  object-fit: contain;
+  object-position: center;
   border: 1px solid rgba(54, 89, 67, 0.16);
   border-radius: 8px;
   background: var(--paper);
+}
+
+.generated-assets img[src$="service-guide-grid.svg"] {
+  grid-column: span 2;
+  aspect-ratio: 1200 / 820;
+}
+
+.generated-assets img[src$="care-promise-poster.svg"] {
+  aspect-ratio: 900 / 1200;
+}
+
+.generated-assets img[src$="promise-banner.svg"] {
+  grid-column: 1 / -1;
+  aspect-ratio: 1600 / 620;
+  min-height: clamp(190px, 30vw, 480px);
+}
+
+.care-text-equivalent {
+  max-width: 920px;
+  margin: 24px auto 0;
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--paper);
+  box-shadow: 0 12px 28px rgba(57, 48, 40, 0.06);
+}
+
+.care-text-equivalent h3 {
+  font-size: 18px;
 }
 
 .story-grid a {
@@ -732,6 +785,24 @@ h3 {
 .contact-section h3,
 .contact-section a {
   color: var(--paper);
+}
+
+.contact-section .button-light {
+  border-color: rgba(255, 255, 255, 0.62);
+  background: var(--paper);
+  color: var(--sage-dark);
+}
+
+.contact-section .button-light:hover,
+.contact-section .button-light:focus-visible {
+  border-color: var(--mint);
+  background: var(--mint);
+  color: var(--sage-dark);
+}
+
+.contact-section .button-light:focus-visible {
+  outline: 3px solid rgba(217, 241, 231, 0.74);
+  outline-offset: 3px;
 }
 
 .contact-grid {
@@ -954,7 +1025,7 @@ h3 {
 
 @media (max-width: 760px) {
   body {
-    padding-bottom: 0;
+    padding-bottom: 96px;
   }
 
   .section-inner,
@@ -1016,11 +1087,17 @@ h3 {
 
   .trust-strip-grid,
   .intro-card-grid,
+  .service-guide,
   .branch-grid,
   .trust-grid,
   .story-grid,
   .generated-assets {
     grid-template-columns: 1fr;
+  }
+
+  .generated-assets img[src$="service-guide-grid.svg"],
+  .generated-assets img[src$="promise-banner.svg"] {
+    grid-column: 1;
   }
 
   .trust-strip-grid div {
@@ -1068,11 +1145,17 @@ h3 {
   }
 
   .floating-cta {
-    position: static;
-    width: min(calc(100% - 32px), var(--container));
-    margin: 24px auto 0;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    border-radius: 8px;
+    position: fixed;
+    inset: auto 0 0;
+    top: auto;
+    right: auto;
+    width: 100%;
+    margin: 0;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    border-right: 0;
+    border-bottom: 0;
+    border-left: 0;
+    border-radius: 8px 8px 0 0;
     transform: none;
   }
 
@@ -1085,6 +1168,10 @@ h3 {
 
   .floating-cta a:last-child {
     border-right: 0;
+  }
+
+  .site-footer {
+    padding-bottom: 126px;
   }
 }
 

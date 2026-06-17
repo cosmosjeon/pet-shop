@@ -1,0 +1,516 @@
+{
+  "url": "http://127.0.0.1:8790/index.html?v=final-current-fixed-1781675718917",
+  "desktop": {
+    "viewport": {
+      "width": 1440,
+      "height": 1400
+    },
+    "title": "헬스독 | 건강하게 자란 반려가족 상담",
+    "h1": "건강하게 자란 반려가족을 만나는 곳, 헬스독",
+    "heroCopy": "전국 6개 지점에서 아이의 건강과 성향, 가족의 생활 환경까지 함께 확인하며 책임 있는 상담을 도와드립니다.",
+    "nav": [
+      "분양중 아이들",
+      "헬스독 케어",
+      "후기",
+      "지점안내",
+      "상담문의"
+    ],
+    "trust": [
+      "대표번호 1600-4533",
+      "전국 6개 지점",
+      "실제 보호자 후기",
+      "네이버 플레이스 연결"
+    ],
+    "sectionOrder": [
+      {
+        "id": "about",
+        "top": 973.140625
+      },
+      {
+        "id": "branches",
+        "top": 1705.828125
+      },
+      {
+        "id": "puppies",
+        "top": 2886.265625
+      },
+      {
+        "id": "care",
+        "top": 6577.21875
+      },
+      {
+        "id": "reviews",
+        "top": 8320.71875
+      },
+      {
+        "id": "contact",
+        "top": 10435.25
+      }
+    ],
+    "branches": 6,
+    "pets": 18,
+    "reviews": 12,
+    "mapLinks": [
+      {
+        "text": "네이버 플레이스",
+        "href": "https://map.naver.com/p/search/%EA%B2%BD%EB%82%A8%20%EC%B0%BD%EC%9B%90%EC%8B%9C%20%EC%9D%98%EC%B0%BD%EA%B5%AC%20%EC%84%9C%EC%83%81%EB%8F%99%20676-1%20%EC%B0%BD%EC%9B%90%ED%97%AC%EC%8A%A4%EB%8F%85",
+        "target": "_blank",
+        "rel": "noopener"
+      },
+      {
+        "text": "네이버 플레이스",
+        "href": "https://map.naver.com/p/search/%EB%B6%80%EC%82%B0%20%EB%B6%80%EC%82%B0%EC%A7%84%EA%B5%AC%20%EB%B6%80%EC%95%94%EB%8F%99%2096-8%20%EB%B6%80%EC%82%B0%ED%97%AC%EC%8A%A4%EB%8F%85",
+        "target": "_blank",
+        "rel": "noopener"
+      },
+      {
+        "text": "네이버 플레이스",
+        "href": "https://map.naver.com/p/search/%EC%84%9C%EC%9A%B8%20%EC%86%A1%ED%8C%8C%EA%B5%AC%20%EC%9E%A0%EC%8B%A4%EB%8F%99%20188-12%20%EC%86%A1%ED%8C%8C%ED%97%AC%EC%8A%A4%EB%8F%85",
+        "target": "_blank",
+        "rel": "noopener"
+      },
+      {
+        "text": "네이버 플레이스",
+        "href": "https://map.naver.com/p/search/%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%88%98%EC%9B%90%EC%8B%9C%20%EC%9D%B4%EC%9D%98%EB%8F%99%201266-5%20%EC%88%98%EC%9B%90%ED%97%AC%EC%8A%A4%EB%8F%85",
+        "target": "_blank",
+        "rel": "noopener"
+      },
+      {
+        "text": "네이버 플레이스",
+        "href": "https://map.naver.com/p/search/%EA%B2%BD%EA%B8%B0%EB%8F%84%20%ED%8F%89%ED%83%9D%EC%8B%9C%20%ED%8F%89%ED%83%9D%EB%8F%99%20164-2%20%ED%8F%89%ED%83%9D%ED%97%AC%EC%8A%A4%EB%8F%85",
+        "target": "_blank",
+        "rel": "noopener"
+      },
+      {
+        "text": "네이버 플레이스",
+        "href": "https://map.naver.com/p/search/%EC%9D%B8%EC%B2%9C%20%EC%84%9C%EA%B5%AC%20%EB%8B%B9%ED%95%98%EB%8F%99%201098-5%20%EC%9D%B8%EC%B2%9C%ED%97%AC%EC%8A%A4%EB%8F%85",
+        "target": "_blank",
+        "rel": "noopener"
+      }
+    ],
+    "generatedInCare": [
+      {
+        "src": "assets/healthdog/generated/service-guide-grid.svg",
+        "naturalWidth": 1200,
+        "naturalHeight": 820,
+        "rect": {
+          "width": 820.65625,
+          "height": 560.78125
+        },
+        "objectFit": "contain",
+        "aspectRatio": "1200 / 820",
+        "alt": "헬스독 소개, 분양 상담, 건강 케어, 지점 위치, 실제 후기, 빠른 상담 안내"
+      },
+      {
+        "src": "assets/healthdog/generated/care-promise-poster.svg",
+        "naturalWidth": 900,
+        "naturalHeight": 1200,
+        "rect": {
+          "width": 401.34375,
+          "height": 535.125
+        },
+        "objectFit": "contain",
+        "aspectRatio": "900 / 1200",
+        "alt": "헬스독 평생 케어 약속 포스터"
+      },
+      {
+        "src": "assets/healthdog/generated/promise-banner.svg",
+        "naturalWidth": 1600,
+        "naturalHeight": 620,
+        "rect": {
+          "width": 1240,
+          "height": 480.5
+        },
+        "objectFit": "contain",
+        "aspectRatio": "1600 / 620",
+        "alt": "처음부터 건강하게, 실제 후기와 투명한 상담, 가까운 6개 지점 안내 배너"
+      }
+    ],
+    "allGenerated": [
+      {
+        "src": "assets/healthdog/generated/promise-banner.svg",
+        "width": 1600,
+        "height": 620,
+        "objectFit": "contain",
+        "hidden": true
+      },
+      {
+        "src": "assets/healthdog/generated/service-guide-grid.svg",
+        "width": 1200,
+        "height": 820,
+        "objectFit": "contain",
+        "hidden": false
+      },
+      {
+        "src": "assets/healthdog/generated/care-promise-poster.svg",
+        "width": 900,
+        "height": 1200,
+        "objectFit": "contain",
+        "hidden": false
+      },
+      {
+        "src": "assets/healthdog/generated/promise-banner.svg",
+        "width": 1600,
+        "height": 620,
+        "objectFit": "contain",
+        "hidden": false
+      }
+    ],
+    "broken": [],
+    "horizontalOverflow": false,
+    "floatingCta": {
+      "rect": {
+        "x": 1326,
+        "y": 584.3046875,
+        "width": 94,
+        "height": 231.390625,
+        "top": 584.3046875,
+        "bottom": 815.6953125
+      },
+      "position": "fixed",
+      "bottom": "468.609px",
+      "links": [
+        {
+          "text": "TEL전화상담",
+          "href": "tel:1600-4533"
+        },
+        {
+          "text": "REV후기보기",
+          "href": "#reviews"
+        },
+        {
+          "text": "MAP지점안내",
+          "href": "#branches"
+        }
+      ]
+    },
+    "contactButtons": [
+      {
+        "text": "전화 상담",
+        "href": "tel:1600-4533",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgb(54, 89, 67)",
+        "className": "button button-dark"
+      },
+      {
+        "text": "네이버 플레이스",
+        "href": "https://map.naver.com/p/search/%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%88%98%EC%9B%90%EC%8B%9C%20%EC%9D%B4%EC%9D%98%EB%8F%99%201266-5%20%EC%88%98%EC%9B%90%ED%97%AC%EC%8A%A4%EB%8F%85",
+        "color": "rgb(54, 89, 67)",
+        "background": "rgb(255, 255, 255)",
+        "className": "button button-light"
+      },
+      {
+        "text": "인스타그램",
+        "href": "https://www.instagram.com/healthdog_suwon",
+        "color": "rgb(54, 89, 67)",
+        "background": "rgb(255, 255, 255)",
+        "className": "button button-light"
+      },
+      {
+        "text": "블로그",
+        "href": "https://blog.naver.com/dallae0212",
+        "color": "rgb(54, 89, 67)",
+        "background": "rgb(255, 255, 255)",
+        "className": "button button-light"
+      },
+      {
+        "text": "카카오",
+        "href": "https://pf.kakao.com/_dZqfn",
+        "color": "rgb(54, 89, 67)",
+        "background": "rgb(255, 255, 255)",
+        "className": "button button-light"
+      }
+    ]
+  },
+  "filters": [
+    {
+      "filter": "all",
+      "active": "all",
+      "visible": 18,
+      "hidden": 0,
+      "emptyHidden": true
+    },
+    {
+      "filter": "maltipoo",
+      "active": "maltipoo",
+      "visible": 4,
+      "hidden": 14,
+      "emptyHidden": true
+    },
+    {
+      "filter": "pomeranian",
+      "active": "pomeranian",
+      "visible": 3,
+      "hidden": 15,
+      "emptyHidden": true
+    },
+    {
+      "filter": "poodle",
+      "active": "poodle",
+      "visible": 5,
+      "hidden": 13,
+      "emptyHidden": true
+    },
+    {
+      "filter": "bichon",
+      "active": "bichon",
+      "visible": 4,
+      "hidden": 14,
+      "emptyHidden": true
+    },
+    {
+      "filter": "small",
+      "active": "small",
+      "visible": 15,
+      "hidden": 3,
+      "emptyHidden": true
+    },
+    {
+      "filter": "medium",
+      "active": "medium",
+      "visible": 3,
+      "hidden": 15,
+      "emptyHidden": true
+    }
+  ],
+  "mobileBefore": {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "title": "헬스독 | 건강하게 자란 반려가족 상담",
+    "h1": "건강하게 자란 반려가족을 만나는 곳, 헬스독",
+    "heroCopy": "전국 6개 지점에서 아이의 건강과 성향, 가족의 생활 환경까지 함께 확인하며 책임 있는 상담을 도와드립니다.",
+    "nav": [
+      "분양중 아이들",
+      "헬스독 케어",
+      "후기",
+      "지점안내",
+      "상담문의"
+    ],
+    "trust": [
+      "대표번호 1600-4533",
+      "전국 6개 지점",
+      "실제 보호자 후기",
+      "네이버 플레이스 연결"
+    ],
+    "sectionOrder": [
+      {
+        "id": "about",
+        "top": 1367.75
+      },
+      {
+        "id": "branches",
+        "top": 2455.78125
+      },
+      {
+        "id": "puppies",
+        "top": 5200.28125
+      },
+      {
+        "id": "care",
+        "top": 15611.90625
+      },
+      {
+        "id": "reviews",
+        "top": 17219.203125
+      },
+      {
+        "id": "contact",
+        "top": 22336.09375
+      }
+    ],
+    "branches": 6,
+    "pets": 18,
+    "reviews": 12,
+    "mapLinks": [
+      {
+        "text": "네이버 플레이스",
+        "href": "https://map.naver.com/p/search/%EA%B2%BD%EB%82%A8%20%EC%B0%BD%EC%9B%90%EC%8B%9C%20%EC%9D%98%EC%B0%BD%EA%B5%AC%20%EC%84%9C%EC%83%81%EB%8F%99%20676-1%20%EC%B0%BD%EC%9B%90%ED%97%AC%EC%8A%A4%EB%8F%85",
+        "target": "_blank",
+        "rel": "noopener"
+      },
+      {
+        "text": "네이버 플레이스",
+        "href": "https://map.naver.com/p/search/%EB%B6%80%EC%82%B0%20%EB%B6%80%EC%82%B0%EC%A7%84%EA%B5%AC%20%EB%B6%80%EC%95%94%EB%8F%99%2096-8%20%EB%B6%80%EC%82%B0%ED%97%AC%EC%8A%A4%EB%8F%85",
+        "target": "_blank",
+        "rel": "noopener"
+      },
+      {
+        "text": "네이버 플레이스",
+        "href": "https://map.naver.com/p/search/%EC%84%9C%EC%9A%B8%20%EC%86%A1%ED%8C%8C%EA%B5%AC%20%EC%9E%A0%EC%8B%A4%EB%8F%99%20188-12%20%EC%86%A1%ED%8C%8C%ED%97%AC%EC%8A%A4%EB%8F%85",
+        "target": "_blank",
+        "rel": "noopener"
+      },
+      {
+        "text": "네이버 플레이스",
+        "href": "https://map.naver.com/p/search/%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%88%98%EC%9B%90%EC%8B%9C%20%EC%9D%B4%EC%9D%98%EB%8F%99%201266-5%20%EC%88%98%EC%9B%90%ED%97%AC%EC%8A%A4%EB%8F%85",
+        "target": "_blank",
+        "rel": "noopener"
+      },
+      {
+        "text": "네이버 플레이스",
+        "href": "https://map.naver.com/p/search/%EA%B2%BD%EA%B8%B0%EB%8F%84%20%ED%8F%89%ED%83%9D%EC%8B%9C%20%ED%8F%89%ED%83%9D%EB%8F%99%20164-2%20%ED%8F%89%ED%83%9D%ED%97%AC%EC%8A%A4%EB%8F%85",
+        "target": "_blank",
+        "rel": "noopener"
+      },
+      {
+        "text": "네이버 플레이스",
+        "href": "https://map.naver.com/p/search/%EC%9D%B8%EC%B2%9C%20%EC%84%9C%EA%B5%AC%20%EB%8B%B9%ED%95%98%EB%8F%99%201098-5%20%EC%9D%B8%EC%B2%9C%ED%97%AC%EC%8A%A4%EB%8F%85",
+        "target": "_blank",
+        "rel": "noopener"
+      }
+    ],
+    "generatedInCare": [
+      {
+        "src": "assets/healthdog/generated/service-guide-grid.svg",
+        "naturalWidth": 1200,
+        "naturalHeight": 820,
+        "rect": {
+          "width": 358,
+          "height": 244.625
+        },
+        "objectFit": "contain",
+        "aspectRatio": "1200 / 820",
+        "alt": "헬스독 소개, 분양 상담, 건강 케어, 지점 위치, 실제 후기, 빠른 상담 안내"
+      },
+      {
+        "src": "assets/healthdog/generated/care-promise-poster.svg",
+        "naturalWidth": 900,
+        "naturalHeight": 1200,
+        "rect": {
+          "width": 358,
+          "height": 477.328125
+        },
+        "objectFit": "contain",
+        "aspectRatio": "900 / 1200",
+        "alt": "헬스독 평생 케어 약속 포스터"
+      },
+      {
+        "src": "assets/healthdog/generated/promise-banner.svg",
+        "naturalWidth": 1600,
+        "naturalHeight": 620,
+        "rect": {
+          "width": 358,
+          "height": 190
+        },
+        "objectFit": "contain",
+        "aspectRatio": "1600 / 620",
+        "alt": "처음부터 건강하게, 실제 후기와 투명한 상담, 가까운 6개 지점 안내 배너"
+      }
+    ],
+    "allGenerated": [
+      {
+        "src": "assets/healthdog/generated/promise-banner.svg",
+        "width": 1600,
+        "height": 620,
+        "objectFit": "contain",
+        "hidden": true
+      },
+      {
+        "src": "assets/healthdog/generated/service-guide-grid.svg",
+        "width": 1200,
+        "height": 820,
+        "objectFit": "contain",
+        "hidden": false
+      },
+      {
+        "src": "assets/healthdog/generated/care-promise-poster.svg",
+        "width": 900,
+        "height": 1200,
+        "objectFit": "contain",
+        "hidden": false
+      },
+      {
+        "src": "assets/healthdog/generated/promise-banner.svg",
+        "width": 1600,
+        "height": 620,
+        "objectFit": "contain",
+        "hidden": false
+      }
+    ],
+    "broken": [],
+    "horizontalOverflow": false,
+    "floatingCta": {
+      "rect": {
+        "x": 0,
+        "y": 767.203125,
+        "width": 390,
+        "height": 76.796875,
+        "top": 767.203125,
+        "bottom": 844
+      },
+      "position": "fixed",
+      "bottom": "0px",
+      "links": [
+        {
+          "text": "TEL전화상담",
+          "href": "tel:1600-4533"
+        },
+        {
+          "text": "REV후기보기",
+          "href": "#reviews"
+        },
+        {
+          "text": "MAP지점안내",
+          "href": "#branches"
+        }
+      ]
+    },
+    "contactButtons": [
+      {
+        "text": "전화 상담",
+        "href": "tel:1600-4533",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgb(54, 89, 67)",
+        "className": "button button-dark"
+      },
+      {
+        "text": "네이버 플레이스",
+        "href": "https://map.naver.com/p/search/%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%88%98%EC%9B%90%EC%8B%9C%20%EC%9D%B4%EC%9D%98%EB%8F%99%201266-5%20%EC%88%98%EC%9B%90%ED%97%AC%EC%8A%A4%EB%8F%85",
+        "color": "rgb(54, 89, 67)",
+        "background": "rgb(255, 255, 255)",
+        "className": "button button-light"
+      },
+      {
+        "text": "인스타그램",
+        "href": "https://www.instagram.com/healthdog_suwon",
+        "color": "rgb(54, 89, 67)",
+        "background": "rgb(255, 255, 255)",
+        "className": "button button-light"
+      },
+      {
+        "text": "블로그",
+        "href": "https://blog.naver.com/dallae0212",
+        "color": "rgb(54, 89, 67)",
+        "background": "rgb(255, 255, 255)",
+        "className": "button button-light"
+      },
+      {
+        "text": "카카오",
+        "href": "https://pf.kakao.com/_dZqfn",
+        "color": "rgb(54, 89, 67)",
+        "background": "rgb(255, 255, 255)",
+        "className": "button button-light"
+      }
+    ]
+  },
+  "mobileMenuState": {
+    "expanded": "true",
+    "hidden": false,
+    "bodyOpen": true
+  },
+  "screenshots": {
+    "desktop": "/Users/cosmos/Documents/pet/.omo/evidence/final-current-desktop-fullpage.jpg",
+    "mobile": "/Users/cosmos/Documents/pet/.omo/evidence/final-current-mobile-fullpage.jpg",
+    "filter": "/Users/cosmos/Documents/pet/.omo/evidence/final-current-filter-pomeranian.jpg",
+    "generated": "/Users/cosmos/Documents/pet/.omo/evidence/final-current-generated-care-crop.jpg",
+    "care": "/Users/cosmos/Documents/pet/.omo/evidence/final-current-care-section-fixed.jpg",
+    "contact": "/Users/cosmos/Documents/pet/.omo/evidence/final-current-contact-section-fixed.jpg",
+    "mobileViewport": "/Users/cosmos/Documents/pet/.omo/evidence/final-current-mobile-viewport.jpg",
+    "mobileCta": "/Users/cosmos/Documents/pet/.omo/evidence/final-current-mobile-cta.jpg",
+    "metrics": "/Users/cosmos/Documents/pet/.omo/evidence/final-current-browser-metrics.json",
+    "notes": "/Users/cosmos/Documents/pet/.omo/evidence/final-current-browser-qa.md"
+  },
+  "timestamp": "2026-06-17T05:55:22.071Z"
+}

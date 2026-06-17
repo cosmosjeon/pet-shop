@@ -1,0 +1,39 @@
+{
+  "event": "final-debugging-hypothesis-audit",
+  "plan": ".omo/plans/healthdog-website-build.md",
+  "task": "Global Review and Debugging Gate runtime audit after CSS visual fixes",
+  "session_id": "codex:019eb65e-5875-75f0-8855-403d984a4410",
+  "commands": [
+    "node <inline metrics audit> against refreshed .omo/evidence/final-current-browser-metrics.json"
+  ],
+  "artifact": [
+    ".omo/evidence/final-current-browser-metrics.json",
+    ".omo/evidence/final-current-debugging-audit.json"
+  ],
+  "hypotheses": [
+    {
+      "hypothesis": "Static fallback and JS render may diverge, causing missing approved hero/nav/trust after reload.",
+      "check": "final-current-browser-metrics.json desktop h1/nav/trust/section counts",
+      "result": "ruled out: approved hero/nav/trust and branch count present after real browser load"
+    },
+    {
+      "hypothesis": "Pet filter categories may not map to available photo cards, producing empty states.",
+      "check": "final-current-browser-metrics.json filters",
+      "result": "ruled out: all seven filters have visible cards and hide empty state"
+    },
+    {
+      "hypothesis": "Mobile fixed CTA or menu may fail at 390x844 and block content/navigation.",
+      "check": "final-current-browser-metrics.json mobileBefore/mobileMenuState",
+      "result": "ruled out: fixed CTA, no horizontal overflow, and menu open state verified at mobile viewport"
+    },
+    {
+      "hypothesis": "Generated graphic text may be clipped by image framing or hidden via low-contrast styling.",
+      "check": "final-current-browser-metrics.json generatedInCare/contactButtons and screenshots",
+      "result": "ruled out: generated graphics are contained/nonzero and contact light buttons use dark readable text"
+    }
+  ],
+  "cleanup": [
+    "no new server/browser process spawned by this audit"
+  ],
+  "timestamp": "2026-06-17T05:56:46.260Z"
+}

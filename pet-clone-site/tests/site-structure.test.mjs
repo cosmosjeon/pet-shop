@@ -19,39 +19,36 @@ const BRANCH_NAMES = [
   "인천헬스독",
 ];
 const REQUIRED_SECTION_IDS = ["branches", "care", "puppies", "reviews", "contact"];
+const EXACT_HERO_H1 = "건강하게 자란 반려가족을 만나는 곳, 헬스독";
+const EXACT_HERO_COPY =
+  "전국 6개 지점에서 아이의 건강과 성향, 가족의 생활 환경까지 함께 확인하며 책임 있는 상담을 도와드립니다.";
+const EXACT_NAV_LABELS = ["분양중 아이들", "헬스독 케어", "후기", "지점안내", "상담문의"];
 const PLANNING_DOC_SECTION_IDS = [
   "about",
   "branches",
   "puppies",
+  "care",
   "reviews",
-  "trust",
-  "stories",
   "contact",
 ];
 const PLANNING_DOC_REQUIRED_COPY = [
-  "건강한 만남을 준비하는 안심분양 브랜드, 헬스독",
-  "6개의 지점, 하나의 안심 기준",
-  "우리 가족에게 맞는 아이를 함께 찾아드립니다",
-  "헬스독은 건강한 만남을 먼저 생각합니다",
-  "가까운 헬스독 지점을 찾아보세요",
-  "헬스독에서 기다리는 아이들",
-  "헬스독을 통해 가족이 된 이야기",
-  "헬스독이 신중하게 만남을 준비하는 방법",
-  "헬스독의 더 많은 이야기를 확인해보세요",
-  "어떤 아이가 우리 가족에게 맞을지 고민된다면",
+  EXACT_HERO_H1,
+  EXACT_HERO_COPY,
+  "대표번호 1600-4533",
+  "전국 6개 지점",
+  "실제 보호자 후기",
+  "네이버 플레이스 연결",
+  "분양 전부터 분양 후까지, 보호자와 반려견이 안심할 수 있도록 함께합니다.",
+  "사진보다 중요한 건 실제 보호자의 선택입니다.",
 ];
 const PLANNING_DOC_FILTERS = [
   "all",
-  "dog",
-  "cat",
-  "changwon",
-  "suwon",
-  "busan",
-  "pyeongtaek",
-  "incheon",
-  "songpa",
-  "free",
-  "responsibility",
+  "maltipoo",
+  "pomeranian",
+  "poodle",
+  "bichon",
+  "small",
+  "medium",
 ];
 const REQUIRED_RETAINED_HEALTHDOG_ASSETS = [
   "assets/healthdog/pets/pet-13-basket-panda.webp",
@@ -69,15 +66,29 @@ const REQUIRED_RETAINED_HEALTHDOG_ASSETS = [
 ];
 const joinParts = (...parts) => parts.join("");
 const OLD_PUPPY_PHONE = joinParts("010", "-", "7699", "-", "0531");
+const OLD_STORY_ASSET_DIR = joinParts("assets", "/", "story", "/");
+const OLD_PROMISE_ASSET = joinParts("promise", ".", "jpg");
 const FORBIDDEN_RUNTIME_STRINGS = [
   OLD_PUPPY_PHONE,
   joinParts("BB", " ", "PUPPY"),
   joinParts("비비", "퍼피"),
+  joinParts("퍼피", "베베"),
+  joinParts("PUPPY", "BEBE"),
   joinParts("bb", "puppy"),
   joinParts("puppy", "bebe", ".", "com"),
   joinParts("instagram", "_", "access", "_", "token"),
   joinParts("access", "_", "token"),
   joinParts("imweb", ".", "me"),
+  joinParts("/Users", "/"),
+  joinParts("/Downloads", "/"),
+  OLD_STORY_ASSET_DIR,
+  OLD_PROMISE_ASSET,
+];
+const ALLOWED_RUNTIME_EXTERNAL_URLS = [
+  "https://map.naver.com/",
+  "https://www.instagram.com/healthdog_suwon",
+  "https://blog.naver.com/dallae0212",
+  "https://pf.kakao.com/_dZqfn",
 ];
 
 function readRequiredFile(path) {
@@ -104,6 +115,15 @@ function extractLocalAssetPaths(html) {
     .filter(Boolean);
 }
 
+function extractContentAssetPaths(content) {
+  return [
+    ...(content.heroSlides || []).map((slide) => slide.image),
+    ...(content.availablePets?.items || []).map((item) => item.image),
+    ...(content.reviews?.items || []).map((item) => item.image),
+    ...(content.care?.graphics || []).map((graphic) => graphic.image),
+  ].filter(Boolean);
+}
+
 function extractExternalUrls(html) {
   return extractReferences(html).filter((value) => /^https?:\/\//i.test(value));
 }
@@ -111,6 +131,14 @@ function extractExternalUrls(html) {
 function extractAttributeValues(html, attributeName) {
   const attributePattern = new RegExp(`\\b${attributeName}=["']([^"']+)["']`, "g");
   return [...html.matchAll(attributePattern)].map((match) => match[1]);
+}
+
+function extractElementText(html, selectorClass) {
+  const elementPattern = new RegExp(
+    `<[^>]+class=["'][^"']*\\b${selectorClass}\\b[^"']*["'][^>]*>([\\s\\S]*?)<\\/[^>]+>`,
+  );
+  const match = html.match(elementPattern);
+  return match ? match[1].replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim() : "";
 }
 
 function parseHealthDogContent() {
@@ -131,26 +159,55 @@ function readRuntimeSources() {
 test("healthdog-brand-branches-and-sections", () => {
   const html = readRequiredFile(INDEX_PATH);
   const combined = readRuntimeSources();
+  const content = parseHealthDogContent();
 
   assert.match(html, /<title>헬스독 \| 건강하게 자란 반려가족 상담<\/title>/);
   assert.match(html, /<img[^>]+class="brand-logo"[^>]+alt="헬스독 로고"/);
-  assert.match(html, /건강하게 자란 반려가족을 만나는 곳, 헬스독/);
+  assert.match(html, new RegExp(`<h1>\\s*${EXACT_HERO_H1}\\s*<\\/h1>`));
+  assert.ok(html.includes(EXACT_HERO_COPY), "missing exact approved hero support copy");
   assert.match(combined, /1600-4533/);
   assert.equal(combined.includes(OLD_PUPPY_PHONE), false, "old puppy phone leaked");
 
   for (const branchName of BRANCH_NAMES) {
-    assert.match(html, new RegExp(branchName), `missing branch name: ${branchName}`);
+    assert.match(combined, new RegExp(branchName), `missing branch name: ${branchName}`);
   }
   for (const sectionId of REQUIRED_SECTION_IDS) {
     assert.match(html, new RegExp(`id=["']${sectionId}["']`), `missing #${sectionId}`);
   }
 
-  const puppyCards = [...html.matchAll(/class=["'][^"']*\bpuppy-card\b/g)];
-  assert.ok(puppyCards.length >= 18, "expected at least eighteen puppy cards");
+  assert.ok(content.availablePets?.items?.length >= 18, "expected at least eighteen pet photo items");
+});
+
+test("approved-plan-semantics-do-not-drift", () => {
+  const html = readRequiredFile(INDEX_PATH);
+  const styles = readRequiredFile(STYLES_PATH);
+  const content = parseHealthDogContent();
+  const navLabels = (content.nav || []).map((item) => item.label);
+  const sectionOrder = ["branches", "puppies", "care", "reviews", "contact"].map((sectionId) =>
+    html.indexOf(`id="${sectionId}"`),
+  );
+
+  for (const navLabel of EXACT_NAV_LABELS) {
+    assert.ok(navLabels.includes(navLabel), `missing approved nav label: ${navLabel}`);
+  }
+  assert.match(html, /전화 상담 1600-4533/);
+  assert.match(html, /가까운 지점 찾기/);
+  assert.ok(
+    sectionOrder.every((index) => index >= 0) &&
+      sectionOrder.every((index, position) => position === 0 || index > sectionOrder[position - 1]),
+    "approved section order must be branches -> puppies -> care -> reviews -> contact",
+  );
+  assert.equal(/font-size\s*:[^;]*vw\b/.test(styles), false, "font-size must not use viewport units");
+  assert.match(
+    styles,
+    /@media\s*\(max-width:\s*760px\)[\s\S]*\.floating-cta\s*{[\s\S]*position:\s*fixed[\s\S]*bottom:/,
+    "mobile CTA must remain a fixed bottom bar",
+  );
 });
 
 test("planning-doc-homepage-scope-is-rendered", () => {
   const html = readRequiredFile(INDEX_PATH);
+  const combined = readRuntimeSources();
   const content = parseHealthDogContent();
 
   for (const sectionId of PLANNING_DOC_SECTION_IDS) {
@@ -158,42 +215,84 @@ test("planning-doc-homepage-scope-is-rendered", () => {
   }
 
   for (const copy of PLANNING_DOC_REQUIRED_COPY) {
-    assert.ok(html.includes(copy), `missing planning-doc copy: ${copy}`);
+    assert.ok(combined.includes(copy), `missing approved-plan copy: ${copy}`);
   }
 
+  const contentFilterValues = Array.from(content.filters.pet, (filter) => String(filter.value));
   for (const filter of PLANNING_DOC_FILTERS) {
-    assert.ok(
-      html.includes(`data-filter="${filter}"`) || html.includes(`value="${filter}"`),
-      `missing planning-doc filter: ${filter}`,
-    );
+    assert.ok(contentFilterValues.includes(filter), `missing approved filter: ${filter}`);
   }
 
   assert.ok(content.heroSlides?.length >= 3, "expected three planning-doc hero slides");
   assert.ok(content.branches?.every((branch) => branch.phone), "expected every branch to expose a phone");
-  assert.ok(content.branches?.every((branch) => branch.instagramUrl), "expected every branch to expose Instagram");
-  assert.ok(content.availablePets?.items?.length >= 12, "expected named pet items");
-  assert.ok(content.reviews?.items?.length >= 6, "expected sourced review items");
-  assert.ok(content.contentHub?.items?.length >= 5, "expected Instagram/blog content hub cards");
+  assert.ok(content.availablePets?.items?.length >= 12, "expected pet photo proof items");
+  assert.ok(content.reviews?.items?.length >= 6, "expected sourced review/proof image items");
+  const suwonBranch = content.branches.find((branch) => branch.id === "suwon");
+  assert.ok(suwonBranch?.instagramUrl, "expected user-provided Suwon Instagram link");
+  assert.ok(suwonBranch?.blogUrl, "expected user-provided Suwon blog link");
+  assert.ok(suwonBranch?.kakaoUrl, "expected user-provided Suwon Kakao link");
+});
+
+test("runtime-content-avoids-unsupported-claims", () => {
+  const html = readRequiredFile(INDEX_PATH);
+  const combined = readRuntimeSources();
+  const content = parseHealthDogContent();
+  const externalUrls = extractExternalUrls(html);
+
+  assert.equal(/\/Users\/|\/Downloads\//.test(combined), false, "runtime must not expose local paths");
+  assert.equal(
+    [OLD_STORY_ASSET_DIR, OLD_PROMISE_ASSET].some((value) => combined.includes(value)),
+    false,
+    "runtime must not use source-reference assets",
+  );
+
+  for (const branch of content.branches) {
+    const optionalUrls = [branch.instagramUrl, branch.blogUrl, branch.kakaoUrl].filter(Boolean);
+    for (const url of optionalUrls) {
+      assert.ok(
+        ALLOWED_RUNTIME_EXTERNAL_URLS.some((allowedUrl) => url.startsWith(allowedUrl)),
+        `unverified branch channel URL leaked: ${url}`,
+      );
+    }
+  }
+
+  for (const url of externalUrls) {
+    assert.ok(
+      ALLOWED_RUNTIME_EXTERNAL_URLS.some((allowedUrl) => url.startsWith(allowedUrl)),
+      `unapproved external runtime URL: ${url}`,
+    );
+  }
+
+  for (const item of content.availablePets.items) {
+    assert.equal("name" in item, false, "pet photo item must not invent a pet name");
+    assert.equal("sex" in item, false, "pet photo item must not invent sex");
+    assert.equal("age" in item, false, "pet photo item must not invent age");
+    assert.equal("status" in item, false, "pet photo item must not invent availability status");
+  }
+
+  for (const item of content.reviews.items) {
+    assert.equal("summary" in item, false, "review proof item must not invent a review summary");
+    assert.match(item.caption, /제공된|무료분양인증|후기 자료/);
+  }
+
+  assert.ok(
+    html.includes("분양 전부터 분양 후까지, 보호자와 반려견이 안심할 수 있도록 함께합니다."),
+    "generated poster needs a text equivalent near the image",
+  );
 });
 
 test("content-pet-filters-match-rendered-filter-and-card-category-values", () => {
-  const html = readRequiredFile(INDEX_PATH);
   const content = parseHealthDogContent();
   const contentFilterValues = Array.from(content.filters.pet, (filter) =>
     String(filter.value),
   ).sort();
-  const renderedFilterValues = extractAttributeValues(html, "data-filter").sort();
   const cardCategoryTokens = new Set(
-    extractAttributeValues(html, "data-category").flatMap((value) =>
-      value.split(/\s+/).filter((token) => token && token !== "all"),
+    content.availablePets.items.flatMap((item) =>
+      String(item.categories).split(/\s+/).filter((token) => token && token !== "all"),
     ),
   );
 
-  assert.deepEqual(
-    contentFilterValues,
-    renderedFilterValues,
-    "content.js pet filter values must exactly match rendered data-filter values",
-  );
+  assert.deepEqual(contentFilterValues, PLANNING_DOC_FILTERS.sort());
 
   for (const token of cardCategoryTokens) {
     assert.ok(
@@ -201,11 +300,21 @@ test("content-pet-filters-match-rendered-filter-and-card-category-values", () =>
       `card category token must exist in rendered/content filter values: ${token}`,
     );
   }
+
+  for (const filter of contentFilterValues.filter((value) => value !== "all")) {
+    assert.ok(
+      content.availablePets.items.some((item) =>
+        String(item.categories).split(/\s+/).includes(filter),
+      ),
+      `filter must show at least one pet photo item: ${filter}`,
+    );
+  }
 });
 
 test("proof-and-generated-assets-exist", () => {
   const html = readRequiredFile(INDEX_PATH);
-  const localAssetPaths = extractLocalAssetPaths(html);
+  const content = parseHealthDogContent();
+  const localAssetPaths = [...new Set([...extractLocalAssetPaths(html), ...extractContentAssetPaths(content)])];
   const reviewProofPaths = localAssetPaths.filter((assetPath) =>
     assetPath.startsWith("assets/healthdog/reviews/"),
   );
@@ -238,9 +347,15 @@ test("proof-and-generated-assets-exist", () => {
 
 test("runtime-sources-have-no-forbidden-strings-and-local-assets-exist", () => {
   const html = readRequiredFile(INDEX_PATH);
+  const content = parseHealthDogContent();
   const combined = readRuntimeSources();
-  const localAssetPaths = extractLocalAssetPaths(html);
-  const externalUrls = extractExternalUrls(html);
+  const localAssetPaths = [...new Set([...extractLocalAssetPaths(html), ...extractContentAssetPaths(content)])];
+  const externalUrls = [
+    ...extractExternalUrls(html),
+    ...content.branches.flatMap((branch) =>
+      [branch.naverMapUrl, branch.instagramUrl, branch.blogUrl, branch.kakaoUrl].filter(Boolean),
+    ),
+  ];
   const naverMapUrls = externalUrls.filter((url) => url.startsWith("https://map.naver.com/"));
 
   for (const value of FORBIDDEN_RUNTIME_STRINGS) {
